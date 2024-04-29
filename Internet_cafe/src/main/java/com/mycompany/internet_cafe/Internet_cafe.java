@@ -11,6 +11,6 @@ package com.mycompany.internet_cafe;
 public class Internet_cafe {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
     }
 }
