@@ -4,6 +4,7 @@
  */
 package com.mycompany.internet_cafe;
 
+import java.awt.Color;
 import static java.awt.SystemColor.window;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
@@ -148,7 +149,8 @@ public class Home extends javax.swing.JFrame {
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
+                {"ha", null, null, null},
+                {"ha", null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
@@ -179,24 +181,26 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(258, 258, 258)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 417, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         menubar.setBackground(new java.awt.Color(51, 51, 51));
+        menubar.setPreferredSize(new java.awt.Dimension(120, 273));
 
         homebutt.setBackground(new java.awt.Color(51, 51, 51));
         homebutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homebutt.setForeground(new java.awt.Color(242, 242, 242));
-        homebutt.setText("Home");
+        homebutt.setText("  Home");
         homebutt.setBorder(null);
         homebutt.setBorderPainted(false);
         homebutt.setContentAreaFilled(false);
         homebutt.setEnabled(false);
         homebutt.setFocusPainted(false);
         homebutt.setFocusable(false);
-        homebutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        homebutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        homebutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         homebutt.setRequestFocusEnabled(false);
         homebutt.setRolloverEnabled(false);
         homebutt.setVerifyInputWhenFocusTarget(false);
@@ -214,14 +218,15 @@ public class Home extends javax.swing.JFrame {
         userbutt.setBackground(new java.awt.Color(51, 51, 51));
         userbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         userbutt.setForeground(new java.awt.Color(242, 242, 242));
-        userbutt.setText("User");
+        userbutt.setText("  User");
         userbutt.setBorder(null);
         userbutt.setBorderPainted(false);
         userbutt.setContentAreaFilled(false);
         userbutt.setEnabled(false);
         userbutt.setFocusPainted(false);
         userbutt.setFocusable(false);
-        userbutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        userbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        userbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         userbutt.setRequestFocusEnabled(false);
         userbutt.setRolloverEnabled(false);
         userbutt.setVerifyInputWhenFocusTarget(false);
@@ -230,18 +235,24 @@ public class Home extends javax.swing.JFrame {
                 userbuttMouseClicked(evt);
             }
         });
+        userbutt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userbuttActionPerformed(evt);
+            }
+        });
 
         orderbutt.setBackground(new java.awt.Color(51, 51, 51));
         orderbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         orderbutt.setForeground(new java.awt.Color(242, 242, 242));
-        orderbutt.setText("Order");
+        orderbutt.setText("  Order");
         orderbutt.setBorder(null);
         orderbutt.setBorderPainted(false);
         orderbutt.setContentAreaFilled(false);
         orderbutt.setEnabled(false);
         orderbutt.setFocusPainted(false);
         orderbutt.setFocusable(false);
-        orderbutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        orderbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        orderbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         orderbutt.setRequestFocusEnabled(false);
         orderbutt.setRolloverEnabled(false);
         orderbutt.setVerifyInputWhenFocusTarget(false);
@@ -259,14 +270,15 @@ public class Home extends javax.swing.JFrame {
         billbutt.setBackground(new java.awt.Color(51, 51, 51));
         billbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         billbutt.setForeground(new java.awt.Color(242, 242, 242));
-        billbutt.setText("Billing");
+        billbutt.setText("  Billing");
         billbutt.setBorder(null);
         billbutt.setBorderPainted(false);
         billbutt.setContentAreaFilled(false);
         billbutt.setEnabled(false);
         billbutt.setFocusPainted(false);
         billbutt.setFocusable(false);
-        billbutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        billbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        billbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         billbutt.setRequestFocusEnabled(false);
         billbutt.setRolloverEnabled(false);
         billbutt.setVerifyInputWhenFocusTarget(false);
@@ -279,14 +291,15 @@ public class Home extends javax.swing.JFrame {
         servbutt.setBackground(new java.awt.Color(51, 51, 51));
         servbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         servbutt.setForeground(new java.awt.Color(242, 242, 242));
-        servbutt.setText("Service");
+        servbutt.setText("  Service");
         servbutt.setBorder(null);
         servbutt.setBorderPainted(false);
         servbutt.setContentAreaFilled(false);
         servbutt.setEnabled(false);
         servbutt.setFocusPainted(false);
         servbutt.setFocusable(false);
-        servbutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        servbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        servbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         servbutt.setRequestFocusEnabled(false);
         servbutt.setRolloverEnabled(false);
         servbutt.setVerifyInputWhenFocusTarget(false);
@@ -299,14 +312,16 @@ public class Home extends javax.swing.JFrame {
         combutt.setBackground(new java.awt.Color(51, 51, 51));
         combutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         combutt.setForeground(new java.awt.Color(242, 242, 242));
-        combutt.setText("Computer");
+        combutt.setText("  Computer");
+        combutt.setActionCommand("  Computer");
         combutt.setBorder(null);
         combutt.setBorderPainted(false);
         combutt.setContentAreaFilled(false);
         combutt.setEnabled(false);
         combutt.setFocusPainted(false);
         combutt.setFocusable(false);
-        combutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        combutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        combutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         combutt.setRequestFocusEnabled(false);
         combutt.setRolloverEnabled(false);
         combutt.setVerifyInputWhenFocusTarget(false);
@@ -315,18 +330,24 @@ public class Home extends javax.swing.JFrame {
                 combuttMouseClicked(evt);
             }
         });
+        combutt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combuttActionPerformed(evt);
+            }
+        });
 
         staffbutt.setBackground(new java.awt.Color(51, 51, 51));
         staffbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         staffbutt.setForeground(new java.awt.Color(242, 242, 242));
-        staffbutt.setText("Staff");
+        staffbutt.setText("  Staff");
         staffbutt.setBorder(null);
         staffbutt.setBorderPainted(false);
         staffbutt.setContentAreaFilled(false);
         staffbutt.setEnabled(false);
         staffbutt.setFocusPainted(false);
         staffbutt.setFocusable(false);
-        staffbutt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        staffbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        staffbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         staffbutt.setRequestFocusEnabled(false);
         staffbutt.setRolloverEnabled(false);
         staffbutt.setVerifyInputWhenFocusTarget(false);
@@ -338,10 +359,12 @@ public class Home extends javax.swing.JFrame {
 
         backbutt.setBackground(new java.awt.Color(51, 51, 51));
         backbutt.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        backbutt.setForeground(new java.awt.Color(242, 242, 242));
+        backbutt.setForeground(new java.awt.Color(204, 204, 204));
         backbutt.setText("←");
+        backbutt.setBorder(null);
         backbutt.setBorderPainted(false);
         backbutt.setContentAreaFilled(false);
+        backbutt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backbutt.setDefaultCapable(false);
         backbutt.setEnabled(false);
         backbutt.setFocusPainted(false);
@@ -349,6 +372,12 @@ public class Home extends javax.swing.JFrame {
         backbutt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backbuttMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                backbuttMouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                backbuttMouseReleased(evt);
             }
         });
         backbutt.addActionListener(new java.awt.event.ActionListener() {
@@ -416,7 +445,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE)
         );
 
         pack();
@@ -479,8 +508,20 @@ public class Home extends javax.swing.JFrame {
 
     private void userbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userbuttMouseClicked
         jScrollPane1.setLocation(148, 90);
+        String a = jTextField1.getText();
         jTextField1.setLocation(850, 10);
         jTextField1.setSize(100, 30);
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"ha", null, null, null},
+                {"null", null, null, null},
+                {a, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }));
     }//GEN-LAST:event_userbuttMouseClicked
 
     private void orderbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderbuttMouseClicked
@@ -530,6 +571,24 @@ public class Home extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void userbuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbuttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userbuttActionPerformed
+
+    private void combuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combuttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_combuttActionPerformed
+
+    private void backbuttMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backbuttMouseEntered
+        backbutt.setForeground(new Color(216,174,94));
+        backbutt.setBackground(new Color(59, 59, 59));
+    }//GEN-LAST:event_backbuttMouseEntered
+
+    private void backbuttMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backbuttMouseReleased
+        backbutt.setBackground(new Color(51, 51, 51));
+        backbutt.setForeground(new Color(204,204,204));
+    }//GEN-LAST:event_backbuttMouseReleased
 
     /**
      * @param args the command line arguments
@@ -585,14 +644,14 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTable table;
     private javax.swing.JButton userbutt;
     // End of variables declaration//GEN-END:variables
-    int width = 100;
+    int width = 120;
     int height = 800;
     private void openmenubar() {
         new Thread(() -> {
             for(int i=0; i<=width; i++){
                 menubar.setSize(i, height);
                 bar.setLocation(i, 0);
-                try {
+                try {     
                     Thread.sleep(2);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
@@ -602,17 +661,8 @@ public class Home extends javax.swing.JFrame {
     }
 
     private void closemenubar() {
-        new Thread(() -> {
-            for(int i=width; i>=0; i--){
-                menubar.setSize(i, height);
-                bar.setLocation(i, 0);
-                try {
-                    Thread.sleep(2);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }  
-        }).start();
+        menubar.setSize(0, height);
+        bar.setLocation(0, 0);
     }
     
     
