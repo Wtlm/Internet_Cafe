@@ -8,6 +8,7 @@ import static java.awt.SystemColor.window;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,6 +21,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+     
     }
 
     /**
@@ -118,8 +120,11 @@ public class Home extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setText("Search...");
-        jTextField1.setBorder(null);
+        jTextField1.setActionCommand("<Not Set>");
+        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField1.setNextFocusableComponent(jTextField1);
+        jTextField1.setPreferredSize(new java.awt.Dimension(700, 60));
         jTextField1.setRequestFocusEnabled(false);
         jTextField1.setVerifyInputWhenFocusTarget(false);
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -152,6 +157,10 @@ public class Home extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        table.setEnabled(false);
+        table.setFocusable(false);
+        table.setPreferredSize(new java.awt.Dimension(700, 300));
+        table.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(table);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -159,19 +168,19 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
-                .addGap(148, 148, 148))
+                .addGap(152, 152, 152)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addGap(133, 133, 133))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(247, 247, 247)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(258, 258, 258)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 417, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -404,8 +413,8 @@ public class Home extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(bar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -446,9 +455,10 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_backbuttMouseClicked
 
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
-        if (evt.getKeyCode()== KeyEvent.VK_ENTER){
+        if (evt.getKeyCode()== KeyEvent.VK_ENTER && !jTextField1.getText().equals("")){
             new Thread(() -> {
                 for (int i = 247; i>=10; i--){
+                    jTextField1.setSize(700, 30);
                     jTextField1.setLocation(148, i);
                     jScrollPane1.setLocation(148, 90 + i*2);
                     try {
@@ -463,7 +473,7 @@ public class Home extends javax.swing.JFrame {
 
     private void homebuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homebuttMouseClicked
         jTextField1.setLocation(148, 247);
-        jTextField1.setSize(700, 30);
+        jTextField1.setSize(700, 70);
         jScrollPane1.setLocation(148, 1000);
     }//GEN-LAST:event_homebuttMouseClicked
 
@@ -503,21 +513,23 @@ public class Home extends javax.swing.JFrame {
         jTextField1.setSize(100, 30);
     }//GEN-LAST:event_staffbuttMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
-        // TODO add your handling code here:
-        if(jTextField1.getText().equals("Search..."))
+        if (jTextField1.getText().trim().equals("Search...")) {
             jTextField1.setText("");
+        }
     }//GEN-LAST:event_jTextField1FocusGained
 
     private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
-        // TODO add your handling code here:
-        if(jTextField1.getText().equals(""))
+        if (jTextField1.getText().trim().equals("")) {
             jTextField1.setText("Search...");
+        }
     }//GEN-LAST:event_jTextField1FocusLost
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        if (jTextField1.getText().length() == 0){
+            JOptionPane.showMessageDialog(null,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
