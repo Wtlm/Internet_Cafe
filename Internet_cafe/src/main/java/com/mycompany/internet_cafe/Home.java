@@ -9,8 +9,9 @@ import static java.awt.SystemColor.window;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
+import java.sql.*;
 /**
  *
  * @author HP
@@ -22,7 +23,19 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
-     
+        setTitle("SQL Server");
+        setExtendedState(JFrame.NORMAL);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        setVisible(true);
+        String connectionUrl = "jdbc:sqlserver://LAPTOP-L1BPEKHQ:1433;databaseName=HospitalData;user=sa;password=123456;"
+                + "encrypt=true;trustServerCertificate=true;";
+        try{
+            Connection con = DriverManager.getConnection(connectionUrl);
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
     /**
