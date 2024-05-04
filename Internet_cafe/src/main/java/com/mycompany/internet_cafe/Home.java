@@ -35,21 +35,21 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         bar = new javax.swing.JPanel();
-        option = new javax.swing.JButton();
+        Menu = new javax.swing.JButton();
         name = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        SearchBox = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-        menubar = new javax.swing.JPanel();
-        homebutt = new javax.swing.JButton();
-        userbutt = new javax.swing.JButton();
-        orderbutt = new javax.swing.JButton();
-        billbutt = new javax.swing.JButton();
-        servbutt = new javax.swing.JButton();
-        combutt = new javax.swing.JButton();
-        staffbutt = new javax.swing.JButton();
-        backbutt = new javax.swing.JButton();
+        Table = new javax.swing.JTable();
+        MenuBar = new javax.swing.JPanel();
+        HomeButton = new javax.swing.JButton();
+        UserButton = new javax.swing.JButton();
+        OrderButton = new javax.swing.JButton();
+        BillButton = new javax.swing.JButton();
+        ServiceButton = new javax.swing.JButton();
+        ComputerButton = new javax.swing.JButton();
+        StaffButton = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 600));
@@ -57,36 +57,37 @@ public class Home extends javax.swing.JFrame {
         bar.setBackground(new java.awt.Color(51, 51, 51));
         bar.setPreferredSize(new java.awt.Dimension(1000, 50));
 
-        option.setBackground(new java.awt.Color(51, 51, 51));
-        option.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        option.setForeground(new java.awt.Color(242, 242, 242));
-        option.setText("≡ ");
-        option.setActionCommand("≡");
-        option.setBorder(null);
-        option.setBorderPainted(false);
-        option.setContentAreaFilled(false);
-        option.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        option.setDefaultCapable(false);
-        option.setFocusPainted(false);
-        option.setFocusable(false);
-        option.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        option.setRequestFocusEnabled(false);
-        option.setRolloverEnabled(false);
-        option.setVerifyInputWhenFocusTarget(false);
-        option.addMouseListener(new java.awt.event.MouseAdapter() {
+        Menu.setBackground(new java.awt.Color(51, 51, 51));
+        Menu.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Menu.setForeground(new java.awt.Color(242, 242, 242));
+        Menu.setText("≡ ");
+        Menu.setActionCommand("≡");
+        Menu.setBorder(null);
+        Menu.setBorderPainted(false);
+        Menu.setContentAreaFilled(false);
+        Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Menu.setDefaultCapable(false);
+        Menu.setFocusPainted(false);
+        Menu.setFocusable(false);
+        Menu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Menu.setName(""); // NOI18N
+        Menu.setRequestFocusEnabled(false);
+        Menu.setRolloverEnabled(false);
+        Menu.setVerifyInputWhenFocusTarget(false);
+        Menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                optionMouseClicked(evt);
+                MenuMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                optionMouseEntered(evt);
+                MenuMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                optionMouseExited(evt);
+                MenuMouseExited(evt);
             }
         });
-        option.addActionListener(new java.awt.event.ActionListener() {
+        Menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                optionActionPerformed(evt);
+                MenuActionPerformed(evt);
             }
         });
 
@@ -101,7 +102,7 @@ public class Home extends javax.swing.JFrame {
             barLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(barLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(option, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
                 .addContainerGap())
@@ -111,43 +112,43 @@ public class Home extends javax.swing.JFrame {
             .addGroup(barLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(barLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(option)
+                    .addComponent(Menu)
                     .addComponent(name))
                 .addContainerGap())
         );
 
         jPanel1.setToolTipText("");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField1.setText("Search...");
-        jTextField1.setActionCommand("<Not Set>");
-        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField1.setNextFocusableComponent(jTextField1);
-        jTextField1.setPreferredSize(new java.awt.Dimension(700, 60));
-        jTextField1.setRequestFocusEnabled(false);
-        jTextField1.setVerifyInputWhenFocusTarget(false);
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+        SearchBox.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        SearchBox.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        SearchBox.setText("Search...");
+        SearchBox.setActionCommand("<Not Set>");
+        SearchBox.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        SearchBox.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        SearchBox.setNextFocusableComponent(SearchBox);
+        SearchBox.setPreferredSize(new java.awt.Dimension(700, 60));
+        SearchBox.setRequestFocusEnabled(false);
+        SearchBox.setVerifyInputWhenFocusTarget(false);
+        SearchBox.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField1FocusGained(evt);
+                SearchBoxFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField1FocusLost(evt);
+                SearchBoxFocusLost(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        SearchBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                SearchBoxActionPerformed(evt);
             }
         });
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        SearchBox.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField1KeyPressed(evt);
+                SearchBoxKeyPressed(evt);
             }
         });
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"ha", null, null, null},
                 {"ha", null, null, null},
@@ -159,11 +160,10 @@ public class Home extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        table.setEnabled(false);
-        table.setFocusable(false);
-        table.setPreferredSize(new java.awt.Dimension(700, 300));
-        table.setRequestFocusEnabled(false);
-        jScrollPane1.setViewportView(table);
+        Table.setFocusable(false);
+        Table.setPreferredSize(new java.awt.Dimension(700, 300));
+        Table.setRequestFocusEnabled(false);
+        jScrollPane1.setViewportView(Table);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -172,7 +172,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(152, 152, 152)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SearchBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addGap(133, 133, 133))
         );
@@ -180,250 +180,250 @@ public class Home extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        menubar.setBackground(new java.awt.Color(51, 51, 51));
-        menubar.setPreferredSize(new java.awt.Dimension(120, 273));
+        MenuBar.setBackground(new java.awt.Color(51, 51, 51));
+        MenuBar.setPreferredSize(new java.awt.Dimension(120, 273));
 
-        homebutt.setBackground(new java.awt.Color(51, 51, 51));
-        homebutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        homebutt.setForeground(new java.awt.Color(242, 242, 242));
-        homebutt.setText("  Home");
-        homebutt.setBorder(null);
-        homebutt.setBorderPainted(false);
-        homebutt.setContentAreaFilled(false);
-        homebutt.setEnabled(false);
-        homebutt.setFocusPainted(false);
-        homebutt.setFocusable(false);
-        homebutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        homebutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        homebutt.setRequestFocusEnabled(false);
-        homebutt.setRolloverEnabled(false);
-        homebutt.setVerifyInputWhenFocusTarget(false);
-        homebutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        HomeButton.setBackground(new java.awt.Color(51, 51, 51));
+        HomeButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        HomeButton.setForeground(new java.awt.Color(242, 242, 242));
+        HomeButton.setText("  Home");
+        HomeButton.setBorder(null);
+        HomeButton.setBorderPainted(false);
+        HomeButton.setContentAreaFilled(false);
+        HomeButton.setEnabled(false);
+        HomeButton.setFocusPainted(false);
+        HomeButton.setFocusable(false);
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        HomeButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        HomeButton.setName(""); // NOI18N
+        HomeButton.setRequestFocusEnabled(false);
+        HomeButton.setRolloverEnabled(false);
+        HomeButton.setVerifyInputWhenFocusTarget(false);
+        HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homebuttMouseClicked(evt);
+                HomeButtonMouseClicked(evt);
             }
         });
-        homebutt.addActionListener(new java.awt.event.ActionListener() {
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homebuttActionPerformed(evt);
+                HomeButtonActionPerformed(evt);
             }
         });
 
-        userbutt.setBackground(new java.awt.Color(51, 51, 51));
-        userbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        userbutt.setForeground(new java.awt.Color(242, 242, 242));
-        userbutt.setText("  User");
-        userbutt.setBorder(null);
-        userbutt.setBorderPainted(false);
-        userbutt.setContentAreaFilled(false);
-        userbutt.setEnabled(false);
-        userbutt.setFocusPainted(false);
-        userbutt.setFocusable(false);
-        userbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        userbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        userbutt.setRequestFocusEnabled(false);
-        userbutt.setRolloverEnabled(false);
-        userbutt.setVerifyInputWhenFocusTarget(false);
-        userbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        UserButton.setBackground(new java.awt.Color(51, 51, 51));
+        UserButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        UserButton.setForeground(new java.awt.Color(242, 242, 242));
+        UserButton.setText("  User");
+        UserButton.setBorder(null);
+        UserButton.setBorderPainted(false);
+        UserButton.setContentAreaFilled(false);
+        UserButton.setEnabled(false);
+        UserButton.setFocusPainted(false);
+        UserButton.setFocusable(false);
+        UserButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        UserButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        UserButton.setRequestFocusEnabled(false);
+        UserButton.setRolloverEnabled(false);
+        UserButton.setVerifyInputWhenFocusTarget(false);
+        UserButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userbuttMouseClicked(evt);
+                UserButtonMouseClicked(evt);
             }
         });
-        userbutt.addActionListener(new java.awt.event.ActionListener() {
+        UserButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userbuttActionPerformed(evt);
+                UserButtonActionPerformed(evt);
             }
         });
 
-        orderbutt.setBackground(new java.awt.Color(51, 51, 51));
-        orderbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        orderbutt.setForeground(new java.awt.Color(242, 242, 242));
-        orderbutt.setText("  Order");
-        orderbutt.setBorder(null);
-        orderbutt.setBorderPainted(false);
-        orderbutt.setContentAreaFilled(false);
-        orderbutt.setEnabled(false);
-        orderbutt.setFocusPainted(false);
-        orderbutt.setFocusable(false);
-        orderbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        orderbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        orderbutt.setRequestFocusEnabled(false);
-        orderbutt.setRolloverEnabled(false);
-        orderbutt.setVerifyInputWhenFocusTarget(false);
-        orderbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        OrderButton.setBackground(new java.awt.Color(51, 51, 51));
+        OrderButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        OrderButton.setForeground(new java.awt.Color(242, 242, 242));
+        OrderButton.setText("  Order");
+        OrderButton.setBorder(null);
+        OrderButton.setBorderPainted(false);
+        OrderButton.setContentAreaFilled(false);
+        OrderButton.setEnabled(false);
+        OrderButton.setFocusPainted(false);
+        OrderButton.setFocusable(false);
+        OrderButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        OrderButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        OrderButton.setRequestFocusEnabled(false);
+        OrderButton.setRolloverEnabled(false);
+        OrderButton.setVerifyInputWhenFocusTarget(false);
+        OrderButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                orderbuttMouseClicked(evt);
+                OrderButtonMouseClicked(evt);
             }
         });
-        orderbutt.addActionListener(new java.awt.event.ActionListener() {
+        OrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orderbuttActionPerformed(evt);
+                OrderButtonActionPerformed(evt);
             }
         });
 
-        billbutt.setBackground(new java.awt.Color(51, 51, 51));
-        billbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        billbutt.setForeground(new java.awt.Color(242, 242, 242));
-        billbutt.setText("  Billing");
-        billbutt.setBorder(null);
-        billbutt.setBorderPainted(false);
-        billbutt.setContentAreaFilled(false);
-        billbutt.setEnabled(false);
-        billbutt.setFocusPainted(false);
-        billbutt.setFocusable(false);
-        billbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        billbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        billbutt.setRequestFocusEnabled(false);
-        billbutt.setRolloverEnabled(false);
-        billbutt.setVerifyInputWhenFocusTarget(false);
-        billbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        BillButton.setBackground(new java.awt.Color(51, 51, 51));
+        BillButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BillButton.setForeground(new java.awt.Color(242, 242, 242));
+        BillButton.setText("  Billing");
+        BillButton.setBorder(null);
+        BillButton.setBorderPainted(false);
+        BillButton.setContentAreaFilled(false);
+        BillButton.setEnabled(false);
+        BillButton.setFocusPainted(false);
+        BillButton.setFocusable(false);
+        BillButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        BillButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        BillButton.setRequestFocusEnabled(false);
+        BillButton.setRolloverEnabled(false);
+        BillButton.setVerifyInputWhenFocusTarget(false);
+        BillButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                billbuttMouseClicked(evt);
+                BillButtonMouseClicked(evt);
             }
         });
 
-        servbutt.setBackground(new java.awt.Color(51, 51, 51));
-        servbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        servbutt.setForeground(new java.awt.Color(242, 242, 242));
-        servbutt.setText("  Service");
-        servbutt.setBorder(null);
-        servbutt.setBorderPainted(false);
-        servbutt.setContentAreaFilled(false);
-        servbutt.setEnabled(false);
-        servbutt.setFocusPainted(false);
-        servbutt.setFocusable(false);
-        servbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        servbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        servbutt.setRequestFocusEnabled(false);
-        servbutt.setRolloverEnabled(false);
-        servbutt.setVerifyInputWhenFocusTarget(false);
-        servbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        ServiceButton.setBackground(new java.awt.Color(51, 51, 51));
+        ServiceButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ServiceButton.setForeground(new java.awt.Color(242, 242, 242));
+        ServiceButton.setText("  Service");
+        ServiceButton.setBorder(null);
+        ServiceButton.setBorderPainted(false);
+        ServiceButton.setContentAreaFilled(false);
+        ServiceButton.setEnabled(false);
+        ServiceButton.setFocusPainted(false);
+        ServiceButton.setFocusable(false);
+        ServiceButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        ServiceButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        ServiceButton.setRequestFocusEnabled(false);
+        ServiceButton.setRolloverEnabled(false);
+        ServiceButton.setVerifyInputWhenFocusTarget(false);
+        ServiceButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                servbuttMouseClicked(evt);
+                ServiceButtonMouseClicked(evt);
             }
         });
 
-        combutt.setBackground(new java.awt.Color(51, 51, 51));
-        combutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        combutt.setForeground(new java.awt.Color(242, 242, 242));
-        combutt.setText("  Computer");
-        combutt.setActionCommand("  Computer");
-        combutt.setBorder(null);
-        combutt.setBorderPainted(false);
-        combutt.setContentAreaFilled(false);
-        combutt.setEnabled(false);
-        combutt.setFocusPainted(false);
-        combutt.setFocusable(false);
-        combutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        combutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        combutt.setRequestFocusEnabled(false);
-        combutt.setRolloverEnabled(false);
-        combutt.setVerifyInputWhenFocusTarget(false);
-        combutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        ComputerButton.setBackground(new java.awt.Color(51, 51, 51));
+        ComputerButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ComputerButton.setForeground(new java.awt.Color(242, 242, 242));
+        ComputerButton.setText("  Computer");
+        ComputerButton.setBorder(null);
+        ComputerButton.setBorderPainted(false);
+        ComputerButton.setContentAreaFilled(false);
+        ComputerButton.setEnabled(false);
+        ComputerButton.setFocusPainted(false);
+        ComputerButton.setFocusable(false);
+        ComputerButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        ComputerButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        ComputerButton.setRequestFocusEnabled(false);
+        ComputerButton.setRolloverEnabled(false);
+        ComputerButton.setVerifyInputWhenFocusTarget(false);
+        ComputerButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                combuttMouseClicked(evt);
+                ComputerButtonMouseClicked(evt);
             }
         });
-        combutt.addActionListener(new java.awt.event.ActionListener() {
+        ComputerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                combuttActionPerformed(evt);
+                ComputerButtonActionPerformed(evt);
             }
         });
 
-        staffbutt.setBackground(new java.awt.Color(51, 51, 51));
-        staffbutt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        staffbutt.setForeground(new java.awt.Color(242, 242, 242));
-        staffbutt.setText("  Staff");
-        staffbutt.setBorder(null);
-        staffbutt.setBorderPainted(false);
-        staffbutt.setContentAreaFilled(false);
-        staffbutt.setEnabled(false);
-        staffbutt.setFocusPainted(false);
-        staffbutt.setFocusable(false);
-        staffbutt.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        staffbutt.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        staffbutt.setRequestFocusEnabled(false);
-        staffbutt.setRolloverEnabled(false);
-        staffbutt.setVerifyInputWhenFocusTarget(false);
-        staffbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        StaffButton.setBackground(new java.awt.Color(51, 51, 51));
+        StaffButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        StaffButton.setForeground(new java.awt.Color(242, 242, 242));
+        StaffButton.setText("  Staff");
+        StaffButton.setBorder(null);
+        StaffButton.setBorderPainted(false);
+        StaffButton.setContentAreaFilled(false);
+        StaffButton.setEnabled(false);
+        StaffButton.setFocusPainted(false);
+        StaffButton.setFocusable(false);
+        StaffButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        StaffButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        StaffButton.setRequestFocusEnabled(false);
+        StaffButton.setRolloverEnabled(false);
+        StaffButton.setVerifyInputWhenFocusTarget(false);
+        StaffButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                staffbuttMouseClicked(evt);
+                StaffButtonMouseClicked(evt);
             }
         });
 
-        backbutt.setBackground(new java.awt.Color(51, 51, 51));
-        backbutt.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        backbutt.setForeground(new java.awt.Color(204, 204, 204));
-        backbutt.setText("←");
-        backbutt.setBorder(null);
-        backbutt.setBorderPainted(false);
-        backbutt.setContentAreaFilled(false);
-        backbutt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backbutt.setDefaultCapable(false);
-        backbutt.setEnabled(false);
-        backbutt.setFocusPainted(false);
-        backbutt.setFocusable(false);
-        backbutt.addMouseListener(new java.awt.event.MouseAdapter() {
+        BackButton.setBackground(new java.awt.Color(51, 51, 51));
+        BackButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BackButton.setForeground(new java.awt.Color(204, 204, 204));
+        BackButton.setText("←");
+        BackButton.setBorder(null);
+        BackButton.setBorderPainted(false);
+        BackButton.setContentAreaFilled(false);
+        BackButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BackButton.setDefaultCapable(false);
+        BackButton.setEnabled(false);
+        BackButton.setFocusPainted(false);
+        BackButton.setFocusable(false);
+        BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backbuttMouseClicked(evt);
+                BackButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                backbuttMouseEntered(evt);
+                BackButtonMouseEntered(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                backbuttMouseReleased(evt);
+                BackButtonMouseReleased(evt);
             }
         });
-        backbutt.addActionListener(new java.awt.event.ActionListener() {
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backbuttActionPerformed(evt);
+                BackButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout menubarLayout = new javax.swing.GroupLayout(menubar);
-        menubar.setLayout(menubarLayout);
-        menubarLayout.setHorizontalGroup(
-            menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menubarLayout.createSequentialGroup()
+        javax.swing.GroupLayout MenuBarLayout = new javax.swing.GroupLayout(MenuBar);
+        MenuBar.setLayout(MenuBarLayout);
+        MenuBarLayout.setHorizontalGroup(
+            MenuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homebutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(userbutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(orderbutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(billbutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(servbutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(combutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(staffbutt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menubarLayout.createSequentialGroup()
+                .addGroup(MenuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(UserButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(OrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BillButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ServiceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ComputerButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(StaffButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(backbutt)))
+                        .addComponent(BackButton)))
                 .addContainerGap())
         );
-        menubarLayout.setVerticalGroup(
-            menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menubarLayout.createSequentialGroup()
+        MenuBarLayout.setVerticalGroup(
+            MenuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBarLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(homebutt)
+                .addComponent(HomeButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userbutt)
+                .addComponent(UserButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(orderbutt)
+                .addComponent(OrderButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(billbutt)
+                .addComponent(BillButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(servbutt)
+                .addComponent(ServiceButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(combutt)
+                .addComponent(ComputerButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(staffbutt)
+                .addComponent(StaffButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(backbutt)
+                .addComponent(BackButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -432,7 +432,7 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(menubar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -445,50 +445,50 @@ public class Home extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE)
+            .addComponent(MenuBar, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void optionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionActionPerformed
+    private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_optionActionPerformed
+    }//GEN-LAST:event_MenuActionPerformed
 
-    private void homebuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttActionPerformed
+    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_homebuttActionPerformed
+    }//GEN-LAST:event_HomeButtonActionPerformed
 
-    private void orderbuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderbuttActionPerformed
+    private void OrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_orderbuttActionPerformed
+    }//GEN-LAST:event_OrderButtonActionPerformed
 
-    private void optionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_optionMouseClicked
-        openmenubar();        // TODO add your handling code here:
-    }//GEN-LAST:event_optionMouseClicked
+    private void MenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseClicked
+        openMenuBar();        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuMouseClicked
 
-    private void optionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_optionMouseEntered
+    private void MenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseEntered
     // TODO add your handling code here:
-    }//GEN-LAST:event_optionMouseEntered
+    }//GEN-LAST:event_MenuMouseEntered
 
-    private void optionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_optionMouseExited
+    private void MenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_optionMouseExited
+    }//GEN-LAST:event_MenuMouseExited
 
-    private void backbuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttActionPerformed
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_backbuttActionPerformed
+    }//GEN-LAST:event_BackButtonActionPerformed
 
-    private void backbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backbuttMouseClicked
-        closemenubar();// TODO add your handling code here:
-    }//GEN-LAST:event_backbuttMouseClicked
+    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
+        closeMenuBar();// TODO add your handling code here:
+    }//GEN-LAST:event_BackButtonMouseClicked
 
-    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
-        if (evt.getKeyCode()== KeyEvent.VK_ENTER && !jTextField1.getText().equals("")){
+    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
+        if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
             new Thread(() -> {
                 for (int i = 247; i>=10; i--){
-                    jTextField1.setSize(700, 30);
-                    jTextField1.setLocation(148, i);
+                    SearchBox.setSize(700, 30);
+                    SearchBox.setLocation(148, i);
                     jScrollPane1.setLocation(148, 90 + i*2);
                     try {
                         Thread.sleep(1);
@@ -498,20 +498,20 @@ public class Home extends javax.swing.JFrame {
                 }
             }).start();
         }
-    }//GEN-LAST:event_jTextField1KeyPressed
+    }//GEN-LAST:event_SearchBoxKeyPressed
 
-    private void homebuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homebuttMouseClicked
-        jTextField1.setLocation(148, 247);
-        jTextField1.setSize(700, 70);
+    private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseClicked
+        SearchBox.setLocation(148, 247);
+        SearchBox.setSize(700, 70);
         jScrollPane1.setLocation(148, 1000);
-    }//GEN-LAST:event_homebuttMouseClicked
+    }//GEN-LAST:event_HomeButtonMouseClicked
 
-    private void userbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userbuttMouseClicked
+    private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        String a = jTextField1.getText();
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        String a = SearchBox.getText();
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+        Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"ha", null, null, null},
                 {"null", null, null, null},
@@ -522,73 +522,73 @@ public class Home extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }));
-    }//GEN-LAST:event_userbuttMouseClicked
+    }//GEN-LAST:event_UserButtonMouseClicked
 
-    private void orderbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderbuttMouseClicked
+    private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-    }//GEN-LAST:event_orderbuttMouseClicked
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+    }//GEN-LAST:event_OrderButtonMouseClicked
 
-    private void billbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billbuttMouseClicked
+    private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-    }//GEN-LAST:event_billbuttMouseClicked
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+    }//GEN-LAST:event_BillButtonMouseClicked
 
-    private void servbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_servbuttMouseClicked
+    private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ServiceButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-    }//GEN-LAST:event_servbuttMouseClicked
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+    }//GEN-LAST:event_ServiceButtonMouseClicked
 
-    private void combuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_combuttMouseClicked
+    private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputerButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-    }//GEN-LAST:event_combuttMouseClicked
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+    }//GEN-LAST:event_ComputerButtonMouseClicked
 
-    private void staffbuttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffbuttMouseClicked
+    private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StaffButtonMouseClicked
         jScrollPane1.setLocation(148, 90);
-        jTextField1.setLocation(850, 10);
-        jTextField1.setSize(100, 30);
-    }//GEN-LAST:event_staffbuttMouseClicked
+        SearchBox.setLocation(850, 10);
+        SearchBox.setSize(100, 30);
+    }//GEN-LAST:event_StaffButtonMouseClicked
 
-    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
-        if (jTextField1.getText().trim().equals("Search...")) {
-            jTextField1.setText("");
+    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusGained
+        if (SearchBox.getText().trim().equals("Search...")) {
+            SearchBox.setText("");
         }
-    }//GEN-LAST:event_jTextField1FocusGained
+    }//GEN-LAST:event_SearchBoxFocusGained
 
-    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
-        if (jTextField1.getText().trim().equals("")) {
-            jTextField1.setText("Search...");
+    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusLost
+        if (SearchBox.getText().trim().equals("")) {
+            SearchBox.setText("Search...");
         }
-    }//GEN-LAST:event_jTextField1FocusLost
+    }//GEN-LAST:event_SearchBoxFocusLost
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        if (jTextField1.getText().length() == 0){
+    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBoxActionPerformed
+        if (SearchBox.getText().length() == 0){
             JOptionPane.showMessageDialog(null,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_SearchBoxActionPerformed
 
-    private void userbuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbuttActionPerformed
+    private void UserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userbuttActionPerformed
+    }//GEN-LAST:event_UserButtonActionPerformed
 
-    private void combuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combuttActionPerformed
+    private void ComputerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputerButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_combuttActionPerformed
+    }//GEN-LAST:event_ComputerButtonActionPerformed
 
-    private void backbuttMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backbuttMouseEntered
-        backbutt.setForeground(new Color(216,174,94));
-        backbutt.setBackground(new Color(59, 59, 59));
-    }//GEN-LAST:event_backbuttMouseEntered
+    private void BackButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseEntered
+        BackButton.setForeground(new Color(216,174,94));
+        BackButton.setBackground(new Color(59, 59, 59));
+    }//GEN-LAST:event_BackButtonMouseEntered
 
-    private void backbuttMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backbuttMouseReleased
-        backbutt.setBackground(new Color(51, 51, 51));
-        backbutt.setForeground(new Color(204,204,204));
-    }//GEN-LAST:event_backbuttMouseReleased
+    private void BackButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseReleased
+        BackButton.setBackground(new Color(51, 51, 51));
+        BackButton.setForeground(new Color(204,204,204));
+    }//GEN-LAST:event_BackButtonMouseReleased
 
     /**
      * @param args the command line arguments
@@ -627,29 +627,29 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backbutt;
+    private javax.swing.JButton BackButton;
+    private javax.swing.JButton BillButton;
+    private javax.swing.JButton ComputerButton;
+    private javax.swing.JButton HomeButton;
+    private javax.swing.JButton Menu;
+    private javax.swing.JPanel MenuBar;
+    private javax.swing.JButton OrderButton;
+    private javax.swing.JTextField SearchBox;
+    private javax.swing.JButton ServiceButton;
+    private javax.swing.JButton StaffButton;
+    private javax.swing.JTable Table;
+    private javax.swing.JButton UserButton;
     private javax.swing.JPanel bar;
-    private javax.swing.JButton billbutt;
-    private javax.swing.JButton combutt;
-    private javax.swing.JButton homebutt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel menubar;
     private javax.swing.JLabel name;
-    private javax.swing.JButton option;
-    private javax.swing.JButton orderbutt;
-    private javax.swing.JButton servbutt;
-    private javax.swing.JButton staffbutt;
-    private javax.swing.JTable table;
-    private javax.swing.JButton userbutt;
     // End of variables declaration//GEN-END:variables
     int width = 120;
     int height = 800;
-    private void openmenubar() {
+    private void openMenuBar() {
         new Thread(() -> {
             for(int i=0; i<=width; i++){
-                menubar.setSize(i, height);
+                MenuBar.setSize(i, height);
                 bar.setLocation(i, 0);
                 try {     
                     Thread.sleep(2);
@@ -660,8 +660,8 @@ public class Home extends javax.swing.JFrame {
         }).start();
     }
 
-    private void closemenubar() {
-        menubar.setSize(0, height);
+    private void closeMenuBar() {
+        MenuBar.setSize(0, height);
         bar.setLocation(0, 0);
     }
     
