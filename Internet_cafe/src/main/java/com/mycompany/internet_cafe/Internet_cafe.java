@@ -49,6 +49,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PDM's Project");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(1000, 600));
         setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
 
@@ -449,52 +450,38 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        SearchBox.setLocation(148, 246);
-        SearchBox.setSize(700, 70);
-        jScrollPane1.setLocation(148, 1000);
         state = 0;
+        setDefault();
     }
 
     private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 1;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 2;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 3;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 4;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 5;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 6;
-        jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 15);
-        SearchBox.setSize(100, 30);
+        setDefault();
     }
 
     private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {
@@ -595,12 +582,20 @@ public class Internet_cafe extends javax.swing.JFrame {
     int width = 120;
     int height = 800;
     int state = 0;
+    int menustatus = 0;
     private void openMenuBar() {
+        menustatus = 1;
         new Thread(() -> {
             for(int i=0; i<=width; i++){
                 MenuBar.setSize(i, height);
                 Bar.setLocation(i, 0);
-                if (state == 0) SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
+                if (state == 0) {
+                    SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
+                    SearchBox.setSize(700, 70);
+                } else {
+                    SearchBox.setLocation(850, 15);
+                    SearchBox.setSize(100, 30);
+                }
                 jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());
                 try {     
                     Thread.sleep(2);
@@ -612,11 +607,47 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void closeMenuBar() {
+        menustatus = 0;
         MenuBar.setSize(0, height);
         Bar.setLocation(0, 0);
-        if (state == 0) SearchBox.setLocation(148, SearchBox.getY());
+        if (state == 0) {
+            SearchBox.setLocation(148, SearchBox.getY());
+            SearchBox.setSize(700, 70);
+        } else {
+            SearchBox.setLocation(850, 15);
+            SearchBox.setSize(100, 30);
+        }
         jScrollPane1.setLocation(148, jScrollPane1.getY());
     }
+
+    private void setDefault() {
+        if (menustatus == 0){
+            if (state == 0) {
+                SearchBox.setLocation(148, 250);
+                SearchBox.setSize(700, 70);
+                jScrollPane1.setLocation(148, 700);
+                
+            } else {
+                SearchBox.setLocation(850, 15);
+                SearchBox.setSize(100, 30);
+                jScrollPane1.setLocation(148, 110);
+            }
+            
+        } else{
+            if (state == 0) {
+                SearchBox.setLocation(196, 250);
+                SearchBox.setSize(700, 70);
+                jScrollPane1.setLocation(196, 700);
+            } else {
+                SearchBox.setLocation(850, 15);
+                SearchBox.setSize(100, 30);
+                jScrollPane1.setLocation(196, 110);
+                }
+        }
+        
+    }
+    
+    
     
     
 }
