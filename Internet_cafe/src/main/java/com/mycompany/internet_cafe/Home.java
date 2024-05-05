@@ -9,7 +9,7 @@ import static java.awt.SystemColor.window;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
+//import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.sql.*;
 /**
@@ -24,9 +24,9 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         setTitle("SQL Server");
-        setExtendedState(JFrame.NORMAL);
+//        setExtendedState(JFrame.NORMAL);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setVisible(true);
         String connectionUrl = "jdbc:sqlserver://LAPTOP-L1BPEKHQ:1433;databaseName=HospitalData;user=sa;password=123456;"
@@ -137,7 +137,7 @@ public class Home extends javax.swing.JFrame {
         SearchBox.setText("Search...");
         SearchBox.setActionCommand("<Not Set>");
         SearchBox.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        SearchBox.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        SearchBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         SearchBox.setNextFocusableComponent(SearchBox);
         SearchBox.setPreferredSize(new java.awt.Dimension(700, 60));
         SearchBox.setRequestFocusEnabled(false);
