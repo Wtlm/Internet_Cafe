@@ -49,6 +49,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PDM's Project");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
 
         Bar.setBackground(new java.awt.Color(51, 51, 51));
