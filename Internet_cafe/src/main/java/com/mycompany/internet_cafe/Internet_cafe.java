@@ -5,11 +5,16 @@
 package com.mycompany.internet_cafe;
 
 import java.awt.Color;
-import static java.awt.SystemColor.window;
+import java.awt.Cursor;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-//import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.sql.*;
 /**
@@ -59,6 +64,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         BackButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PDM's Project");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1000, 600));
 
         bar.setBackground(new java.awt.Color(51, 51, 51));
@@ -125,13 +132,18 @@ public class Internet_cafe extends javax.swing.JFrame {
         );
 
         jPanel1.setToolTipText("");
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel1MousePressed(evt);
+            }
+        });
 
         SearchBox.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         SearchBox.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         SearchBox.setText("Search...");
         SearchBox.setActionCommand("<Not Set>");
         SearchBox.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        SearchBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        SearchBox.setCursor(null);
         SearchBox.setNextFocusableComponent(SearchBox);
         SearchBox.setPreferredSize(new java.awt.Dimension(700, 60));
         SearchBox.setRequestFocusEnabled(false);
@@ -142,6 +154,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 SearchBoxFocusLost(evt);
+            }
+        });
+        SearchBox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                SearchBoxMousePressed(evt);
             }
         });
         SearchBox.addActionListener(new java.awt.event.ActionListener() {
@@ -459,41 +476,41 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_MenuActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void OrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_OrderButtonActionPerformed
 
     private void MenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseClicked
-        openMenuBar();        // TODO add your handling code here:
+        openMenuBar();        
     }//GEN-LAST:event_MenuMouseClicked
 
     private void MenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseEntered
-    // TODO add your handling code here:
+    
     }//GEN-LAST:event_MenuMouseEntered
 
     private void MenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseExited
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_MenuMouseExited
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
-        closeMenuBar();// TODO add your handling code here:
+        closeMenuBar();
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
             new Thread(() -> {
-                for (int i = 247; i>=10; i--){
+                for (int i = 246; i>=10; i--){                   
                     SearchBox.setSize(700, 30);
                     SearchBox.setLocation(148, i);
                     jScrollPane1.setLocation(148, 90 + i*2);
@@ -508,56 +525,51 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchBoxKeyPressed
 
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseClicked
-        SearchBox.setLocation(148, 247);
+        SearchBox.setLocation(148, 246);
         SearchBox.setSize(700, 70);
         jScrollPane1.setLocation(148, 1000);
+        state = 0;
     }//GEN-LAST:event_HomeButtonMouseClicked
 
     private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserButtonMouseClicked
+        state = 1;
         jScrollPane1.setLocation(148, 90);
-        String a = SearchBox.getText();
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
-        Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"ha", null, null, null},
-                {"null", null, null, null},
-                {a, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }));
     }//GEN-LAST:event_UserButtonMouseClicked
 
     private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderButtonMouseClicked
+        state = 2;
         jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
     }//GEN-LAST:event_OrderButtonMouseClicked
 
     private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillButtonMouseClicked
+        state = 3;
         jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
     }//GEN-LAST:event_BillButtonMouseClicked
 
     private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ServiceButtonMouseClicked
+        state = 4;
         jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
     }//GEN-LAST:event_ServiceButtonMouseClicked
 
     private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputerButtonMouseClicked
+        state = 5;
         jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
     }//GEN-LAST:event_ComputerButtonMouseClicked
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StaffButtonMouseClicked
+        state = 6;
         jScrollPane1.setLocation(148, 90);
-        SearchBox.setLocation(850, 10);
+        SearchBox.setLocation(850, 15);
         SearchBox.setSize(100, 30);
     }//GEN-LAST:event_StaffButtonMouseClicked
 
@@ -575,16 +587,16 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBoxActionPerformed
         if (SearchBox.getText().length() == 0){
-            JOptionPane.showMessageDialog(null,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_SearchBoxActionPerformed
 
     private void UserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_UserButtonActionPerformed
 
     private void ComputerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputerButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_ComputerButtonActionPerformed
 
     private void BackButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseEntered
@@ -596,6 +608,18 @@ public class Internet_cafe extends javax.swing.JFrame {
         BackButton.setBackground(new Color(51, 51, 51));
         BackButton.setForeground(new Color(204,204,204));
     }//GEN-LAST:event_BackButtonMouseReleased
+
+    private void SearchBoxMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SearchBoxMousePressed
+//        if (!SearchBox.contains(evt.getPoint()))
+//            SearchBox.setFocusable(true);
+//            SearchBox.setCursor(new Cursor(Cursor.TEXT_CURSOR));
+    }//GEN-LAST:event_SearchBoxMousePressed
+
+    private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
+//        if (jPanel1.contains(evt.getPoint()) && (jScrollPane1.contains(evt.getPoint()) || SearchBox.contains(evt.getPoint()))){
+//            SearchBox.setCursor(null);
+//        }
+    }//GEN-LAST:event_jPanel1MousePressed
 
     /**
      * @param args the command line arguments
@@ -653,11 +677,14 @@ public class Internet_cafe extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     int width = 120;
     int height = 800;
+    int state = 0;
     private void openMenuBar() {
         new Thread(() -> {
             for(int i=0; i<=width; i++){
                 MenuBar.setSize(i, height);
                 bar.setLocation(i, 0);
+                if (state == 0) SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
+                jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());
                 try {     
                     Thread.sleep(2);
                 } catch (InterruptedException ex) {
@@ -670,6 +697,8 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void closeMenuBar() {
         MenuBar.setSize(0, height);
         bar.setLocation(0, 0);
+        if (state == 0) SearchBox.setLocation(148, SearchBox.getY());
+        jScrollPane1.setLocation(148, jScrollPane1.getY());
     }
     
     
