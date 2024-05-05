@@ -336,11 +336,6 @@ public class Internet_cafe extends javax.swing.JFrame {
                 StaffButtonMouseClicked(evt);
             }
         });
-        StaffButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StaffButtonActionPerformed(evt);
-            }
-        });
 
         BackButton.setBackground(new java.awt.Color(51, 51, 51));
         BackButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -405,11 +400,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetailButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 OrderDetailButtonMouseClicked(evt);
-            }
-        });
-        OrderDetailButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderDetailButtonActionPerformed(evt);
             }
         });
 
@@ -493,20 +483,14 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TakeCareButtonMouseClicked
-        // TODO add your handling code here:
+        state = 8;
+        setDefault();
     }//GEN-LAST:event_TakeCareButtonMouseClicked
 
     private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailButtonMouseClicked
-        // TODO add your handling code here:
+        state = 6;
+        setDefault();
     }//GEN-LAST:event_OrderDetailButtonMouseClicked
-
-    private void OrderDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDetailButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderDetailButtonActionPerformed
-
-    private void StaffButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StaffButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_StaffButtonActionPerformed
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
@@ -556,9 +540,11 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 6;
+        state = 7;
         setDefault();
     }
+    
+    
 
     private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {
         if (SearchBox.getText().trim().equals("Search...")) {
