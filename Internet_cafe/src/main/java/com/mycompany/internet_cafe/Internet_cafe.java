@@ -45,6 +45,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerButton = new javax.swing.JButton();
         StaffButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
+        TakeCareButton = new javax.swing.JButton();
+        OrderDetailButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PDM's Project");
@@ -334,6 +336,11 @@ public class Internet_cafe extends javax.swing.JFrame {
                 StaffButtonMouseClicked(evt);
             }
         });
+        StaffButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StaffButtonActionPerformed(evt);
+            }
+        });
 
         BackButton.setBackground(new java.awt.Color(51, 51, 51));
         BackButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -359,6 +366,53 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
+        TakeCareButton.setBackground(new java.awt.Color(51, 51, 51));
+        TakeCareButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        TakeCareButton.setForeground(new java.awt.Color(242, 242, 242));
+        TakeCareButton.setText("  Take care");
+        TakeCareButton.setBorder(null);
+        TakeCareButton.setBorderPainted(false);
+        TakeCareButton.setContentAreaFilled(false);
+        TakeCareButton.setEnabled(false);
+        TakeCareButton.setFocusPainted(false);
+        TakeCareButton.setFocusable(false);
+        TakeCareButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        TakeCareButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        TakeCareButton.setRequestFocusEnabled(false);
+        TakeCareButton.setRolloverEnabled(false);
+        TakeCareButton.setVerifyInputWhenFocusTarget(false);
+        TakeCareButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TakeCareButtonMouseClicked(evt);
+            }
+        });
+
+        OrderDetailButton.setBackground(new java.awt.Color(51, 51, 51));
+        OrderDetailButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        OrderDetailButton.setForeground(new java.awt.Color(242, 242, 242));
+        OrderDetailButton.setText("  Order detail");
+        OrderDetailButton.setBorder(null);
+        OrderDetailButton.setBorderPainted(false);
+        OrderDetailButton.setContentAreaFilled(false);
+        OrderDetailButton.setEnabled(false);
+        OrderDetailButton.setFocusPainted(false);
+        OrderDetailButton.setFocusable(false);
+        OrderDetailButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        OrderDetailButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        OrderDetailButton.setRequestFocusEnabled(false);
+        OrderDetailButton.setRolloverEnabled(false);
+        OrderDetailButton.setVerifyInputWhenFocusTarget(false);
+        OrderDetailButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OrderDetailButtonMouseClicked(evt);
+            }
+        });
+        OrderDetailButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderDetailButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MenuBarLayout = new javax.swing.GroupLayout(MenuBar);
         MenuBar.setLayout(MenuBarLayout);
         MenuBarLayout.setHorizontalGroup(
@@ -375,7 +429,9 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(StaffButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(BackButton)))
+                        .addComponent(BackButton))
+                    .addComponent(OrderDetailButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TakeCareButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         MenuBarLayout.setVerticalGroup(
@@ -394,10 +450,14 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ComputerButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(OrderDetailButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(StaffButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TakeCareButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BackButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(591, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -431,6 +491,22 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
         closeMenuBar();
     }//GEN-LAST:event_BackButtonMouseClicked
+
+    private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TakeCareButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TakeCareButtonMouseClicked
+
+    private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrderDetailButtonMouseClicked
+
+    private void OrderDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDetailButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrderDetailButtonActionPerformed
+
+    private void StaffButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StaffButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StaffButtonActionPerformed
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
@@ -570,10 +646,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JPanel MenuBar;
     private javax.swing.JLabel Name;
     private javax.swing.JButton OrderButton;
+    private javax.swing.JButton OrderDetailButton;
     private javax.swing.JTextField SearchBox;
     private javax.swing.JButton ServiceButton;
     private javax.swing.JButton StaffButton;
     private javax.swing.JTable Table;
+    private javax.swing.JButton TakeCareButton;
     private javax.swing.JButton UserButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
