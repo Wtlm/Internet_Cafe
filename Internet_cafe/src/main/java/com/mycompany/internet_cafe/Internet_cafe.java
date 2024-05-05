@@ -47,6 +47,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         BackButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1000, 600));
+        setResizable(false);
 
         Bar.setBackground(new java.awt.Color(51, 51, 51));
         Bar.setPreferredSize(new java.awt.Dimension(1000, 50));
@@ -87,7 +89,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Name, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
+                .addComponent(Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         BarLayout.setVerticalGroup(
@@ -298,6 +300,11 @@ public class Internet_cafe extends javax.swing.JFrame {
                 ComputerButtonMouseClicked(evt);
             }
         });
+        ComputerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComputerButtonActionPerformed(evt);
+            }
+        });
 
         StaffButton.setBackground(new java.awt.Color(51, 51, 51));
         StaffButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -394,7 +401,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Bar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -515,6 +522,10 @@ public class Internet_cafe extends javax.swing.JFrame {
         BackButton.setBackground(new Color(51, 51, 51));
         BackButton.setForeground(new Color(204,204,204));
     }//GEN-LAST:event_BackButtonMouseReleased
+
+    private void ComputerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComputerButtonActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
