@@ -2,10 +2,6 @@ package com.mycompany.internet_cafe;
 
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -53,7 +49,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PDM's Project");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
 
         Bar.setBackground(new java.awt.Color(51, 51, 51));
@@ -314,11 +309,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ComputerButtonMouseClicked(evt);
-            }
-        });
-        ComputerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComputerButtonActionPerformed(evt);
             }
         });
 
@@ -608,7 +598,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         new Thread(() -> {
             for(int i=0; i<=width; i++){
                 MenuBar.setSize(i, height);
-                bar.setLocation(i, 0);
+                Bar.setLocation(i, 0);
                 if (state == 0) SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
                 jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());
                 try {     
@@ -622,7 +612,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void closeMenuBar() {
         MenuBar.setSize(0, height);
-        bar.setLocation(0, 0);
+        Bar.setLocation(0, 0);
         if (state == 0) SearchBox.setLocation(148, SearchBox.getY());
         jScrollPane1.setLocation(148, jScrollPane1.getY());
     }
