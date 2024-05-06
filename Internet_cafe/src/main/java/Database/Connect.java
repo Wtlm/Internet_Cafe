@@ -18,7 +18,7 @@ public class Connect {
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://LAPTOP-L1BPEKHQ:1433;databaseName=InternetCafe;user=sa;password=123456;"
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
             + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);
@@ -28,27 +28,8 @@ public class Connect {
         }   
     }
     
-    public void displayData(String cmd){
-        try{
-            rs = s.executeQuery(cmd);
-            rs.last();
-            int row = rs.getRow();
-            int col = rs.getMetaData().getColumnCount();
-            rs.beforeFirst();
-            rowData = new String[row][col];
-            int r = 0;
-            while(rs.next()){
-                for(int i = 0; i < col; i++){
-                    rowData[r][i] = rs.getString(i+1);
-                }
-                r++;
-            }
-        }catch(SQLException e){
-            e.printStackTrace();
-        } 
-    }
     
-    public void displaySearch(String cmd){
+    public void displayData(String cmd){
         try {
             rs = s.executeQuery(cmd);
             ResultSetMetaData metaData = rs.getMetaData();

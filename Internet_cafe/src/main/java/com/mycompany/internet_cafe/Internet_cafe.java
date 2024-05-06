@@ -512,11 +512,19 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_TakeCareButtonMouseClicked
         state = 8;
         setDefault();
+        
+        connect.displayData("SELECT * FROM TakeCare");
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, connect.columnName);
     }// GEN-LAST:event_TakeCareButtonMouseClicked
 
     private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OrderDetailButtonMouseClicked
         state = 6;
         setDefault();
+        
+        connect.displayData("SELECT * FROM OrderDetail");
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, connect.columnName);
     }// GEN-LAST:event_OrderDetailButtonMouseClicked
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {
@@ -529,7 +537,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         
         String cmd = SearchBox.getText();
-        connect.displaySearch(cmd);
+        connect.displayData(cmd);
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         jScrollPane1.setViewportView(Table);
@@ -545,9 +553,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Users");
-        String[] columnName = { "User ID", "Account", "Password", "Remaining Time" };
+
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -555,9 +563,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Orders");
-        String[] columnName = { "Order ID", "Staff ID", "Order Date", "User ID" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -565,9 +572,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Bill");
-        String[] columnName = { "Bill ID", "Order ID", "Pay Date", "Payment Method" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -575,9 +581,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Service");
-        String[] columnName = { "Service ID", "Price", "Description", "Type" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -585,9 +590,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Computer");
-        String[] columnName = { "Computer ID", "Status", "User ID", "Start Time" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -595,9 +599,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefault();
 
         connect.displayData("SELECT * FROM Staff");
-        String[] columnName = { "Staff ID", "Staff Name", "Date of Birth", "Phone Number", "Address" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
-        model.setDataVector(connect.rowData, columnName);
+        model.setDataVector(connect.rowData, connect.columnName);
     }
     
     
