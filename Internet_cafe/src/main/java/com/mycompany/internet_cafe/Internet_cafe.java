@@ -51,9 +51,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PDM's Project");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMaximumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
+        setSize(new java.awt.Dimension(1000, 600));
 
         Bar.setBackground(new java.awt.Color(51, 51, 51));
         Bar.setPreferredSize(new java.awt.Dimension(1000, 50));
@@ -148,22 +147,51 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setEnabled(false);
+        jScrollPane1.setFocusable(false);
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.setRequestFocusEnabled(false);
+
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"ha", null, null, null},
-                {"ha", null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "1", "2", "3", "4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        Table.setAutoscrolls(false);
+        Table.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Table.setDropMode(javax.swing.DropMode.ON_OR_INSERT);
+        Table.setEnabled(false);
         Table.setFocusable(false);
         Table.setPreferredSize(new java.awt.Dimension(700, 300));
         Table.setRequestFocusEnabled(false);
+        Table.setShowGrid(true);
+        Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(Table);
+        Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        if (Table.getColumnModel().getColumnCount() > 0) {
+            Table.getColumnModel().getColumn(0).setResizable(false);
+            Table.getColumnModel().getColumn(1).setResizable(false);
+            Table.getColumnModel().getColumn(2).setResizable(false);
+            Table.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -181,13 +209,13 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(258, 258, 258)
                 .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(235, 235, 235)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         MenuBar.setBackground(new java.awt.Color(51, 51, 51));
-        MenuBar.setPreferredSize(new java.awt.Dimension(120, 273));
+        MenuBar.setPreferredSize(new java.awt.Dimension(130, 273));
 
         HomeButton.setBackground(new java.awt.Color(51, 51, 51));
         HomeButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -420,7 +448,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BackButton))
-                    .addComponent(OrderDetailButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(OrderDetailButton, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                     .addComponent(TakeCareButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -447,7 +475,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addComponent(TakeCareButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BackButton)
-                .addContainerGap(591, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -472,6 +500,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseClicked
@@ -494,18 +523,11 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
-            new Thread(() -> {
-                for (int i = 246; i>=10; i--){                   
-                    SearchBox.setSize(700, 30);
-                    SearchBox.setLocation(148, i);
-                    jScrollPane1.setLocation(148, 90 + i*2);
-                    try {
-                        Thread.sleep(1);
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(Internet_cafe.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
-            }).start();
+            for (int i = 246; i>=10; i--){                   
+                SearchBox.setSize(700, 30);
+                SearchBox.setLocation(148, i);
+                jScrollPane1.setLocation(148, 90 + i*2);
+            }           
         }
     }
 
@@ -595,6 +617,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        new Internet_cafe().setVisible(true);
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -614,12 +637,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Internet_cafe().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new Internet_cafe().setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -643,31 +666,24 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
     
-    int width = 120;
+    int width = 130;
     int height = 800;
     int state = 0;
     int menustatus = 0;
     private void openMenuBar() {
-        menustatus = 1;
-        new Thread(() -> {
-            for(int i=0; i<=width; i++){
-                MenuBar.setSize(i, height);
-                Bar.setLocation(i, 0);
-                if (state == 0) {
-                    SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
-                    SearchBox.setSize(700, 70);
-                } else {
-                    SearchBox.setLocation(850, 15);
-                    SearchBox.setSize(100, 30);
-                }
-                jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());
-                try {     
-                    Thread.sleep(2);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Internet_cafe.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }  
-        }).start();
+        menustatus = 1;       
+        for(int i=0; i<=width; i++){
+            MenuBar.setSize(i, height);
+            Bar.setLocation(i, 0);
+            if (state == 0) {
+                SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
+                SearchBox.setSize(700, 70);
+            } else {
+                SearchBox.setLocation(850, 15);
+                SearchBox.setSize(100, 30);
+            }
+            jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());  
+        }
     }
 
     private void closeMenuBar() {
