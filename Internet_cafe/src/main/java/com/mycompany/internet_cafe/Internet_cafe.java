@@ -1,11 +1,13 @@
 package com.mycompany.internet_cafe;
 
+import Database.Connect;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,19 +15,22 @@ import java.sql.*;
  */
 
 public class Internet_cafe extends javax.swing.JFrame {
+    Connect connect;
+
     public Internet_cafe() {
         initComponents();
-        
-        String connectionUrl = "jdbc:sqlserver://LAPTOP-L1BPEKHQ:1433;databaseName=HospitalData;user=sa;password=123456;"
+        connect = new Connect();
+        String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
                 + "encrypt=true;trustServerCertificate=true;";
-        try{
+        try {
             Connection con = DriverManager.getConnection(connectionUrl);
-        }catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    
+
     @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -215,7 +220,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         );
 
         MenuBar.setBackground(new java.awt.Color(51, 51, 51));
-        MenuBar.setPreferredSize(new java.awt.Dimension(130, 273));
+        MenuBar.setPreferredSize(new java.awt.Dimension(140, 273));
 
         HomeButton.setBackground(new java.awt.Color(51, 51, 51));
         HomeButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -242,7 +247,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserButton.setBackground(new java.awt.Color(51, 51, 51));
         UserButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         UserButton.setForeground(new java.awt.Color(242, 242, 242));
-        UserButton.setText("  User");
+        UserButton.setText("  Users");
         UserButton.setBorder(null);
         UserButton.setBorderPainted(false);
         UserButton.setContentAreaFilled(false);
@@ -259,11 +264,16 @@ public class Internet_cafe extends javax.swing.JFrame {
                 UserButtonMouseClicked(evt);
             }
         });
+        UserButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserButtonActionPerformed(evt);
+            }
+        });
 
         OrderButton.setBackground(new java.awt.Color(51, 51, 51));
         OrderButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         OrderButton.setForeground(new java.awt.Color(242, 242, 242));
-        OrderButton.setText("  Order");
+        OrderButton.setText("  Orders");
         OrderButton.setBorder(null);
         OrderButton.setBorderPainted(false);
         OrderButton.setContentAreaFilled(false);
@@ -392,7 +402,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareButton.setBackground(new java.awt.Color(51, 51, 51));
         TakeCareButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         TakeCareButton.setForeground(new java.awt.Color(242, 242, 242));
-        TakeCareButton.setText("  Take care");
+        TakeCareButton.setText("  Take Care");
         TakeCareButton.setBorder(null);
         TakeCareButton.setBorderPainted(false);
         TakeCareButton.setContentAreaFilled(false);
@@ -413,7 +423,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetailButton.setBackground(new java.awt.Color(51, 51, 51));
         OrderDetailButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         OrderDetailButton.setForeground(new java.awt.Color(242, 242, 242));
-        OrderDetailButton.setText("  Order detail");
+        OrderDetailButton.setText("  Order Detail");
         OrderDetailButton.setBorder(null);
         OrderDetailButton.setBorderPainted(false);
         OrderDetailButton.setContentAreaFilled(false);
@@ -503,23 +513,27 @@ public class Internet_cafe extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMouseClicked
-        openMenuBar();        
-    }//GEN-LAST:event_MenuMouseClicked
+    private void UserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UserButtonActionPerformed
 
-    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
+    private void MenuMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_MenuMouseClicked
+        openMenuBar();
+    }// GEN-LAST:event_MenuMouseClicked
+
+    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_BackButtonMouseClicked
         closeMenuBar();
-    }//GEN-LAST:event_BackButtonMouseClicked
+    }// GEN-LAST:event_BackButtonMouseClicked
 
-    private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TakeCareButtonMouseClicked
+    private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_TakeCareButtonMouseClicked
         state = 8;
         setDefault();
-    }//GEN-LAST:event_TakeCareButtonMouseClicked
+    }// GEN-LAST:event_TakeCareButtonMouseClicked
 
-    private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailButtonMouseClicked
+    private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OrderDetailButtonMouseClicked
         state = 6;
         setDefault();
-    }//GEN-LAST:event_OrderDetailButtonMouseClicked
+    }// GEN-LAST:event_OrderDetailButtonMouseClicked
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
@@ -534,36 +548,73 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 0;
         setDefault();
+
+        String cmd = SearchBox.getText();
+        connect.displayData(cmd);
+        String[] columnName = { "User ID", "Account", "Password", "Remaining Time" };
+        DefaultTableModel model = new DefaultTableModel(connect.rowData, columnName);
+        Table.setModel(model);
+        jScrollPane1.setViewportView(Table);
     }
 
     private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 1;
         setDefault();
+
+        connect.displayData("SELECT * FROM Users");
+        String[] columnName = { "User ID", "Account", "Password", "Remaining Time" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
 
     private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 2;
         setDefault();
+
+        connect.displayData("SELECT * FROM Order");
+        String[] columnName = { "Order ID", "Staff ID", "Order Date", "User ID" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
 
     private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 3;
         setDefault();
+
+        connect.displayData("SELECT * FROM Bill");
+        String[] columnName = { "Bill ID", "Order ID", "Pay Date", "Payment Method" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
 
     private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 4;
         setDefault();
+
+        connect.displayData("SELECT * FROM Service");
+        String[] columnName = { "Service ID", "Price", "Description", "Type" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
 
     private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 5;
         setDefault();
+
+        connect.displayData("SELECT * FROM Computer");
+        String[] columnName = { "Computer ID", "Status", "User ID", "Start Time" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 7;
         setDefault();
+
+        connect.displayData("SELECT * FROM Staff");
+        String[] columnName = { "Staff ID", "Staff Name", "Date of Birth", "Phone Number", "Address" };
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, columnName);
     }
     
     
@@ -581,31 +632,33 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {
-        if (SearchBox.getText().length() == 0){
-            JOptionPane.showMessageDialog(this,"Please input query string!","Message", JOptionPane.WARNING_MESSAGE);
+        if (SearchBox.getText().length() == 0) {
+            JOptionPane.showMessageDialog(this, "Please input query string!", "Message", JOptionPane.WARNING_MESSAGE);
         }
     }
 
     private void BackButtonMouseEntered(java.awt.event.MouseEvent evt) {
-        BackButton.setForeground(new Color(216,174,94));
+        BackButton.setForeground(new Color(216, 174, 94));
         BackButton.setBackground(new Color(59, 59, 59));
     }
 
     private void BackButtonMouseReleased(java.awt.event.MouseEvent evt) {
         BackButton.setBackground(new Color(51, 51, 51));
-        BackButton.setForeground(new Color(204,204,204));
+        BackButton.setForeground(new Color(204, 204, 204));
     }
 
     private void SearchBoxMousePressed(java.awt.event.MouseEvent evt) {
-//        if (!SearchBox.contains(evt.getPoint()))
-//            SearchBox.setFocusable(true);
-//            SearchBox.setCursor(new Cursor(Cursor.TEXT_CURSOR));
+        // if (!SearchBox.contains(evt.getPoint()))
+        // SearchBox.setFocusable(true);
+        // SearchBox.setCursor(new Cursor(Cursor.TEXT_CURSOR));
     }
 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {
-//        if (jPanel1.contains(evt.getPoint()) && (jScrollPane1.contains(evt.getPoint()) || SearchBox.contains(evt.getPoint()))){
-//            SearchBox.setCursor(null);
-//        }
+        // if (jPanel1.contains(evt.getPoint()) &&
+        // (jScrollPane1.contains(evt.getPoint()) ||
+        // SearchBox.contains(evt.getPoint()))){
+        // SearchBox.setCursor(null);
+        // }
     }
 
     /**
@@ -613,9 +666,13 @@ public class Internet_cafe extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         new Internet_cafe().setVisible(true);
         try {
@@ -626,15 +683,19 @@ public class Internet_cafe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
-        //</editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
@@ -670,6 +731,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     int height = 800;
     int state = 0;
     int menustatus = 0;
+
     private void openMenuBar() {
         menustatus = 1;       
         for(int i=0; i<=width; i++){
@@ -701,19 +763,19 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void setDefault() {
-        if (menustatus == 0){
+        if (menustatus == 0) {
             if (state == 0) {
                 SearchBox.setLocation(148, 250);
                 SearchBox.setSize(700, 70);
                 jScrollPane1.setLocation(148, 700);
-                
+
             } else {
                 SearchBox.setLocation(850, 15);
                 SearchBox.setSize(100, 30);
                 jScrollPane1.setLocation(148, 110);
             }
-            
-        } else{
+
+        } else {
             if (state == 0) {
                 SearchBox.setLocation(196, 250);
                 SearchBox.setSize(700, 70);
@@ -722,11 +784,11 @@ public class Internet_cafe extends javax.swing.JFrame {
                 SearchBox.setLocation(850, 15);
                 SearchBox.setSize(100, 30);
                 jScrollPane1.setLocation(196, 110);
-                }
+            }
         }
-        
+
     }
-    
+
     
     
     
