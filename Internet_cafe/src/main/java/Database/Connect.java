@@ -14,27 +14,15 @@ public class Connect {
     public Statement s;
     public ResultSet rs;
     public String rowData[][];
+    public String columnName[];
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
-                + "encrypt=true;trustServerCertificate=true;";
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-L1BPEKHQ:1433;databaseName=InternetCafe;user=sa;password=123456;"
+            + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);
             s = connect.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-//            rs = s .executeQuery("SELECT * FROM Service");
-//            rs.last();
-//            int row = rs.getRow();
-//            int col = rs.getMetaData().getColumnCount();
-//            rs.beforeFirst();
-//            String rowData[][] = new String[row][col];
-//            int r = 0;
-//            while(rs.next()){
-//                for(int i = 0; i < col; i++){
-//                    rowData[r][i] = rs.getString(i+1);
-//                }
-//                row++;
-//            }
         }catch(SQLException e){
             e.printStackTrace();
         }   
@@ -58,5 +46,31 @@ public class Connect {
         }catch(SQLException e){
             e.printStackTrace();
         } 
+    }
+    
+    public void displaySearch(String cmd){
+        try {
+            rs = s.executeQuery(cmd);
+            ResultSetMetaData metaData = rs.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            columnName = new String[columnCount];
+            for (int i = 0; i < columnCount; i++) {
+                columnName[i] = metaData.getColumnName(i+1);
+            }
+            rs.last();
+            int row = rs.getRow();
+            int col = rs.getMetaData().getColumnCount();
+            rs.beforeFirst();
+            rowData = new String[row][col];
+            int r = 0;
+            while(rs.next()){
+                for(int i = 0; i < col; i++){
+                    rowData[r][i] = rs.getString(i+1);
+                }
+                r++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -20,13 +20,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     public Internet_cafe() {
         initComponents();
         connect = new Connect();
-        String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
-                + "encrypt=true;trustServerCertificate=true;";
-        try {
-            Connection con = DriverManager.getConnection(connectionUrl);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     @SuppressWarnings("unchecked")
@@ -155,31 +148,22 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane1.setBorder(null);
         jScrollPane1.setEnabled(false);
         jScrollPane1.setFocusable(false);
-        jScrollPane1.setOpaque(false);
         jScrollPane1.setRequestFocusEnabled(false);
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "1", "2", "3", "4"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         Table.setAutoscrolls(false);
         Table.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Table.setDropMode(javax.swing.DropMode.ON_OR_INSERT);
@@ -458,7 +442,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BackButton))
-                    .addComponent(OrderDetailButton, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                    .addComponent(OrderDetailButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(TakeCareButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -543,18 +527,17 @@ public class Internet_cafe extends javax.swing.JFrame {
                 jScrollPane1.setLocation(148, 90 + i*2);
             }           
         }
+        
+        String cmd = SearchBox.getText();
+        connect.displaySearch(cmd);
+        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        model.setDataVector(connect.rowData, connect.columnName);
+        jScrollPane1.setViewportView(Table);
     }
 
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {
         state = 0;
         setDefault();
-
-        String cmd = SearchBox.getText();
-        connect.displayData(cmd);
-        String[] columnName = { "User ID", "Account", "Password", "Remaining Time" };
-        DefaultTableModel model = new DefaultTableModel(connect.rowData, columnName);
-        Table.setModel(model);
-        jScrollPane1.setViewportView(Table);
     }
 
     private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -571,7 +554,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         state = 2;
         setDefault();
 
-        connect.displayData("SELECT * FROM Order");
+        connect.displayData("SELECT * FROM Orders");
         String[] columnName = { "Order ID", "Staff ID", "Order Date", "User ID" };
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
         model.setDataVector(connect.rowData, columnName);
