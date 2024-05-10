@@ -4,6 +4,7 @@
  */
 package Database;
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Connect {
     public ResultSet rs;
     public String rowData[][];
     public String columnName[];
+    public boolean status;
     
     public Connect(){
        try{
@@ -50,8 +52,9 @@ public class Connect {
                 }
                 r++;
             }
+            status = true;
         } catch (SQLException e) {
-            e.printStackTrace();
+            status = false;
         }
     }
 }

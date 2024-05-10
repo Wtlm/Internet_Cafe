@@ -1827,17 +1827,20 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
-                              
-            SearchBox.setSize(700, 30);
-            SearchBox.setLocation(148, 40);
-            jScrollPane1.setSize(650, 350);
-            jScrollPane1.setLocation(148, 110);
-
+            
             String cmd = SearchBox.getText();
             connect.displayData(cmd);
             DefaultTableModel model = (DefaultTableModel) Table.getModel();
             model.setDataVector(connect.rowData, connect.columnName);
             jScrollPane1.setViewportView(Table);
+            if (connect.status){
+                SearchBox.setSize(700, 30);
+                SearchBox.setLocation(148, 40);
+                jScrollPane1.setSize(650, 350);
+                jScrollPane1.setLocation(148, 110);
+            } else {
+                JOptionPane.showMessageDialog(null, "Incorrect syntax, please enter again!", "Message", JOptionPane.WARNING_MESSAGE);
+            }          
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
 
