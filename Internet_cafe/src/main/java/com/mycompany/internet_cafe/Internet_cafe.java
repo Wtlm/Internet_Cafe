@@ -14,13 +14,11 @@ import javax.swing.table.DefaultTableModel;
 
 public class Internet_cafe extends javax.swing.JFrame {
     Connect connect;
-    boolean menuSize;
 
     public Internet_cafe() {
         initComponents();
         connect = new Connect();
         submenu.setSize(0,0);
-        menuSize = false;
         
     }
 
@@ -624,7 +622,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
             }
         ));
-        UserTable.setColumnSelectionAllowed(true);
+        UserTable.setCellSelectionEnabled(false);
         UserTable.setMaximumSize(new java.awt.Dimension(500, 550));
         UserTable.setMinimumSize(new java.awt.Dimension(500, 550));
         UserTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1748,15 +1746,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuButtonMouseClicked
-        if (!menuSize) {
-            submenu.setSize(150, 340);
-            menuSize = true;
-        }
-        else {
-            submenu.setSize(0,0);
-            menuSize = false;
-        }
-        
+        menuSize(true);
     }//GEN-LAST:event_menuButtonMouseClicked
 
     private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseClicked
@@ -1764,7 +1754,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Users");
         DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_usersButtonMouseClicked
 
     private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseClicked
@@ -1772,7 +1762,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Staff");
         DefaultTableModel model = (DefaultTableModel) StaffTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_staffButtonMouseClicked
 
     private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseClicked
@@ -1780,7 +1770,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Computer");
         DefaultTableModel model = (DefaultTableModel) ComputerTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_computerButtonMouseClicked
 
     private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseClicked
@@ -1788,6 +1778,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Service");
         DefaultTableModel model = (DefaultTableModel) ServiceTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
+        menuSize(false);
     }//GEN-LAST:event_serviceButtonMouseClicked
 
     private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseClicked
@@ -1795,7 +1786,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Orders");
         DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_ordersButtonMouseClicked
 
     private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseClicked
@@ -1803,6 +1794,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM OrderDetail");
         DefaultTableModel model = (DefaultTableModel) OrderDetailTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
+        menuSize(false);
     }//GEN-LAST:event_orderDetailButtonMouseClicked
 
     private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseClicked
@@ -1810,7 +1802,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM Bill");
         DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_billButtonMouseClicked
 
     private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseClicked
@@ -1818,11 +1810,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.displayData("SELECT * FROM TakeCare");
         DefaultTableModel model = (DefaultTableModel) TakeCareTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        
+        menuSize(false);
     }//GEN-LAST:event_takeCareButtonMouseClicked
 
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
         jTabbedPane.setSelectedIndex(0);
+        menuSize(false);
     }//GEN-LAST:event_homeButtonMouseClicked
 
     private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
@@ -1867,7 +1860,15 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
-
+    
+    private void menuSize(boolean status){
+        if (status) {
+            submenu.setSize(150, 340);
+        }
+        else {
+            submenu.setSize(0,0);
+        }
+    }
     /**
      * @param args the command line arguments
      */
