@@ -1762,7 +1762,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseClicked
         jTabbedPane.setSelectedIndex(1);
         connect.displayData("SELECT * FROM Users");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_usersButtonMouseClicked
@@ -1770,7 +1770,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseClicked
         jTabbedPane.setSelectedIndex(2);
         connect.displayData("SELECT * FROM Staff");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) StaffTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_staffButtonMouseClicked
@@ -1778,7 +1778,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseClicked
         jTabbedPane.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) ComputerTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_computerButtonMouseClicked
@@ -1793,7 +1793,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseClicked
         jTabbedPane.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_ordersButtonMouseClicked
@@ -1801,14 +1801,14 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseClicked
         jTabbedPane.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) OrderDetailTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
     }//GEN-LAST:event_orderDetailButtonMouseClicked
 
     private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseClicked
         jTabbedPane.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_billButtonMouseClicked
@@ -1816,7 +1816,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseClicked
         jTabbedPane.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare");
-        DefaultTableModel model = (DefaultTableModel) Table.getModel();
+        DefaultTableModel model = (DefaultTableModel) TakeCareTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
         
     }//GEN-LAST:event_takeCareButtonMouseClicked
