@@ -48,7 +48,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         usersInterface = new javax.swing.JPanel();
-        usersInfomation = new javax.swing.JPanel();
+        UserInformation = new javax.swing.JPanel();
         uID = new javax.swing.JLabel();
         uidText = new javax.swing.JTextField();
         uAcc = new javax.swing.JLabel();
@@ -60,7 +60,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         uAdd = new javax.swing.JButton();
         uUpdate = new javax.swing.JButton();
         uDelete = new javax.swing.JButton();
-        usersTable = new javax.swing.JPanel();
+        UTable = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         UserTable = new javax.swing.JTable();
         staffInterface = new javax.swing.JPanel();
@@ -82,19 +82,19 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         StaffTable = new javax.swing.JTable();
         computerInterface = new javax.swing.JPanel();
-        ComputerInformation = new javax.swing.JPanel();
-        cID = new javax.swing.JLabel();
-        cidText = new javax.swing.JTextField();
-        cStatus = new javax.swing.JLabel();
-        cON = new javax.swing.JRadioButton();
-        cOFF = new javax.swing.JRadioButton();
-        cUserID = new javax.swing.JLabel();
-        cuseridText = new javax.swing.JTextField();
-        cTime = new javax.swing.JLabel();
-        ctimeText = new javax.swing.JTextField();
-        cAdd = new javax.swing.JButton();
-        cUpdate = new javax.swing.JButton();
-        cDelete = new javax.swing.JButton();
+        ComputerInformation6 = new javax.swing.JPanel();
+        cID6 = new javax.swing.JLabel();
+        cidText6 = new javax.swing.JTextField();
+        cStatus6 = new javax.swing.JLabel();
+        cON6 = new javax.swing.JRadioButton();
+        cOFF6 = new javax.swing.JRadioButton();
+        cUserID6 = new javax.swing.JLabel();
+        cuseridText6 = new javax.swing.JTextField();
+        cTime6 = new javax.swing.JLabel();
+        ctimeText6 = new javax.swing.JTextField();
+        cAdd6 = new javax.swing.JButton();
+        cUpdate6 = new javax.swing.JButton();
+        cDelete6 = new javax.swing.JButton();
         CTable = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         ComputerTable = new javax.swing.JTable();
@@ -503,12 +503,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addGroup(homeInterfaceLayout.createSequentialGroup()
                 .addGap(236, 236, 236)
                 .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(469, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
             .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(homeInterfaceLayout.createSequentialGroup()
                     .addGap(377, 377, 377)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(378, Short.MAX_VALUE)))
+                    .addContainerGap(173, Short.MAX_VALUE)))
         );
 
         jTabbedPane.addTab("home", homeInterface);
@@ -522,7 +522,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         usersInterface.setRequestFocusEnabled(false);
         usersInterface.setVerifyInputWhenFocusTarget(false);
 
-        usersInfomation.setPreferredSize(new java.awt.Dimension(500, 550));
+        UserInformation.setPreferredSize(new java.awt.Dimension(500, 550));
 
         uID.setText("ID");
 
@@ -550,67 +550,67 @@ public class Internet_cafe extends javax.swing.JFrame {
         uDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         uDelete.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        javax.swing.GroupLayout usersInfomationLayout = new javax.swing.GroupLayout(usersInfomation);
-        usersInfomation.setLayout(usersInfomationLayout);
-        usersInfomationLayout.setHorizontalGroup(
-            usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(usersInfomationLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInfomationLayout.createSequentialGroup()
+        javax.swing.GroupLayout UserInformationLayout = new javax.swing.GroupLayout(UserInformation);
+        UserInformation.setLayout(UserInformationLayout);
+        UserInformationLayout.setHorizontalGroup(
+            UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UserInformationLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                         .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInfomationLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                         .addComponent(uPass, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(upassText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInfomationLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                         .addComponent(uAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(uaccText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInfomationLayout.createSequentialGroup()
-                        .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
+                        .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(uTime, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 35, Short.MAX_VALUE)
-                        .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInfomationLayout.createSequentialGroup()
+                        .addGap(0, 31, Short.MAX_VALUE)
+                        .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                                 .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
+                                .addGap(31, 31, 31)
                                 .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(utimeText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
-        usersInfomationLayout.setVerticalGroup(
-            usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(usersInfomationLayout.createSequentialGroup()
+        UserInformationLayout.setVerticalGroup(
+            UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UserInformationLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uaccText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uPass, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(upassText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uTime, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(utimeText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
-                .addGroup(usersInfomationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(211, Short.MAX_VALUE))
         );
 
-        usersTable.setPreferredSize(new java.awt.Dimension(500, 550));
-        usersTable.setRequestFocusEnabled(false);
+        UTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        UTable.setRequestFocusEnabled(false);
 
         jScrollPane2.setMaximumSize(new java.awt.Dimension(500, 550));
         jScrollPane2.setMinimumSize(new java.awt.Dimension(500, 550));
@@ -631,16 +631,15 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserTable.setShowGrid(true);
         UserTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(UserTable);
-        UserTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        javax.swing.GroupLayout usersTableLayout = new javax.swing.GroupLayout(usersTable);
-        usersTable.setLayout(usersTableLayout);
-        usersTableLayout.setHorizontalGroup(
-            usersTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout UTableLayout = new javax.swing.GroupLayout(UTable);
+        UTable.setLayout(UTableLayout);
+        UTableLayout.setHorizontalGroup(
+            UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        usersTableLayout.setVerticalGroup(
-            usersTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        UTableLayout.setVerticalGroup(
+            UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -649,9 +648,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         usersInterfaceLayout.setHorizontalGroup(
             usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersInterfaceLayout.createSequentialGroup()
-                .addComponent(usersInfomation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(usersTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         usersInterfaceLayout.setVerticalGroup(
@@ -659,8 +658,8 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addGroup(usersInterfaceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(usersTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usersInfomation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -709,7 +708,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         StaffInformationLayout.setHorizontalGroup(
             StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StaffInformationLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(69, 69, 69)
                 .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(StaffInformationLayout.createSequentialGroup()
                         .addComponent(sAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -731,19 +730,19 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 33, Short.MAX_VALUE)
+                        .addGap(0, 31, Short.MAX_VALUE)
                         .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StaffInformationLayout.createSequentialGroup()
                                 .addComponent(sUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
+                                .addGap(31, 31, 31)
                                 .addComponent(sDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(sphoneText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         StaffInformationLayout.setVerticalGroup(
             StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StaffInformationLayout.createSequentialGroup()
-                .addGap(115, 115, 115)
+                .addGap(119, 119, 119)
                 .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(sID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -768,7 +767,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(sAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         STable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -792,7 +791,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         StaffTable.setShowGrid(true);
         StaffTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(StaffTable);
-        StaffTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout STableLayout = new javax.swing.GroupLayout(STable);
         STable.setLayout(STableLayout);
@@ -835,101 +833,93 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterface.setRequestFocusEnabled(false);
         computerInterface.setVerifyInputWhenFocusTarget(false);
 
-        ComputerInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        ComputerInformation6.setPreferredSize(new java.awt.Dimension(500, 550));
 
-        cID.setText("ID");
+        cID6.setText("ID");
 
-        cStatus.setText("Status");
+        cStatus6.setText("Status");
 
-        cON.setText("ON");
+        cON6.setText("ON");
 
-        cOFF.setText("OFF");
+        cOFF6.setText("OFF");
 
-        cUserID.setText("User ID");
+        cUserID6.setText("User ID");
 
-        cTime.setText("Start Time");
+        cTime6.setText("Start Time");
 
-        cAdd.setText("Add");
-        cAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cAdd.setMaximumSize(new java.awt.Dimension(100, 25));
-        cAdd.setMinimumSize(new java.awt.Dimension(100, 25));
-        cAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        cAdd6.setText("Add");
+        cAdd6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cAdd6.setMaximumSize(new java.awt.Dimension(100, 25));
+        cAdd6.setMinimumSize(new java.awt.Dimension(100, 25));
+        cAdd6.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        cUpdate.setText("Update");
-        cUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
-        cUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
-        cUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        cUpdate6.setText("Update");
+        cUpdate6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cUpdate6.setMaximumSize(new java.awt.Dimension(100, 25));
+        cUpdate6.setMinimumSize(new java.awt.Dimension(100, 25));
+        cUpdate6.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        cDelete.setText("Delete");
-        cDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cDelete.setMaximumSize(new java.awt.Dimension(100, 25));
-        cDelete.setMinimumSize(new java.awt.Dimension(100, 25));
-        cDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        cDelete6.setText("Delete");
+        cDelete6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cDelete6.setMaximumSize(new java.awt.Dimension(100, 25));
+        cDelete6.setMinimumSize(new java.awt.Dimension(100, 25));
+        cDelete6.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        javax.swing.GroupLayout ComputerInformationLayout = new javax.swing.GroupLayout(ComputerInformation);
-        ComputerInformation.setLayout(ComputerInformationLayout);
-        ComputerInformationLayout.setHorizontalGroup(
-            ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformationLayout.createSequentialGroup()
-                        .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformationLayout.createSequentialGroup()
-                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cTime, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                                .addGap(0, 58, Short.MAX_VALUE)
-                                .addComponent(ctimeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformationLayout.createSequentialGroup()
-                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                                .addComponent(cON, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cOFF, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(75, Short.MAX_VALUE))
+        javax.swing.GroupLayout ComputerInformation6Layout = new javax.swing.GroupLayout(ComputerInformation6);
+        ComputerInformation6.setLayout(ComputerInformation6Layout);
+        ComputerInformation6Layout.setHorizontalGroup(
+            ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComputerInformation6Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cAdd6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cUserID6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cID6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cStatus6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ComputerInformation6Layout.createSequentialGroup()
+                        .addComponent(cUpdate6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(cDelete6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cuseridText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctimeText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cidText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(ComputerInformation6Layout.createSequentialGroup()
+                            .addComponent(cON6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cOFF6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
-        ComputerInformationLayout.setVerticalGroup(
-            ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        ComputerInformation6Layout.setVerticalGroup(
+            ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComputerInformation6Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cID6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cidText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cON)
-                    .addComponent(cOFF))
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cStatus6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cON6)
+                    .addComponent(cOFF6))
                 .addGap(12, 12, 12)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cUserID6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cuseridText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cTime, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ctimeText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctimeText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cAdd6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cUpdate6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cDelete6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         CTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -953,7 +943,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerTable.setShowGrid(true);
         ComputerTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(ComputerTable);
-        ComputerTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout CTableLayout = new javax.swing.GroupLayout(CTable);
         CTable.setLayout(CTableLayout);
@@ -971,7 +960,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterfaceLayout.setHorizontalGroup(
             computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(computerInterfaceLayout.createSequentialGroup()
-                .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComputerInformation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -982,7 +971,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComputerInformation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1029,39 +1018,29 @@ public class Internet_cafe extends javax.swing.JFrame {
         ServiceInformationLayout.setHorizontalGroup(
             ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ServiceInformationLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ServiceInformationLayout.createSequentialGroup()
-                        .addComponent(svID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(svidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ServiceInformationLayout.createSequentialGroup()
-                        .addComponent(svDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(svdescriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ServiceInformationLayout.createSequentialGroup()
-                        .addComponent(svPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(svpriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ServiceInformationLayout.createSequentialGroup()
-                        .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(svType, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(svAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(ServiceInformationLayout.createSequentialGroup()
-                                .addGap(0, 58, Short.MAX_VALUE)
-                                .addComponent(svtypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ServiceInformationLayout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(svUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(svDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(svType, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ServiceInformationLayout.createSequentialGroup()
+                        .addComponent(svUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(svDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(svidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svdescriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svpriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(svtypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         ServiceInformationLayout.setVerticalGroup(
             ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ServiceInformationLayout.createSequentialGroup()
-                .addGap(149, 149, 149)
+                .addGap(119, 119, 119)
                 .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(svID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1082,7 +1061,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(svAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         SerTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1106,7 +1085,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         ServiceTable.setShowGrid(true);
         ServiceTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(ServiceTable);
-        ServiceTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout SerTableLayout = new javax.swing.GroupLayout(SerTable);
         SerTable.setLayout(SerTableLayout);
@@ -1184,7 +1162,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderInformationLayout.setHorizontalGroup(
             OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderInformationLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(69, 69, 69)
                 .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInformationLayout.createSequentialGroup()
                         .addComponent(oID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1202,19 +1180,19 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(oUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(oAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 36, Short.MAX_VALUE)
+                        .addGap(0, 31, Short.MAX_VALUE)
                         .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInformationLayout.createSequentialGroup()
                                 .addComponent(oUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
+                                .addGap(31, 31, 31)
                                 .addComponent(oDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ouseridText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         OrderInformationLayout.setVerticalGroup(
             OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderInformationLayout.createSequentialGroup()
-                .addGap(149, 149, 149)
+                .addGap(119, 119, 119)
                 .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(oID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1235,7 +1213,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(oAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         OTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1259,7 +1237,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderTable.setShowGrid(true);
         OrderTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane6.setViewportView(OrderTable);
-        OrderTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout OTableLayout = new javax.swing.GroupLayout(OTable);
         OTable.setLayout(OTableLayout);
@@ -1333,32 +1310,30 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetaiInformationLayout.setHorizontalGroup(
             OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderDetaiInformationLayout.createSequentialGroup()
-                        .addComponent(odOderID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(odorderidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderDetaiInformationLayout.createSequentialGroup()
-                        .addComponent(odQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(odquantityText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderDetaiInformationLayout.createSequentialGroup()
-                        .addComponent(odServiceID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(odserviceidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderDetaiInformationLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
                         .addComponent(odAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(31, 31, 31)
                         .addComponent(odUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(odDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addGap(31, 31, 31)
+                        .addComponent(odDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
+                        .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(odServiceID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(odOderID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(odQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(odorderidText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(odquantityText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(odserviceidText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         OrderDetaiInformationLayout.setVerticalGroup(
             OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
+                .addGap(119, 119, 119)
                 .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(odOderID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odorderidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1375,7 +1350,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(odAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
 
         ODTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1399,7 +1374,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetailTable.setShowGrid(true);
         OrderDetailTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane7.setViewportView(OrderDetailTable);
-        OrderDetailTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout ODTableLayout = new javax.swing.GroupLayout(ODTable);
         ODTable.setLayout(ODTableLayout);
@@ -1475,7 +1449,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillInformationLayout.setHorizontalGroup(
             BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BillInformationLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(69, 69, 69)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillInformationLayout.createSequentialGroup()
                         .addComponent(bID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1493,11 +1467,11 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bPaymentMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 33, Short.MAX_VALUE)
+                        .addGap(0, 31, Short.MAX_VALUE)
                         .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillInformationLayout.createSequentialGroup()
                                 .addComponent(bUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
+                                .addGap(31, 31, 31)
                                 .addComponent(bDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(bpaymentmethodText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
@@ -1505,7 +1479,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillInformationLayout.setVerticalGroup(
             BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BillInformationLayout.createSequentialGroup()
-                .addGap(142, 142, 142)
+                .addGap(119, 119, 119)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(bID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1526,7 +1500,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         BTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1550,7 +1524,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillTable.setShowGrid(true);
         BillTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane8.setViewportView(BillTable);
-        BillTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout BTableLayout = new javax.swing.GroupLayout(BTable);
         BTable.setLayout(BTableLayout);
@@ -1626,7 +1599,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareInformationLayout.setHorizontalGroup(
             TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TakeCareInformationLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(69, 69, 69)
                 .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TakeCareInformationLayout.createSequentialGroup()
                         .addComponent(tcStaffID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1640,11 +1613,11 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tcRate, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tcAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 35, Short.MAX_VALUE)
+                        .addGap(0, 31, Short.MAX_VALUE)
                         .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TakeCareInformationLayout.createSequentialGroup()
                                 .addComponent(tcUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
+                                .addGap(31, 31, 31)
                                 .addComponent(tcDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(tcrateText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
@@ -1652,7 +1625,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareInformationLayout.setVerticalGroup(
             TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TakeCareInformationLayout.createSequentialGroup()
-                .addGap(182, 182, 182)
+                .addGap(119, 119, 119)
                 .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tcUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1669,7 +1642,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(tcAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
 
         TCTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1693,7 +1666,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareTable.setShowGrid(true);
         TakeCareTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane9.setViewportView(TakeCareTable);
-        TakeCareTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout TCTableLayout = new javax.swing.GroupLayout(TCTable);
         TCTable.setLayout(TCTableLayout);
@@ -1920,6 +1892,11 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTable BillTable;
     private javax.swing.JPanel CTable;
     private javax.swing.JPanel ComputerInformation;
+    private javax.swing.JPanel ComputerInformation1;
+    private javax.swing.JPanel ComputerInformation2;
+    private javax.swing.JPanel ComputerInformation3;
+    private javax.swing.JPanel ComputerInformation4;
+    private javax.swing.JPanel ComputerInformation6;
     private javax.swing.JTable ComputerTable;
     private javax.swing.JPanel ODTable;
     private javax.swing.JPanel OTable;
@@ -1938,6 +1915,8 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTable Table;
     private javax.swing.JPanel TakeCareInformation;
     private javax.swing.JTable TakeCareTable;
+    private javax.swing.JPanel UTable;
+    private javax.swing.JPanel UserInformation;
     private javax.swing.JTable UserTable;
     private javax.swing.JButton bAdd;
     private javax.swing.JButton bDelete;
@@ -1953,19 +1932,79 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField bpaymentdayText;
     private javax.swing.JTextField bpaymentmethodText;
     private javax.swing.JButton cAdd;
+    private javax.swing.JButton cAdd1;
+    private javax.swing.JButton cAdd2;
+    private javax.swing.JButton cAdd3;
+    private javax.swing.JButton cAdd4;
+    private javax.swing.JButton cAdd6;
     private javax.swing.JButton cDelete;
+    private javax.swing.JButton cDelete1;
+    private javax.swing.JButton cDelete2;
+    private javax.swing.JButton cDelete3;
+    private javax.swing.JButton cDelete4;
+    private javax.swing.JButton cDelete6;
     private javax.swing.JLabel cID;
+    private javax.swing.JLabel cID1;
+    private javax.swing.JLabel cID2;
+    private javax.swing.JLabel cID3;
+    private javax.swing.JLabel cID4;
+    private javax.swing.JLabel cID6;
     private javax.swing.JRadioButton cOFF;
+    private javax.swing.JRadioButton cOFF1;
+    private javax.swing.JRadioButton cOFF2;
+    private javax.swing.JRadioButton cOFF3;
+    private javax.swing.JRadioButton cOFF4;
+    private javax.swing.JRadioButton cOFF6;
     private javax.swing.JRadioButton cON;
+    private javax.swing.JRadioButton cON1;
+    private javax.swing.JRadioButton cON2;
+    private javax.swing.JRadioButton cON3;
+    private javax.swing.JRadioButton cON4;
+    private javax.swing.JRadioButton cON6;
     private javax.swing.JLabel cStatus;
+    private javax.swing.JLabel cStatus1;
+    private javax.swing.JLabel cStatus2;
+    private javax.swing.JLabel cStatus3;
+    private javax.swing.JLabel cStatus4;
+    private javax.swing.JLabel cStatus6;
     private javax.swing.JLabel cTime;
+    private javax.swing.JLabel cTime1;
+    private javax.swing.JLabel cTime2;
+    private javax.swing.JLabel cTime3;
+    private javax.swing.JLabel cTime4;
+    private javax.swing.JLabel cTime6;
     private javax.swing.JButton cUpdate;
+    private javax.swing.JButton cUpdate1;
+    private javax.swing.JButton cUpdate2;
+    private javax.swing.JButton cUpdate3;
+    private javax.swing.JButton cUpdate4;
+    private javax.swing.JButton cUpdate6;
     private javax.swing.JLabel cUserID;
+    private javax.swing.JLabel cUserID1;
+    private javax.swing.JLabel cUserID2;
+    private javax.swing.JLabel cUserID3;
+    private javax.swing.JLabel cUserID4;
+    private javax.swing.JLabel cUserID6;
     private javax.swing.JTextField cidText;
+    private javax.swing.JTextField cidText1;
+    private javax.swing.JTextField cidText2;
+    private javax.swing.JTextField cidText3;
+    private javax.swing.JTextField cidText4;
+    private javax.swing.JTextField cidText6;
     private javax.swing.JButton computerButton;
     private javax.swing.JPanel computerInterface;
     private javax.swing.JTextField ctimeText;
+    private javax.swing.JTextField ctimeText1;
+    private javax.swing.JTextField ctimeText2;
+    private javax.swing.JTextField ctimeText3;
+    private javax.swing.JTextField ctimeText4;
+    private javax.swing.JTextField ctimeText6;
     private javax.swing.JTextField cuseridText;
+    private javax.swing.JTextField cuseridText1;
+    private javax.swing.JTextField cuseridText2;
+    private javax.swing.JTextField cuseridText3;
+    private javax.swing.JTextField cuseridText4;
+    private javax.swing.JTextField cuseridText6;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel homeInterface;
     private javax.swing.JPanel jPanel;
@@ -2056,9 +2095,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField uidText;
     private javax.swing.JTextField upassText;
     private javax.swing.JButton usersButton;
-    private javax.swing.JPanel usersInfomation;
     private javax.swing.JPanel usersInterface;
-    private javax.swing.JPanel usersTable;
     private javax.swing.JTextField utimeText;
     // End of variables declaration//GEN-END:variables
 }
