@@ -14,8 +14,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class Internet_cafe extends javax.swing.JFrame {
     Connect connect;
-    private final Color HOVER_COLOR = new Color(0x5A5A5A);
-    private final Color NORMAL_COLOR = new Color(0x333333);
+    private final Color HOVER_COLOR = new Color(216, 174, 94);
+    private final Color NORMAL_COLOR = new Color(216, 174, 94, 200);
     boolean menuClick;
 
     public Internet_cafe() {
@@ -32,6 +32,26 @@ public class Internet_cafe extends javax.swing.JFrame {
         else {
             submenu.setSize(0,0);
         }
+    }
+    
+    private void showAddMessage(){
+        JOptionPane.showMessageDialog(rootPane, "Please enter data!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation", JOptionPane.INFORMATION_MESSAGE);      
+    }
+    
+    private void showUpdateMessage(){
+        JOptionPane.showMessageDialog(rootPane, "No data to update!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(rootPane, "Update data successfully!", "Update Confirmation", JOptionPane.INFORMATION_MESSAGE);      
+    }
+    
+    private void showDeleteMessage(){
+        JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        int confirmDelete = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+        if (confirmDelete == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
+        }     
     }
 
     @SuppressWarnings("unchecked")
@@ -92,19 +112,19 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         StaffTable = new javax.swing.JTable();
         computerInterface = new javax.swing.JPanel();
-        ComputerInformation6 = new javax.swing.JPanel();
-        cID6 = new javax.swing.JLabel();
-        cidText6 = new javax.swing.JTextField();
-        cStatus6 = new javax.swing.JLabel();
-        cON6 = new javax.swing.JRadioButton();
-        cOFF6 = new javax.swing.JRadioButton();
-        cUserID6 = new javax.swing.JLabel();
-        cuseridText6 = new javax.swing.JTextField();
-        cTime6 = new javax.swing.JLabel();
-        ctimeText6 = new javax.swing.JTextField();
-        cAdd6 = new javax.swing.JButton();
-        cUpdate6 = new javax.swing.JButton();
-        cDelete6 = new javax.swing.JButton();
+        ComputerInformation = new javax.swing.JPanel();
+        cID = new javax.swing.JLabel();
+        cidText = new javax.swing.JTextField();
+        cStatus = new javax.swing.JLabel();
+        cON = new javax.swing.JRadioButton();
+        cOFF = new javax.swing.JRadioButton();
+        cUserID = new javax.swing.JLabel();
+        cuseridText = new javax.swing.JTextField();
+        cTime = new javax.swing.JLabel();
+        ctimeText = new javax.swing.JTextField();
+        cAdd = new javax.swing.JButton();
+        cUpdate = new javax.swing.JButton();
+        cDelete = new javax.swing.JButton();
         CTable = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         ComputerTable = new javax.swing.JTable();
@@ -255,13 +275,13 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         jPanel.add(Bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 50));
 
-        submenu.setBackground(new java.awt.Color(51, 51, 51));
+        submenu.setBackground(new java.awt.Color(51, 51, 51, 220));
         submenu.setMaximumSize(new java.awt.Dimension(150, 325));
         submenu.setPreferredSize(new java.awt.Dimension(150, 325));
 
-        homeButton.setBackground(new java.awt.Color(51, 51, 51));
+        homeButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         homeButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        homeButton.setForeground(new java.awt.Color(216, 174, 94));
+        homeButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         homeButton.setText("Home");
         homeButton.setBorder(null);
         homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -281,9 +301,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        usersButton.setBackground(new java.awt.Color(51, 51, 51));
+        usersButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         usersButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        usersButton.setForeground(new java.awt.Color(216, 174, 94));
+        usersButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         usersButton.setText("Users");
         usersButton.setBorder(null);
         usersButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -303,9 +323,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        staffButton.setBackground(new java.awt.Color(51, 51, 51));
+        staffButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         staffButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        staffButton.setForeground(new java.awt.Color(216, 174, 94));
+        staffButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         staffButton.setText("Staff");
         staffButton.setBorder(null);
         staffButton.setMaximumSize(new java.awt.Dimension(150, 35));
@@ -323,9 +343,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        computerButton.setBackground(new java.awt.Color(51, 51, 51));
+        computerButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         computerButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        computerButton.setForeground(new java.awt.Color(216, 174, 94));
+        computerButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         computerButton.setText("Computer");
         computerButton.setBorder(null);
         computerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -345,9 +365,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        serviceButton.setBackground(new java.awt.Color(51, 51, 51));
+        serviceButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         serviceButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        serviceButton.setForeground(new java.awt.Color(216, 174, 94));
+        serviceButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         serviceButton.setText("Service");
         serviceButton.setBorder(null);
         serviceButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -367,9 +387,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        ordersButton.setBackground(new java.awt.Color(51, 51, 51));
+        ordersButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         ordersButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        ordersButton.setForeground(new java.awt.Color(216, 174, 94));
+        ordersButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         ordersButton.setText("Orders");
         ordersButton.setBorder(null);
         ordersButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -389,9 +409,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        orderDetailButton.setBackground(new java.awt.Color(51, 51, 51));
+        orderDetailButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         orderDetailButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        orderDetailButton.setForeground(new java.awt.Color(216, 174, 94));
+        orderDetailButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         orderDetailButton.setText("Order Detail");
         orderDetailButton.setBorder(null);
         orderDetailButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -411,9 +431,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        billButton.setBackground(new java.awt.Color(51, 51, 51));
+        billButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         billButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        billButton.setForeground(new java.awt.Color(216, 174, 94));
+        billButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         billButton.setText("Bill");
         billButton.setBorder(null);
         billButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -433,9 +453,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        takeCareButton.setBackground(new java.awt.Color(51, 51, 51));
+        takeCareButton.setBackground(new java.awt.Color(51, 51, 51, 0));
         takeCareButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        takeCareButton.setForeground(new java.awt.Color(216, 174, 94));
+        takeCareButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         takeCareButton.setText("Take Care");
         takeCareButton.setBorder(null);
         takeCareButton.setBorderPainted(false);
@@ -608,23 +628,53 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         uTime.setText("Remaining Time");
 
+        uAdd.setBackground(new java.awt.Color(165, 252, 76));
+        uAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        uAdd.setForeground(new java.awt.Color(103, 158, 50));
         uAdd.setText("Add");
+        uAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        uAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         uAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         uAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         uAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         uAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        uAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uAddActionPerformed(evt);
+            }
+        });
 
+        uUpdate.setBackground(new java.awt.Color(254, 201, 38));
+        uUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        uUpdate.setForeground(new java.awt.Color(128, 133, 162));
         uUpdate.setText("Update");
+        uUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        uUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         uUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         uUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         uUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         uUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        uUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uUpdateActionPerformed(evt);
+            }
+        });
 
+        uDelete.setBackground(new java.awt.Color(251, 101, 101));
+        uDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        uDelete.setForeground(new java.awt.Color(254, 225, 223));
         uDelete.setText("Delete");
+        uDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        uDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         uDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         uDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         uDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         uDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        uDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout UserInformationLayout = new javax.swing.GroupLayout(UserInformation);
         UserInformation.setLayout(UserInformationLayout);
@@ -908,92 +958,92 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterface.setRequestFocusEnabled(false);
         computerInterface.setVerifyInputWhenFocusTarget(false);
 
-        ComputerInformation6.setPreferredSize(new java.awt.Dimension(500, 550));
+        ComputerInformation.setPreferredSize(new java.awt.Dimension(500, 550));
 
-        cID6.setText("ID");
+        cID.setText("ID");
 
-        cStatus6.setText("Status");
+        cStatus.setText("Status");
 
-        cON6.setText("ON");
+        cON.setText("ON");
 
-        cOFF6.setText("OFF");
+        cOFF.setText("OFF");
 
-        cUserID6.setText("User ID");
+        cUserID.setText("User ID");
 
-        cTime6.setText("Start Time");
+        cTime.setText("Start Time");
 
-        cAdd6.setText("Add");
-        cAdd6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cAdd6.setMaximumSize(new java.awt.Dimension(100, 25));
-        cAdd6.setMinimumSize(new java.awt.Dimension(100, 25));
-        cAdd6.setPreferredSize(new java.awt.Dimension(100, 25));
+        cAdd.setText("Add");
+        cAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cAdd.setMaximumSize(new java.awt.Dimension(100, 25));
+        cAdd.setMinimumSize(new java.awt.Dimension(100, 25));
+        cAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        cUpdate6.setText("Update");
-        cUpdate6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cUpdate6.setMaximumSize(new java.awt.Dimension(100, 25));
-        cUpdate6.setMinimumSize(new java.awt.Dimension(100, 25));
-        cUpdate6.setPreferredSize(new java.awt.Dimension(100, 25));
+        cUpdate.setText("Update");
+        cUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
+        cUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
+        cUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        cDelete6.setText("Delete");
-        cDelete6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        cDelete6.setMaximumSize(new java.awt.Dimension(100, 25));
-        cDelete6.setMinimumSize(new java.awt.Dimension(100, 25));
-        cDelete6.setPreferredSize(new java.awt.Dimension(100, 25));
+        cDelete.setText("Delete");
+        cDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cDelete.setMaximumSize(new java.awt.Dimension(100, 25));
+        cDelete.setMinimumSize(new java.awt.Dimension(100, 25));
+        cDelete.setPreferredSize(new java.awt.Dimension(100, 25));
 
-        javax.swing.GroupLayout ComputerInformation6Layout = new javax.swing.GroupLayout(ComputerInformation6);
-        ComputerInformation6.setLayout(ComputerInformation6Layout);
-        ComputerInformation6Layout.setHorizontalGroup(
-            ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputerInformation6Layout.createSequentialGroup()
+        javax.swing.GroupLayout ComputerInformationLayout = new javax.swing.GroupLayout(ComputerInformation);
+        ComputerInformation.setLayout(ComputerInformationLayout);
+        ComputerInformationLayout.setHorizontalGroup(
+            ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComputerInformationLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cAdd6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cUserID6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cID6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cStatus6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cTime, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(ComputerInformation6Layout.createSequentialGroup()
-                        .addComponent(cUpdate6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ComputerInformationLayout.createSequentialGroup()
+                        .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
-                        .addComponent(cDelete6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cuseridText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ctimeText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cidText6, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(ComputerInformation6Layout.createSequentialGroup()
-                            .addComponent(cON6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctimeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(ComputerInformationLayout.createSequentialGroup()
+                            .addComponent(cON, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(cOFF6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cOFF, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
-        ComputerInformation6Layout.setVerticalGroup(
-            ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputerInformation6Layout.createSequentialGroup()
+        ComputerInformationLayout.setVerticalGroup(
+            ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComputerInformationLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cID6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cidText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cStatus6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cON6)
-                    .addComponent(cOFF6))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cON)
+                    .addComponent(cOFF))
                 .addGap(12, 12, 12)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cUserID6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cuseridText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ctimeText6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cTime, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctimeText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
-                .addGroup(ComputerInformation6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cAdd6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cUpdate6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cDelete6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(211, Short.MAX_VALUE))
         );
 
@@ -1035,7 +1085,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterfaceLayout.setHorizontalGroup(
             computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(computerInterfaceLayout.createSequentialGroup()
-                .addComponent(ComputerInformation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1046,7 +1096,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComputerInformation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1914,80 +1964,92 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
 
-    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
-        homeButton.setBackground(HOVER_COLOR);
-    }//GEN-LAST:event_homeButtonMouseEntered
-
-    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseExited
-        homeButton.setBackground(NORMAL_COLOR);
-    }//GEN-LAST:event_homeButtonMouseExited
-
-    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseEntered
-        usersButton.setBackground(HOVER_COLOR);
-    }//GEN-LAST:event_usersButtonMouseEntered
-
-    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseExited
-        usersButton.setBackground(NORMAL_COLOR);
-    }//GEN-LAST:event_usersButtonMouseExited
-
     private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseEntered
-        staffButton.setBackground(HOVER_COLOR);
+        staffButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_staffButtonMouseEntered
 
     private void staffButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseExited
-        staffButton.setBackground(NORMAL_COLOR);
+        staffButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_staffButtonMouseExited
 
     private void computerButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseEntered
-        computerButton.setBackground(HOVER_COLOR);
+        computerButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_computerButtonMouseEntered
 
     private void computerButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseExited
-        computerButton.setBackground(NORMAL_COLOR);
+        computerButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_computerButtonMouseExited
 
     private void serviceButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseEntered
-        serviceButton.setBackground(HOVER_COLOR);
+        serviceButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_serviceButtonMouseEntered
 
     private void serviceButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseExited
-        serviceButton.setBackground(NORMAL_COLOR);
+        serviceButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_serviceButtonMouseExited
 
     private void ordersButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseEntered
-        ordersButton.setBackground(HOVER_COLOR);
+        ordersButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_ordersButtonMouseEntered
 
     private void ordersButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseExited
-        ordersButton.setBackground(NORMAL_COLOR);
+        ordersButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_ordersButtonMouseExited
 
     private void orderDetailButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseEntered
-        orderDetailButton.setBackground(HOVER_COLOR);
+        orderDetailButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_orderDetailButtonMouseEntered
 
     private void orderDetailButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseExited
-        orderDetailButton.setBackground(NORMAL_COLOR);
+        orderDetailButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_orderDetailButtonMouseExited
 
     private void billButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseEntered
-        billButton.setBackground(HOVER_COLOR);
+        billButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_billButtonMouseEntered
 
     private void billButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseExited
-        billButton.setBackground(NORMAL_COLOR);
+        billButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_billButtonMouseExited
 
     private void takeCareButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseEntered
-        takeCareButton.setBackground(HOVER_COLOR);
+        takeCareButton.setForeground(HOVER_COLOR);
     }//GEN-LAST:event_takeCareButtonMouseEntered
 
     private void takeCareButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseExited
-        takeCareButton.setBackground(NORMAL_COLOR);
+        takeCareButton.setForeground(NORMAL_COLOR);
     }//GEN-LAST:event_takeCareButtonMouseExited
+
+    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseExited
+        usersButton.setForeground(NORMAL_COLOR);
+    }//GEN-LAST:event_usersButtonMouseExited
+
+    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseEntered
+        usersButton.setForeground(HOVER_COLOR);
+    }//GEN-LAST:event_usersButtonMouseEntered
+
+    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseExited
+        homeButton.setForeground(NORMAL_COLOR);
+    }//GEN-LAST:event_homeButtonMouseExited
+
+    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
+        homeButton.setForeground(HOVER_COLOR);
+    }//GEN-LAST:event_homeButtonMouseEntered
+
+    private void uAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uAddActionPerformed
+        showAddMessage();
+    }//GEN-LAST:event_uAddActionPerformed
+
+    private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uUpdateActionPerformed
+        showUpdateMessage();
+    }//GEN-LAST:event_uUpdateActionPerformed
+
+    private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDeleteActionPerformed
+        showDeleteMessage();
+    }//GEN-LAST:event_uDeleteActionPerformed
     
     
-  
+
     /**
      * @param args the command line arguments
      */
@@ -2039,7 +2101,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JPanel BillInformation;
     private javax.swing.JTable BillTable;
     private javax.swing.JPanel CTable;
-    private javax.swing.JPanel ComputerInformation6;
+    private javax.swing.JPanel ComputerInformation;
     private javax.swing.JTable ComputerTable;
     private javax.swing.JPanel ODTable;
     private javax.swing.JPanel OTable;
@@ -2074,20 +2136,20 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField boderidText;
     private javax.swing.JTextField bpaymentdayText;
     private javax.swing.JTextField bpaymentmethodText;
-    private javax.swing.JButton cAdd6;
-    private javax.swing.JButton cDelete6;
-    private javax.swing.JLabel cID6;
-    private javax.swing.JRadioButton cOFF6;
-    private javax.swing.JRadioButton cON6;
-    private javax.swing.JLabel cStatus6;
-    private javax.swing.JLabel cTime6;
-    private javax.swing.JButton cUpdate6;
-    private javax.swing.JLabel cUserID6;
-    private javax.swing.JTextField cidText6;
+    private javax.swing.JButton cAdd;
+    private javax.swing.JButton cDelete;
+    private javax.swing.JLabel cID;
+    private javax.swing.JRadioButton cOFF;
+    private javax.swing.JRadioButton cON;
+    private javax.swing.JLabel cStatus;
+    private javax.swing.JLabel cTime;
+    private javax.swing.JButton cUpdate;
+    private javax.swing.JLabel cUserID;
+    private javax.swing.JTextField cidText;
     private javax.swing.JButton computerButton;
     private javax.swing.JPanel computerInterface;
-    private javax.swing.JTextField ctimeText6;
-    private javax.swing.JTextField cuseridText6;
+    private javax.swing.JTextField ctimeText;
+    private javax.swing.JTextField cuseridText;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel homeInterface;
     private javax.swing.JPanel jPanel;
