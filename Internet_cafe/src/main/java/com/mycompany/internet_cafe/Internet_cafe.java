@@ -1718,33 +1718,35 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuButtonMouseClicked
         menuSize(true);
+        
     }//GEN-LAST:event_menuButtonMouseClicked
 
     private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(1);
         connect.displayData("SELECT * FROM Users");
         DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_usersButtonMouseClicked
 
     private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(2);
         connect.displayData("SELECT * FROM Staff");
         DefaultTableModel model = (DefaultTableModel) StaffTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_staffButtonMouseClicked
 
     private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer");
         DefaultTableModel model = (DefaultTableModel) ComputerTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_computerButtonMouseClicked
 
     private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(4);
         connect.displayData("SELECT * FROM Service");
         DefaultTableModel model = (DefaultTableModel) ServiceTable.getModel();
@@ -1753,35 +1755,35 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_serviceButtonMouseClicked
 
     private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders");
         DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_ordersButtonMouseClicked
 
     private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail");
         DefaultTableModel model = (DefaultTableModel) OrderDetailTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_orderDetailButtonMouseClicked
 
     private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill");
         DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_billButtonMouseClicked
 
     private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseClicked
+        menuSize(false);
         jTabbedPane.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare");
         DefaultTableModel model = (DefaultTableModel) TakeCareTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-        menuSize(false);
     }//GEN-LAST:event_takeCareButtonMouseClicked
 
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
