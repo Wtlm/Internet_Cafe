@@ -1829,8 +1829,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
                               
             SearchBox.setSize(700, 30);
-            SearchBox.setLocation(148, 20);
-            jScrollPane1.setSize(700, 350);
+            SearchBox.setLocation(148, 40);
+            jScrollPane1.setSize(650, 350);
             jScrollPane1.setLocation(148, 110);
 
             String cmd = SearchBox.getText();
@@ -1841,55 +1841,40 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
 
-    private void MenuMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_MenuMouseClicked
+    private void MenuMouseClicked(java.awt.event.MouseEvent evt) {
         openMenuBar();
-    }// GEN-LAST:event_MenuMouseClicked
+    }
 
-    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_BackButtonMouseClicked
+    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {
         closeMenuBar();
-    }// GEN-LAST:event_BackButtonMouseClicked
+    }
 
-    private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_TakeCareButtonMouseClicked
-        state = 8;
-        setDefault();
-        
+    private void TakeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {  
         jTabbedPane1.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare");
         DefaultTableModel model = (DefaultTableModel) TakeCareTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-    }// GEN-LAST:event_TakeCareButtonMouseClicked
+    }
 
-    private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OrderDetailButtonMouseClicked
-        state = 6;
-        setDefault();
-        
+    private void OrderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {       
         jTabbedPane1.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail");
         DefaultTableModel model = (DefaultTableModel) OrderDetailTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
-    }// GEN-LAST:event_OrderDetailButtonMouseClicked
-
+    }
 
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 0;
-//        setDefault();
         jTabbedPane1.setSelectedIndex(0);
     }
 
     private void UserButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 1;
-//        setDefault();
         jTabbedPane1.setSelectedIndex(1);
-//
         connect.displayData("SELECT * FROM Users");
         DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
     }
 
     private void OrderButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 2;
-        setDefault();
-
         jTabbedPane1.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders");
         DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
@@ -1897,9 +1882,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void BillButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 3;
-        setDefault();
-
         jTabbedPane1.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill");
         DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
@@ -1907,9 +1889,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void ServiceButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 4;
-        setDefault();
-        
         jTabbedPane1.setSelectedIndex(4);
         connect.displayData("SELECT * FROM Service");
         DefaultTableModel model = (DefaultTableModel) ServiceTable.getModel();
@@ -1917,9 +1896,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void ComputerButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 5;
-        setDefault();
-        
         jTabbedPane1.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer");
         DefaultTableModel model = (DefaultTableModel) ComputerTable.getModel();
@@ -1927,10 +1903,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void StaffButtonMouseClicked(java.awt.event.MouseEvent evt) {
-        state = 7;
-        setDefault();
         jTabbedPane1.setSelectedIndex(2);
-
         connect.displayData("SELECT * FROM Staff");
         DefaultTableModel model = (DefaultTableModel) StaffTable.getModel();
         model.setDataVector(connect.rowData, connect.columnName);
@@ -2140,64 +2113,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField upassText;
     private javax.swing.JTextField utimeText;
     // End of variables declaration//GEN-END:variables
-    
-    int width = 130;
-    int height = 800;
-    int state = 0;
-    int menustatus = 0;
 
-    private void openMenuBar() {
-        menustatus = 1;       
-        for(int i=0; i<=width; i++){
-            MenuBar.setSize(i, height);
-            Bar.setLocation(i, 0);
-            if (state == 0) {
-                SearchBox.setLocation(148 + 2*i/5, SearchBox.getY());
-                SearchBox.setSize(700, 70);
-            } else {
-                SearchBox.setLocation(850, 15);
-                SearchBox.setSize(100, 30);
-            }
-            jScrollPane1.setLocation(148 + 2*i/5, jScrollPane1.getY());  
-        }
+    private void openMenuBar() {      
+        MenuBar.setSize(130, 600);
+        Bar.setLocation(130, 0);
     }
 
     private void closeMenuBar() {
-        menustatus = 0;
-        MenuBar.setSize(0, height);
+        MenuBar.setSize(0, 600);
         Bar.setLocation(0, 0);
-        if (state == 0) {
-            SearchBox.setLocation(148, SearchBox.getY());
-            SearchBox.setSize(700, 70);
-        } else {
-            SearchBox.setLocation(850, 15);
-            SearchBox.setSize(100, 30);
-        }
-        jScrollPane1.setLocation(148, jScrollPane1.getY());
     }
-
-    private void setDefault() {
-        if (menustatus == 0) {
-            if (state == 0) {
-                SearchBox.setLocation(148, 250);
-                SearchBox.setSize(700, 70);
-                jScrollPane1.setLocation(148, 700);
-            } else {
-                SearchBox.setLocation(850, 15);
-                SearchBox.setSize(100, 30);
-                jScrollPane1.setLocation(148, 110);
-            }
-
-        } else {
-            if (state == 0) {
-                SearchBox.setLocation(196, 250);
-                SearchBox.setSize(700, 70);
-                jScrollPane1.setLocation(196, 700);
-            } else {
-                SearchBox.setLocation(850, 15);
-                SearchBox.setSize(100, 30);
-                jScrollPane1.setLocation(196, 110);
-            }
-        }
-    }    
+    
 }
