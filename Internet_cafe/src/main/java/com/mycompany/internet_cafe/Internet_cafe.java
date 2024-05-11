@@ -46,11 +46,11 @@ public class Internet_cafe extends javax.swing.JFrame {
     
     private void showDeleteMessage(){
         JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        int confirmDelete = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+        int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
         if (confirmDelete == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(null, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
         }     
     }
 
@@ -183,10 +183,10 @@ public class Internet_cafe extends javax.swing.JFrame {
         bPaymentDay = new javax.swing.JLabel();
         bpaymentdayText = new javax.swing.JTextField();
         bPaymentMethod = new javax.swing.JLabel();
-        bpaymentmethodText = new javax.swing.JTextField();
         bAdd = new javax.swing.JButton();
         bUpdate = new javax.swing.JButton();
         bDelete = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         BTable = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         BillTable = new javax.swing.JTable();
@@ -609,6 +609,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         jTabbedPane.addTab("home", homeInterface);
 
+        usersInterface.setBackground(new java.awt.Color(245, 229, 191));
         usersInterface.setToolTipText("");
         usersInterface.setFocusable(false);
         usersInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -618,19 +619,24 @@ public class Internet_cafe extends javax.swing.JFrame {
         usersInterface.setRequestFocusEnabled(false);
         usersInterface.setVerifyInputWhenFocusTarget(false);
 
+        UserInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
         UserInformation.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        uID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         uID.setText("ID");
 
+        uAcc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         uAcc.setText("Account");
 
+        uPass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         uPass.setText("Password");
 
+        uTime.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         uTime.setText("Remaining Time");
 
-        uAdd.setBackground(new java.awt.Color(165, 252, 76));
+        uAdd.setBackground(new java.awt.Color(73, 79, 86));
         uAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uAdd.setForeground(new java.awt.Color(103, 158, 50));
+        uAdd.setForeground(new java.awt.Color(252, 255, 222));
         uAdd.setText("Add");
         uAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         uAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -644,9 +650,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        uUpdate.setBackground(new java.awt.Color(254, 201, 38));
+        uUpdate.setBackground(new java.awt.Color(73, 79, 86));
         uUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uUpdate.setForeground(new java.awt.Color(128, 133, 162));
+        uUpdate.setForeground(new java.awt.Color(252, 255, 222));
         uUpdate.setText("Update");
         uUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         uUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -660,9 +666,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        uDelete.setBackground(new java.awt.Color(251, 101, 101));
+        uDelete.setBackground(new java.awt.Color(73, 79, 86));
         uDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uDelete.setForeground(new java.awt.Color(254, 225, 223));
+        uDelete.setForeground(new java.awt.Color(242, 242, 242));
         uDelete.setText("Delete");
         uDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         uDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -681,7 +687,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserInformationLayout.setHorizontalGroup(
             UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                         .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -706,12 +712,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(utimeText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(69, 69, 69))
         );
         UserInformationLayout.setVerticalGroup(
             UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -732,7 +738,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         UTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -750,9 +756,12 @@ public class Internet_cafe extends javax.swing.JFrame {
 
             }
         ));
+        UserTable.setGridColor(new java.awt.Color(51, 51, 51));
         UserTable.setMaximumSize(new java.awt.Dimension(500, 550));
         UserTable.setMinimumSize(new java.awt.Dimension(500, 550));
         UserTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        UserTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        UserTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         UserTable.setShowGrid(true);
         UserTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(UserTable);
@@ -773,8 +782,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         usersInterfaceLayout.setHorizontalGroup(
             usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersInterfaceLayout.createSequentialGroup()
-                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGap(44, 44, 44)
+                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
                 .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -783,9 +793,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addGroup(usersInterfaceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(usersInterfaceLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 199, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("users", usersInterface);
@@ -810,19 +822,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         sAddress.setText("Address");
 
+        sAdd.setBackground(new java.awt.Color(73, 79, 86));
+        sAdd.setForeground(new java.awt.Color(252, 255, 222));
         sAdd.setText("Add");
+        sAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        sAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         sAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         sAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         sAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        sUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        sUpdate.setForeground(new java.awt.Color(252, 255, 222));
         sUpdate.setText("Update");
+        sUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        sUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         sUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         sUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         sUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        sDelete.setBackground(new java.awt.Color(73, 79, 86));
+        sDelete.setForeground(new java.awt.Color(252, 255, 222));
         sDelete.setText("Delete");
+        sDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        sDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         sDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         sDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -972,19 +996,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         cTime.setText("Start Time");
 
+        cAdd.setBackground(new java.awt.Color(73, 79, 86));
+        cAdd.setForeground(new java.awt.Color(252, 255, 222));
         cAdd.setText("Add");
+        cAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         cAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         cAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        cUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        cUpdate.setForeground(new java.awt.Color(252, 255, 222));
         cUpdate.setText("Update");
+        cUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         cUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         cUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        cDelete.setBackground(new java.awt.Color(73, 79, 86));
+        cDelete.setForeground(new java.awt.Color(252, 255, 222));
         cDelete.setText("Delete");
+        cDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         cDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -1120,19 +1156,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         svType.setText("Type");
 
+        svAdd.setBackground(new java.awt.Color(73, 79, 86));
+        svAdd.setForeground(new java.awt.Color(252, 255, 222));
         svAdd.setText("Add");
+        svAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        svAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         svAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         svAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         svAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         svAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        svUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        svUpdate.setForeground(new java.awt.Color(252, 255, 222));
         svUpdate.setText("Update");
+        svUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        svUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         svUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         svUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         svUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         svUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        svDelete.setBackground(new java.awt.Color(73, 79, 86));
+        svDelete.setForeground(new java.awt.Color(252, 255, 222));
         svDelete.setText("Delete");
+        svDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        svDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         svDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         svDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         svDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -1264,19 +1312,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         oUserID.setText("User ID");
 
+        oAdd.setBackground(new java.awt.Color(73, 79, 86));
+        oAdd.setForeground(new java.awt.Color(252, 255, 222));
         oAdd.setText("Add");
+        oAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        oAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         oAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         oAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         oAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         oAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        oUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        oUpdate.setForeground(new java.awt.Color(252, 255, 222));
         oUpdate.setText("Update");
+        oUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        oUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         oUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         oUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         oUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         oUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        oDelete.setBackground(new java.awt.Color(73, 79, 86));
+        oDelete.setForeground(new java.awt.Color(252, 255, 222));
         oDelete.setText("Delete");
+        oDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        oDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         oDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         oDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         oDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -1412,19 +1472,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         odQuantity.setText("Quantity");
 
+        odAdd.setBackground(new java.awt.Color(73, 79, 86));
+        odAdd.setForeground(new java.awt.Color(252, 255, 222));
         odAdd.setText("Add");
+        odAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        odAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         odAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         odAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         odAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         odAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        odUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        odUpdate.setForeground(new java.awt.Color(252, 255, 222));
         odUpdate.setText("Update");
+        odUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        odUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         odUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         odUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         odUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         odUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        odDelete.setBackground(new java.awt.Color(73, 79, 86));
+        odDelete.setForeground(new java.awt.Color(252, 255, 222));
         odDelete.setText("Delete");
+        odDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        odDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         odDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         odDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         odDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -1551,23 +1623,37 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         bPaymentMethod.setText("Payment Method");
 
+        bAdd.setBackground(new java.awt.Color(73, 79, 86));
+        bAdd.setForeground(new java.awt.Color(252, 255, 222));
         bAdd.setText("Add");
+        bAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         bAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         bAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        bUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        bUpdate.setForeground(new java.awt.Color(252, 255, 222));
         bUpdate.setText("Update");
+        bUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         bUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         bUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        bDelete.setBackground(new java.awt.Color(73, 79, 86));
+        bDelete.setForeground(new java.awt.Color(252, 255, 222));
         bDelete.setText("Delete");
+        bDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         bDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         bDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash", "Card", "Internet Banking" }));
 
         javax.swing.GroupLayout BillInformationLayout = new javax.swing.GroupLayout(BillInformation);
         BillInformation.setLayout(BillInformationLayout);
@@ -1592,13 +1678,15 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bPaymentMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 31, Short.MAX_VALUE)
-                        .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillInformationLayout.createSequentialGroup()
+                        .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(BillInformationLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(bUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
                                 .addComponent(bDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(bpaymentmethodText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(BillInformationLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         BillInformationLayout.setVerticalGroup(
@@ -1619,7 +1707,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bPaymentMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bpaymentmethodText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1701,19 +1789,31 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         tcRate.setText("Rate");
 
+        tcAdd.setBackground(new java.awt.Color(73, 79, 86));
+        tcAdd.setForeground(new java.awt.Color(252, 255, 222));
         tcAdd.setText("Add");
+        tcAdd.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        tcAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tcAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tcAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         tcAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         tcAdd.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        tcUpdate.setBackground(new java.awt.Color(73, 79, 86));
+        tcUpdate.setForeground(new java.awt.Color(252, 255, 222));
         tcUpdate.setText("Update");
+        tcUpdate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        tcUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tcUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tcUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         tcUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         tcUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
 
+        tcDelete.setBackground(new java.awt.Color(73, 79, 86));
+        tcDelete.setForeground(new java.awt.Color(252, 255, 222));
         tcDelete.setText("Delete");
+        tcDelete.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        tcDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tcDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tcDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         tcDelete.setMinimumSize(new java.awt.Dimension(100, 25));
@@ -2135,7 +2235,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JPanel billInterface;
     private javax.swing.JTextField boderidText;
     private javax.swing.JTextField bpaymentdayText;
-    private javax.swing.JTextField bpaymentmethodText;
     private javax.swing.JButton cAdd;
     private javax.swing.JButton cDelete;
     private javax.swing.JLabel cID;
@@ -2152,6 +2251,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField cuseridText;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel homeInterface;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
