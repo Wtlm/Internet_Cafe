@@ -2,10 +2,13 @@ package com.mycompany.internet_cafe;
 
 import Database.Connect;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollBar;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -65,7 +68,21 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         }
     }
-
+    
+    private void setTable(javax.swing.JTable table){
+        table.getTableHeader().setBackground(new Color(51, 51, 51));
+        table.getTableHeader().setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 5, 10, 5));
+        table.getTableHeader().setOpaque(true);
+        table.getTableHeader().setForeground(Color.WHITE);
+    }
+    
+    private void setScroll(javax.swing.JScrollPane pane){
+        pane.getVerticalScrollBar().setUI(new ScrollBar());
+        pane.getVerticalScrollBar().setPreferredSize(new Dimension(10, 5));
+        pane.getVerticalScrollBar().setBackground(new Color(242, 242, 242));
+        pane.getVerticalScrollBar().setUnitIncrement(50);
+    }
+   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -781,22 +798,14 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane2.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 550));
 
-        UserTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        UserTable.setGridColor(new java.awt.Color(51, 51, 51));
+        UserTable.setBackground(new java.awt.Color(245, 229, 191));
+        UserTable.setGridColor(new java.awt.Color(102, 102, 102));
         UserTable.setMaximumSize(new java.awt.Dimension(500, 550));
         UserTable.setMinimumSize(new java.awt.Dimension(500, 550));
         UserTable.setPreferredSize(new java.awt.Dimension(500, 550));
         UserTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
         UserTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         UserTable.setShowGrid(true);
-        UserTable.getTableHeader().setReorderingAllowed(false);
         UserTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 UserTableMouseClicked(evt);
@@ -808,7 +817,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         UTable.setLayout(UTableLayout);
         UTableLayout.setHorizontalGroup(
             UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         UTableLayout.setVerticalGroup(
             UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -832,7 +841,7 @@ public class Internet_cafe extends javax.swing.JFrame {
             usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersInterfaceLayout.createSequentialGroup()
                 .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 15, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(usersInterfaceLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -985,6 +994,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane3.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane3.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        StaffTable.setBackground(new java.awt.Color(245, 229, 191));
         StaffTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -996,6 +1006,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         StaffTable.setMaximumSize(new java.awt.Dimension(500, 550));
         StaffTable.setMinimumSize(new java.awt.Dimension(500, 550));
         StaffTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        StaffTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        StaffTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         StaffTable.setShowGrid(true);
         StaffTable.getTableHeader().setReorderingAllowed(false);
         StaffTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1188,7 +1200,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane4.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane4.setPreferredSize(new java.awt.Dimension(500, 550));
 
-        ComputerTable.setBackground(new java.awt.Color(153, 153, 153));
+        ComputerTable.setBackground(new java.awt.Color(245, 229, 191));
         ComputerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1201,6 +1213,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerTable.setMaximumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setMinimumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        ComputerTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        ComputerTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         ComputerTable.setShowGrid(true);
         ComputerTable.getTableHeader().setReorderingAllowed(false);
         ComputerTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1370,6 +1384,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane5.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane5.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        ServiceTable.setBackground(new java.awt.Color(245, 229, 191));
         ServiceTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1381,6 +1396,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         ServiceTable.setMaximumSize(new java.awt.Dimension(500, 550));
         ServiceTable.setMinimumSize(new java.awt.Dimension(500, 550));
         ServiceTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        ServiceTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        ServiceTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         ServiceTable.setShowGrid(true);
         ServiceTable.getTableHeader().setReorderingAllowed(false);
         ServiceTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1559,6 +1576,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane6.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane6.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        OrderTable.setBackground(new java.awt.Color(245, 229, 191));
         OrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1570,6 +1588,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderTable.setMaximumSize(new java.awt.Dimension(500, 550));
         OrderTable.setMinimumSize(new java.awt.Dimension(500, 550));
         OrderTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        OrderTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        OrderTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         OrderTable.setShowGrid(true);
         OrderTable.getTableHeader().setReorderingAllowed(false);
         OrderTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1737,6 +1757,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane7.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane7.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        OrderDetailTable.setBackground(new java.awt.Color(245, 229, 191));
         OrderDetailTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1748,6 +1769,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetailTable.setMaximumSize(new java.awt.Dimension(500, 550));
         OrderDetailTable.setMinimumSize(new java.awt.Dimension(500, 550));
         OrderDetailTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        OrderDetailTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        OrderDetailTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         OrderDetailTable.setShowGrid(true);
         OrderDetailTable.getTableHeader().setReorderingAllowed(false);
         OrderDetailTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1933,6 +1956,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane8.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane8.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        BillTable.setBackground(new java.awt.Color(245, 229, 191));
         BillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1944,6 +1968,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillTable.setMaximumSize(new java.awt.Dimension(500, 550));
         BillTable.setMinimumSize(new java.awt.Dimension(500, 550));
         BillTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        BillTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        BillTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         BillTable.setShowGrid(true);
         BillTable.getTableHeader().setReorderingAllowed(false);
         BillTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2109,6 +2135,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane9.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane9.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        TakeCareTable.setBackground(new java.awt.Color(245, 229, 191));
         TakeCareTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -2120,6 +2147,8 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareTable.setMaximumSize(new java.awt.Dimension(500, 550));
         TakeCareTable.setMinimumSize(new java.awt.Dimension(500, 550));
         TakeCareTable.setPreferredSize(new java.awt.Dimension(500, 550));
+        TakeCareTable.setSelectionBackground(new java.awt.Color(216, 174, 94));
+        TakeCareTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         TakeCareTable.setShowGrid(true);
         TakeCareTable.getTableHeader().setReorderingAllowed(false);
         TakeCareTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2196,49 +2225,64 @@ public class Internet_cafe extends javax.swing.JFrame {
         menuSize(false);
         jTabbedPane.setSelectedIndex(1);
         connect.displayData("SELECT * FROM Users", UserTable);
+        setTable(UserTable);
+        setScroll(jScrollPane2);
     }                                        
 
     private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_staffButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(2);
         connect.displayData("SELECT * FROM Staff", StaffTable);
+        setTable(StaffTable);
+        setScroll(jScrollPane3);
     }                                        
 
     private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_computerButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer", ComputerTable);
+        setTable(ComputerTable);
+        setScroll(jScrollPane4);
     }                                           
 
     private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_serviceButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(4);
         connect.displayData("SELECT * FROM Service", ServiceTable);
-        menuSize(false);
+        setTable(ServiceTable);
+        setScroll(jScrollPane5);
     }// GEN-LAST:event_serviceButtonMouseClicked
 
     private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ordersButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders", OrderTable);
+        setTable(OrderTable);
+        setScroll(jScrollPane6);
     }                                         
 
     private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_orderDetailButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+        setTable(OrderDetailTable);
+        setScroll(jScrollPane7);
     }                                              
 
     private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_billButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill", BillTable);
+        setTable(BillTable);
+        setScroll(jScrollPane8);
     }                                       
 
     private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_takeCareButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+        setTable(TakeCareTable);
+        setScroll(jScrollPane9);
     }                                           
 
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
