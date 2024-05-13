@@ -67,7 +67,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel = new javax.swing.JPanel();
@@ -2177,9 +2177,9 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuButtonMouseClicked
+    private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         if (!menuClick) {
             submenu.setSize(150, 550);
             menuClick = true;
@@ -2188,83 +2188,83 @@ public class Internet_cafe extends javax.swing.JFrame {
             submenu.setSize(0,0);
             menuClick = false;
         }
-    }//GEN-LAST:event_menuButtonMouseClicked
+    }                                       
 
-    private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseClicked
+    private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         menuSize(false);
         jTabbedPane.setSelectedIndex(1);
         connect.displayData("SELECT * FROM Users", UserTable);
-    }//GEN-LAST:event_usersButtonMouseClicked
+    }                                        
 
-    private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseClicked
+    private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         menuSize(false);
         jTabbedPane.setSelectedIndex(2);
         connect.displayData("SELECT * FROM Staff", StaffTable);
-    }//GEN-LAST:event_staffButtonMouseClicked
+    }                                        
 
-    private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseClicked
+    private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
         menuSize(false);
         jTabbedPane.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer", ComputerTable);
-    }//GEN-LAST:event_computerButtonMouseClicked
+    }                                           
 
-    private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseClicked
+    private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
         menuSize(false);
         jTabbedPane.setSelectedIndex(4);
         connect.displayData("SELECT * FROM Service", ServiceTable);
         menuSize(false);
-    }//GEN-LAST:event_serviceButtonMouseClicked
+    }                                          
 
-    private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseClicked
+    private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
         menuSize(false);
         jTabbedPane.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders", OrderTable);
-    }//GEN-LAST:event_ordersButtonMouseClicked
+    }                                         
 
-    private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseClicked
+    private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
         menuSize(false);
         jTabbedPane.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-    }//GEN-LAST:event_orderDetailButtonMouseClicked
+    }                                              
 
-    private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseClicked
+    private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         menuSize(false);
         jTabbedPane.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill", BillTable);
-    }//GEN-LAST:event_billButtonMouseClicked
+    }                                       
 
-    private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseClicked
+    private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
         menuSize(false);
         jTabbedPane.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-    }//GEN-LAST:event_takeCareButtonMouseClicked
+    }                                           
 
-    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         menuSize(false);
         jTabbedPane.setSelectedIndex(0);
-    }//GEN-LAST:event_homeButtonMouseClicked
+    }                                       
 
-    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusGained
+    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {                                      
         if (SearchBox.getText().trim().equals("Search...")) {
             SearchBox.setText("");
             SearchBox.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         }
-    }//GEN-LAST:event_SearchBoxFocusGained
+    }                                     
 
-    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusLost
+    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {                                    
         if (SearchBox.getText().trim().equals("")) {
             SearchBox.setText("Search...");
             SearchBox.setFont(new Font("Segoe UI", Font.ITALIC, 12));
         }
-    }//GEN-LAST:event_SearchBoxFocusLost
+    }                                   
 
-    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBoxActionPerformed
+    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {                                          
         if (SearchBox.getText().length() == 0) {
             JOptionPane.showMessageDialog(this, "Please input query string!", "Message", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_SearchBoxActionPerformed
+    }                                         
 
-    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
+    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {                                     
         if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
             String cmd = SearchBox.getText();
             connect.displayData(cmd, Table);
@@ -2279,81 +2279,81 @@ public class Internet_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_SearchBoxKeyPressed
+    }                                    
 
-    private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseEntered
+    private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
         staffButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_staffButtonMouseEntered
+    }                                        
 
-    private void staffButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseExited
+    private void staffButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
         staffButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_staffButtonMouseExited
+    }                                       
 
-    private void computerButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseEntered
+    private void computerButtonMouseEntered(java.awt.event.MouseEvent evt) {                                            
         computerButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_computerButtonMouseEntered
+    }                                           
 
-    private void computerButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseExited
+    private void computerButtonMouseExited(java.awt.event.MouseEvent evt) {                                           
         computerButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_computerButtonMouseExited
+    }                                          
 
-    private void serviceButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseEntered
+    private void serviceButtonMouseEntered(java.awt.event.MouseEvent evt) {                                           
         serviceButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_serviceButtonMouseEntered
+    }                                          
 
-    private void serviceButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseExited
+    private void serviceButtonMouseExited(java.awt.event.MouseEvent evt) {                                          
         serviceButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_serviceButtonMouseExited
+    }                                         
 
-    private void ordersButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseEntered
+    private void ordersButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
         ordersButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_ordersButtonMouseEntered
+    }                                         
 
-    private void ordersButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseExited
+    private void ordersButtonMouseExited(java.awt.event.MouseEvent evt) {                                         
         ordersButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_ordersButtonMouseExited
+    }                                        
 
-    private void orderDetailButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseEntered
+    private void orderDetailButtonMouseEntered(java.awt.event.MouseEvent evt) {                                               
         orderDetailButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_orderDetailButtonMouseEntered
+    }                                              
 
-    private void orderDetailButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseExited
+    private void orderDetailButtonMouseExited(java.awt.event.MouseEvent evt) {                                              
         orderDetailButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_orderDetailButtonMouseExited
+    }                                             
 
-    private void billButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseEntered
+    private void billButtonMouseEntered(java.awt.event.MouseEvent evt) {                                        
         billButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_billButtonMouseEntered
+    }                                       
 
-    private void billButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseExited
+    private void billButtonMouseExited(java.awt.event.MouseEvent evt) {                                       
         billButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_billButtonMouseExited
+    }                                      
 
-    private void takeCareButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseEntered
+    private void takeCareButtonMouseEntered(java.awt.event.MouseEvent evt) {                                            
         takeCareButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_takeCareButtonMouseEntered
+    }                                           
 
-    private void takeCareButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseExited
+    private void takeCareButtonMouseExited(java.awt.event.MouseEvent evt) {                                           
         takeCareButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_takeCareButtonMouseExited
+    }                                          
 
-    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseExited
+    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
         usersButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_usersButtonMouseExited
+    }                                       
 
-    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseEntered
+    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
         usersButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_usersButtonMouseEntered
+    }                                        
 
-    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseExited
+    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {                                       
         homeButton.setForeground(NORMAL_COLOR);
-    }//GEN-LAST:event_homeButtonMouseExited
+    }                                      
 
-    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
+    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {                                        
         homeButton.setForeground(HOVER_COLOR);
-    }//GEN-LAST:event_homeButtonMouseEntered
+    }                                       
 
-    private void uAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uAddActionPerformed
+    private void uAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
@@ -2369,9 +2369,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_uAddActionPerformed
+    }                                    
 
-    private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uUpdateActionPerformed
+    private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
@@ -2387,9 +2387,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_uUpdateActionPerformed
+    }                                       
 
-    private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDeleteActionPerformed
+    private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = uidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Users", data);
@@ -2399,9 +2399,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_uDeleteActionPerformed
+    }                                       
 
-    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserTableMouseClicked
+    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {                                       
         connect.selectData("Users", UserTable);
         try {
             while (connect.rs.next()) {
@@ -2413,9 +2413,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_UserTableMouseClicked
+    }                                      
 
-    private void sAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sAddActionPerformed
+    private void sAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { sidText.getText(), snameText.getText(), sdobText.getText(), sphoneText.getText(),
                 saddressText.getText() };
         
@@ -2433,9 +2433,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_sAddActionPerformed
+    }                                    
 
-    private void sUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sUpdateActionPerformed
+    private void sUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { sidText.getText(), snameText.getText(), sdobText.getText(), sphoneText.getText(),
                 saddressText.getText() };
         boolean state = true;
@@ -2452,9 +2452,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_sUpdateActionPerformed
+    }                                       
 
-    private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sDeleteActionPerformed
+    private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = sidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Staff", data);
@@ -2463,9 +2463,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_sDeleteActionPerformed
+    }                                       
 
-    private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StaffTableMouseClicked
+    private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {                                        
         connect.selectData("Staff", StaffTable);
         try {
             while (connect.rs.next()) {
@@ -2478,9 +2478,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_StaffTableMouseClicked
+    }                                       
 
-    private void cAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cAddActionPerformed
+    private void cAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = null;
         if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), ctimeText.getText() };
@@ -2503,9 +2503,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_cAddActionPerformed
+    }                                    
 
-    private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cUpdateActionPerformed
+    private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = null;
         if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), (String) ctimeText.getText() };
@@ -2529,9 +2529,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_cUpdateActionPerformed
+    }                                       
 
-    private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cDeleteActionPerformed
+    private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = cidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Computer", data);
@@ -2540,9 +2540,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_cDeleteActionPerformed
+    }                                       
 
-    private void ComputerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputerTableMouseClicked
+    private void ComputerTableMouseClicked(java.awt.event.MouseEvent evt) {                                           
         connect.selectData("Computer", ComputerTable);
         try {
             while (connect.rs.next()) {
@@ -2561,9 +2561,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_ComputerTableMouseClicked
+    }                                          
 
-    private void svAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svAddActionPerformed
+    private void svAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
                 svtypeText.getText() };
         
@@ -2581,9 +2581,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_svAddActionPerformed
+    }                                     
 
-    private void svUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svUpdateActionPerformed
+    private void svUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
                 svtypeText.getText() };
         
@@ -2601,9 +2601,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_svUpdateActionPerformed
+    }                                        
 
-    private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svDeleteActionPerformed
+    private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
                 svtypeText.getText() };
         
@@ -2621,9 +2621,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_svDeleteActionPerformed
+    }                                        
 
-    private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ServiceTableMouseClicked
+    private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {                                          
         connect.selectData("Service", ServiceTable);
         try {
             while (connect.rs.next()) {
@@ -2635,9 +2635,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_ServiceTableMouseClicked
+    }                                         
 
-    private void oAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oAddActionPerformed
+    private void oAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
         
         boolean state = true;
@@ -2654,9 +2654,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_oAddActionPerformed
+    }                                    
 
-    private void oUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oUpdateActionPerformed
+    private void oUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
         
         boolean state = true;
@@ -2673,9 +2673,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_oUpdateActionPerformed
+    }                                       
 
-    private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oDeleteActionPerformed
+    private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = oidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Orders", data);
@@ -2684,9 +2684,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_oDeleteActionPerformed
+    }                                       
 
-    private void OrderTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderTableMouseClicked
+    private void OrderTableMouseClicked(java.awt.event.MouseEvent evt) {                                        
         connect.selectData("Orders", OrderTable);
         try {
             while (connect.rs.next()) {
@@ -2698,9 +2698,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_OrderTableMouseClicked
+    }                                       
 
-    private void odAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odAddActionPerformed
+    private void odAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
         
         boolean state = true;
@@ -2717,9 +2717,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_odAddActionPerformed
+    }                                     
 
-    private void odUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odUpdateActionPerformed
+    private void odUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
         
         boolean state = true;
@@ -2736,9 +2736,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_odUpdateActionPerformed
+    }                                        
 
-    private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odDeleteActionPerformed
+    private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String data = odorderidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("OrderDetail", data);
@@ -2747,9 +2747,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_odDeleteActionPerformed
+    }                                        
 
-    private void OrderDetailTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailTableMouseClicked
+    private void OrderDetailTableMouseClicked(java.awt.event.MouseEvent evt) {                                              
         connect.selectData("OrderDetail", OrderDetailTable);
         try {
             while (connect.rs.next()) {
@@ -2760,9 +2760,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_OrderDetailTableMouseClicked
+    }                                             
 
-    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
+    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
                 (String) jComboBox1.getSelectedItem() };
         
@@ -2780,9 +2780,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_bAddActionPerformed
+    }                                    
 
-    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
+    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
                 (String) jComboBox1.getSelectedItem() };
         
@@ -2800,9 +2800,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_bUpdateActionPerformed
+    }                                       
 
-    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = bidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Bill", data);
@@ -2811,9 +2811,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_bDeleteActionPerformed
+    }                                       
 
-    private void BillTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillTableMouseClicked
+    private void BillTableMouseClicked(java.awt.event.MouseEvent evt) {                                       
         connect.selectData("Bill", BillTable);
         try {
             while (connect.rs.next()) {
@@ -2825,9 +2825,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_BillTableMouseClicked
+    }                                      
 
-    private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcAddActionPerformed
+    private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
         
         boolean state = true;
@@ -2844,9 +2844,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }//GEN-LAST:event_tcAddActionPerformed
+    }                                     
 
-    private void tcUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcUpdateActionPerformed
+    private void tcUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
         
         boolean state = true;
@@ -2863,9 +2863,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }//GEN-LAST:event_tcUpdateActionPerformed
+    }                                        
 
-    private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcDeleteActionPerformed
+    private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String data = tcuseridText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("TakeCare", data);
@@ -2874,9 +2874,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }//GEN-LAST:event_tcDeleteActionPerformed
+    }                                        
 
-    private void TakeCareTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TakeCareTableMouseClicked
+    private void TakeCareTableMouseClicked(java.awt.event.MouseEvent evt) {                                           
         connect.selectData("TakeCare", TakeCareTable);
         try {
             while (connect.rs.next()) {
@@ -2887,7 +2887,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_TakeCareTableMouseClicked
+    }                                          
 
     
     
@@ -2936,7 +2936,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 //        });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JPanel BTable;
     private javax.swing.JPanel Bar;
     private javax.swing.JPanel BillInformation;
@@ -3083,5 +3083,5 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JButton usersButton;
     private javax.swing.JPanel usersInterface;
     private javax.swing.JTextField utimeText;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
