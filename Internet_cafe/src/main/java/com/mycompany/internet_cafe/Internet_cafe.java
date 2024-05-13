@@ -1187,6 +1187,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane4.setMinimumSize(new java.awt.Dimension(500, 550));
         jScrollPane4.setPreferredSize(new java.awt.Dimension(500, 550));
 
+        ComputerTable.setBackground(new java.awt.Color(70, 3, 75));
         ComputerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1195,6 +1196,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
             }
         ));
+        ComputerTable.setAutoscrolls(false);
         ComputerTable.setMaximumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setMinimumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setPreferredSize(new java.awt.Dimension(500, 550));
