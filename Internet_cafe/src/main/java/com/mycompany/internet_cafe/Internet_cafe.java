@@ -2373,6 +2373,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Users", data);
             connect.displayData("SELECT * FROM Users", UserTable);
             showAddMessage(true);
+            
+            uidText.setText(null);
+            uaccText.setText(null); 
+            upassText.setText(null);
+            utimeText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2391,6 +2396,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Users", data, UserTable);
             connect.displayData("SELECT * FROM Users", UserTable);
             showUpdateMessage(true);
+            
+            uidText.setText(null);
+            uaccText.setText(null); 
+            upassText.setText(null);
+            utimeText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2403,6 +2413,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Users", data);
                 connect.displayData("SELECT * FROM Users", UserTable);
+                
+                uidText.setText(null);
+                uaccText.setText(null); 
+                upassText.setText(null);
+                utimeText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2439,6 +2454,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Staff", data);
             connect.displayData("SELECT * FROM Staff", StaffTable);
             showAddMessage(true);
+            
+            sidText.setText(null);
+            snameText.setText(null); 
+            sdobText.setText(null);
+            sphoneText.setText(null);
+            saddressText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2458,6 +2479,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Staff", data, StaffTable);
             connect.displayData("SELECT * FROM Staff", StaffTable);
             showUpdateMessage(true);
+            
+            sidText.setText(null);
+            snameText.setText(null); 
+            sdobText.setText(null);
+            sphoneText.setText(null);
+            saddressText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2471,6 +2498,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Staff", data);
                 connect.displayData("SELECT * FROM Staff", StaffTable);
+                
+                sidText.setText(null);
+                snameText.setText(null); 
+                sdobText.setText(null);
+                sphoneText.setText(null);
+                saddressText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2517,6 +2550,13 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Computer", data);
             connect.displayData("SELECT * FROM Computer", ComputerTable);
             showAddMessage(true);
+            
+            cidText.setText(null);
+            cuseridText.setText(null);
+            ctimeText.setText(null);
+            cON.setSelected(false);
+            cOFF.setSelected(false);
+            
         }
         else
             showAddMessage(false);
@@ -2547,6 +2587,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Computer", data, ComputerTable);
             connect.displayData("SELECT * FROM Computer", ComputerTable);
             showUpdateMessage(true);
+            
+            cidText.setText(null);
+            cuseridText.setText(null);
+            ctimeText.setText(null);
+            cON.setSelected(false);
+            cOFF.setSelected(false);
         }
         else
             showUpdateMessage(false);
@@ -2559,6 +2605,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Computer", data);
                 connect.displayData("SELECT * FROM Computer", ComputerTable);
+                
+                cidText.setText(null);
+                cuseridText.setText(null);
+                ctimeText.setText(null);
+                cON.setSelected(false);
+                cOFF.setSelected(false);
             }
             chooseDeleteMess(option);
         }
@@ -2602,6 +2654,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Service", data);
             connect.displayData("SELECT * FROM Service", ServiceTable);
             showAddMessage(true);
+            
+            svidText.setText(null);
+            svpriceText.setText(null);
+            svdescriptionText.setText(null);
+            svtypeText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2622,6 +2679,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Service", data, ServiceTable);
             connect.displayData("SELECT * FROM Service", ServiceTable);
             showUpdateMessage(true);
+            
+            svidText.setText(null);
+            svpriceText.setText(null);
+            svdescriptionText.setText(null);
+            svtypeText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2634,6 +2696,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Service", data);
                 connect.displayData("SELECT * FROM Service", ServiceTable);
+                
+                svidText.setText(null);
+                svpriceText.setText(null);
+                svdescriptionText.setText(null);
+                svtypeText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2669,6 +2736,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Orders", data);
             connect.displayData("SELECT * FROM Orders", OrderTable);
             showAddMessage(true);
+            
+            oidText.setText(null);
+            ostaffidText.setText(null);
+            ooderdateText.setText(null);
+            ouseridText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2688,6 +2760,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Orders", data, OrderTable);
             connect.displayData("SELECT * FROM Orders", OrderTable);
             showUpdateMessage(true);
+            
+            oidText.setText(null);
+            ostaffidText.setText(null);
+            ooderdateText.setText(null);
+            ouseridText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2700,6 +2777,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Orders", data);
                 connect.displayData("SELECT * FROM Orders", OrderTable);
+                
+                oidText.setText(null);
+                ostaffidText.setText(null);
+                ooderdateText.setText(null);
+                ouseridText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2735,6 +2817,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("OrderDetail", data);
             connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
             showAddMessage(true);
+            
+            odorderidText.setText(null);
+            odserviceidText.setText(null);
+            odquantityText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2754,6 +2840,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("OrderDetail", data, OrderDetailTable);
             connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
             showUpdateMessage(true);
+            
+            odorderidText.setText(null);
+            odserviceidText.setText(null);
+            odquantityText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2766,6 +2856,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("OrderDetail", data);
                 connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+                
+                odorderidText.setText(null);
+                odserviceidText.setText(null);
+                odquantityText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2801,6 +2895,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("Bill", data);
             connect.displayData("SELECT * FROM Bill", BillTable);
             showAddMessage(true);
+            
+            bidText.setText(null);
+            boderidText.setText(null);
+            bpaymentdayText.setText(null);
+            jComboBox1.setSelectedItem(null);
         }
         else
             showAddMessage(false);
@@ -2821,6 +2920,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("Bill", data, BillTable);
             connect.displayData("SELECT * FROM Bill", BillTable);
             showUpdateMessage(true);
+            
+            bidText.setText(null);
+            boderidText.setText(null);
+            bpaymentdayText.setText(null);
+            jComboBox1.setSelectedItem(null);
         }
         else
             showUpdateMessage(false);
@@ -2833,6 +2937,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("Bill", data);
                 connect.displayData("SELECT * FROM Bill", BillTable);
+                
+                bidText.setText(null);
+                boderidText.setText(null);
+                bpaymentdayText.setText(null);
+                jComboBox1.setSelectedItem(null);
             }
             chooseDeleteMess(option);
         }
@@ -2868,6 +2977,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showAddData("TakeCare", data);
             connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
             showAddMessage(true);
+            
+            tcuseridText.setText(null);
+            tcstaffidText.setText(null);
+            tcrateText.setText(null);
         }
         else
             showAddMessage(false);
@@ -2887,6 +3000,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.showUpdateData("TakeCare", data, TakeCareTable);
             connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
             showUpdateMessage(true);
+            
+            tcuseridText.setText(null);
+            tcstaffidText.setText(null);
+            tcrateText.setText(null);
         }
         else
             showUpdateMessage(false);
@@ -2899,6 +3016,10 @@ public class Internet_cafe extends javax.swing.JFrame {
             if(option == 1){
                 connect.showDeleteData("TakeCare", data);
                 connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+                
+                tcuseridText.setText(null);
+                tcstaffidText.setText(null);
+                tcrateText.setText(null);
             }
             chooseDeleteMess(option);
         }
