@@ -52,15 +52,18 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
 
     private void showDeleteMessage(boolean state) {
+        Boolean option = null;
         if (!state)
             JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else {
             int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?",
                     "Confirm Deletion", JOptionPane.YES_NO_OPTION);
             if (confirmDelete == JOptionPane.YES_OPTION) {
+                option = true;
                 JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation",
                         JOptionPane.INFORMATION_MESSAGE);
             } else {
+                option = false;
                 JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled",
                         JOptionPane.INFORMATION_MESSAGE);
             }
@@ -2318,7 +2321,6 @@ public class Internet_cafe extends javax.swing.JFrame {
                 jScrollPane1.setLocation(148, 110);
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
-                connect.status = true;
             }
         }
     }// GEN-LAST:event_SearchBoxKeyPressed
@@ -2432,9 +2434,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_uUpdateActionPerformed
 
     private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_uDeleteActionPerformed
-        connect.showDeleteData("Users", UserTable);
-        connect.displayData("SELECT * FROM Users", UserTable);
-        showDeleteMessage(true);
+        String data = uidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Users", data);
+            connect.displayData("SELECT * FROM Users", UserTable);
+            showDeleteMessage(true);
+//            if(show)
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_uDeleteActionPerformed
 
     private void computerButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_computerButtonActionPerformed
@@ -2461,7 +2469,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2480,7 +2488,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 saddressText.getText() };
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2495,9 +2503,14 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_sUpdateActionPerformed
 
     private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sDeleteActionPerformed
-        connect.showDeleteData("Staff", StaffTable);
-        connect.displayData("SELECT * FROM Staff", StaffTable);
-        showDeleteMessage(true);
+        String data = sidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Staff", data);
+            connect.displayData("SELECT * FROM Staff", StaffTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_sDeleteActionPerformed
 
     private void cAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cAddActionPerformed
@@ -2511,7 +2524,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2537,7 +2550,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2552,9 +2565,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_cUpdateActionPerformed
 
     private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cDeleteActionPerformed
-        connect.showDeleteData("Computer", ComputerTable);
-        connect.displayData("SELECT * FROM Computer", ComputerTable);
-        showDeleteMessage(true);
+        
+        String data = cidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Computer", data);
+            connect.displayData("SELECT * FROM Computer", ComputerTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_cDeleteActionPerformed
 
     private void svAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_svAddActionPerformed
@@ -2563,7 +2582,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2583,7 +2602,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2598,9 +2617,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_svUpdateActionPerformed
 
     private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_svDeleteActionPerformed
-        connect.showDeleteData("Service", ServiceTable);
-        connect.displayData("SELECT * FROM Service", ServiceTable);
-        showDeleteMessage(true);
+        
+        String data = svidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Service", data);
+            connect.displayData("SELECT * FROM Service", ServiceTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_svDeleteActionPerformed
 
     private void oAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_oAddActionPerformed
@@ -2608,7 +2633,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2627,7 +2652,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty() ){
                 state = false;
                 break;
             }                
@@ -2642,9 +2667,16 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_oUpdateActionPerformed
 
     private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_oDeleteActionPerformed
-        connect.showDeleteData("Orders", OrderTable);
-        connect.displayData("SELECT * FROM Orders", OrderTable);
-        showDeleteMessage(true);
+        
+        String data = oidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Orders", data);
+            connect.displayData("SELECT * FROM Orders", OrderTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
+
     }// GEN-LAST:event_oDeleteActionPerformed
 
     private void odAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_odAddActionPerformed
@@ -2652,7 +2684,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2671,7 +2703,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty() ){
                 state = false;
                 break;
             }                
@@ -2686,9 +2718,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_odUpdateActionPerformed
 
     private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_odDeleteActionPerformed
-        connect.showDeleteData("OrderDetail", OrderDetailTable);
-        connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-        showDeleteMessage(true);
+        
+        String data = odorderidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("OrderDetail", data);
+            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_odDeleteActionPerformed
 
     private void bAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_bAddActionPerformed
@@ -2697,7 +2735,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2717,7 +2755,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2732,9 +2770,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_bUpdateActionPerformed
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_bDeleteActionPerformed
-        connect.showDeleteData("Bill", BillTable);
-        connect.displayData("SELECT * FROM Bill", BillTable);
-        showDeleteMessage(true);
+        
+        String data = bidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Bill", data);
+            connect.displayData("SELECT * FROM Bill", BillTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_bDeleteActionPerformed
 
     private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tcAddActionPerformed
@@ -2742,7 +2786,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2761,7 +2805,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2776,9 +2820,15 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_tcUpdateActionPerformed
 
     private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tcDeleteActionPerformed
-        connect.showDeleteData("TakeCare", TakeCareTable);
-        connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-        showDeleteMessage(true);
+        
+        String data = tcuseridText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("TakeCare", data);
+            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
     }// GEN-LAST:event_tcDeleteActionPerformed
 
     private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_StaffTableMouseClicked

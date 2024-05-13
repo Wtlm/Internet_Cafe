@@ -21,7 +21,7 @@ public class Connect {
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://ZANG\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
             + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);
@@ -175,8 +175,7 @@ public class Connect {
         }
     }
     
-    public void showDeleteData(String TableName, JTable Table){
-        String id = Table.getModel().getValueAt(Table.getSelectedRow(), 0).toString();  
+    public void showDeleteData(String TableName, String data){
         try {
             String query = "DELETE FROM ";
             StringBuilder cmdBuild = new StringBuilder(query);
@@ -186,7 +185,7 @@ public class Connect {
             cmdBuild.append(" = ?");
             
             PreparedStatement pst = connect.prepareStatement(cmdBuild.toString());
-            pst.setString(1, id);
+            pst.setString(1, data);
             pst.executeUpdate();
         } catch (SQLException e) {
              e.printStackTrace();
