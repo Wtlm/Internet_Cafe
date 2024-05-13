@@ -2364,7 +2364,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
@@ -2382,7 +2382,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
-            if(i.isEmpty() || i == null){
+            if(i.isEmpty()){
                 state = false;
                 break;
             }                
