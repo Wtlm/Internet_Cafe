@@ -2324,12 +2324,15 @@ public class Internet_cafe extends javax.swing.JFrame {
             String cmd = SearchBox.getText();
             connect.displayData(cmd, Table);
             jScrollPane1.setViewportView(Table);
+            setTable(Table);
+            Table.setBackground(new Color(245,229,191));
 
             if (connect.status) {
                 SearchBox.setSize(700, 30);
                 SearchBox.setLocation(148, 40);
                 jScrollPane1.setSize(700, 300);
                 jScrollPane1.setLocation(148, 110);
+                setScroll(jScrollPane1);
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
             }
@@ -3163,40 +3166,7 @@ public class Internet_cafe extends javax.swing.JFrame {
          * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         new Internet_cafe().setVisible(true);
-        // try {
-        // for (javax.swing.UIManager.LookAndFeelInfo info :
-        // javax.swing.UIManager.getInstalledLookAndFeels()) {
-        // if ("Nimbus".equals(info.getName())) {
-        // javax.swing.UIManager.setLookAndFeel(info.getClassName());
-        // break;
-        // }
-        // }
-        // } catch (ClassNotFoundException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (InstantiationException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (IllegalAccessException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // }
-        // // </editor-fold>
-        //
-        // /* Create and display the form */
-        // java.awt.EventQueue.invokeLater(new Runnable() {
-        // @Override
-        // public void run() {
-        // new Internet_cafe().setVisible(true);
-        // }
-        // });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
