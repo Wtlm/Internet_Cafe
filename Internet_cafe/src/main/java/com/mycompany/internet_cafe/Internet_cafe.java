@@ -18,6 +18,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private final Color HOVER_COLOR = new Color(216, 174, 94);
     private final Color NORMAL_COLOR = new Color(216, 174, 94, 200);
     boolean menuClick;
+    int option = 0;
 
     public Internet_cafe() {
         initComponents();
@@ -37,7 +38,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     
     private void showAddMessage(boolean state){
         if(!state)
-            JOptionPane.showMessageDialog(rootPane, "Please enter data!", "Input Request", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Please enter missing data!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else
             JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation", JOptionPane.INFORMATION_MESSAGE);      
     }
@@ -50,20 +51,24 @@ public class Internet_cafe extends javax.swing.JFrame {
     }
     
     private void showDeleteMessage(boolean state){
-        boolean option = true;
         if(!state)
             JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else {
             int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
         
             if (confirmDelete == JOptionPane.YES_OPTION) {
-                option = true;
-                JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
+                option = 1;
             } else {
-                option = false;
-                JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
+                option = 2;
             }
         }
+    }
+    
+    private void chooseDeleteMess(int option){
+        if(option == 1)
+            JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
+        else if(option == 2)
+            JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);            
     }
 
     @SuppressWarnings("unchecked")
@@ -2394,10 +2399,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDeleteActionPerformed
         String data = uidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("Users", data);
-            connect.displayData("SELECT * FROM Users", UserTable);
             showDeleteMessage(true);
-//            if(show)
+            if(option == 1){
+                connect.showDeleteData("Users", data);
+                connect.displayData("SELECT * FROM Users", UserTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2459,9 +2466,13 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sDeleteActionPerformed
         String data = sidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("Staff", data);
-            connect.displayData("SELECT * FROM Staff", StaffTable);
+            
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("Staff", data);
+                connect.displayData("SELECT * FROM Staff", StaffTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2484,19 +2495,23 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void cAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cAddActionPerformed
         String[] data = null;
-        if (cON.isSelected()) {
+        if (cON.isSelected() == true && cOFF.isSelected() == true ||
+                    cON.isSelected() == false && cOFF.isSelected() == false) {
+            JOptionPane.showMessageDialog(rootPane, "Please choose 1 state of computer!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), ctimeText.getText() };
         } else if (cOFF.isSelected()) {
             data = new String[] { cidText.getText(), "OFF", null, null };
-        } else if (cON.isSelected() && cOFF.isSelected() || !cOFF.isSelected() && !cON.isSelected()) {
-            System.out.print("Please choose status of computer");
         }
         boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
+        if(cON.isSelected()){
+            for(String i: data){
+                if(i.isEmpty()){
+                    state = false;
+                    break;
+                }                
+            }
         }
         if(state){
             connect.showAddData("Computer", data);
@@ -2509,20 +2524,24 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cUpdateActionPerformed
         String[] data = null;
-        if (cON.isSelected()) {
+        if (cON.isSelected() == true && cOFF.isSelected() == true ||
+                    cON.isSelected() == false && cOFF.isSelected() == false) {
+            JOptionPane.showMessageDialog(rootPane, "Please choose 1 state of computer!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), (String) ctimeText.getText() };
         } else if (cOFF.isSelected()) {
             data = new String[] { cidText.getText(), "OFF", null, null };
-        } else if (cON.isSelected() && cOFF.isSelected() || !cOFF.isSelected() && !cON.isSelected()) {
-            System.out.print("Please choose status of computer");
         }
 
         boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
+        if(cON.isSelected()){
+            for(String i: data){
+                if(i.isEmpty()){
+                    state = false;
+                    break;
+                }                
+            }
         }
         if(state){
             connect.showUpdateData("Computer", data, ComputerTable);
@@ -2536,9 +2555,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cDeleteActionPerformed
         String data = cidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("Computer", data);
-            connect.displayData("SELECT * FROM Computer", ComputerTable);
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("Computer", data);
+                connect.displayData("SELECT * FROM Computer", ComputerTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2606,23 +2628,17 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_svUpdateActionPerformed
 
     private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svDeleteActionPerformed
-        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
-                svtypeText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
+        String data = svidText.getText();
+        if(!data.isEmpty()){
+            showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("Service", data);
+                connect.displayData("SELECT * FROM Service", ServiceTable);
+            }
+            chooseDeleteMess(option);
         }
-        if(state){
-            connect.showUpdateData("Service", data, ServiceTable);
-            connect.displayData("SELECT * FROM Service", ServiceTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
+        else 
+            showDeleteMessage(false);
     }//GEN-LAST:event_svDeleteActionPerformed
 
     private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ServiceTableMouseClicked
@@ -2680,9 +2696,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oDeleteActionPerformed
         String data = oidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("Orders", data);
-            connect.displayData("SELECT * FROM Orders", OrderTable);
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("Orders", data);
+                connect.displayData("SELECT * FROM Orders", OrderTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2743,9 +2762,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odDeleteActionPerformed
         String data = odorderidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("OrderDetail", data);
-            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("OrderDetail", data);
+                connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2807,9 +2829,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
         String data = bidText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("Bill", data);
-            connect.displayData("SELECT * FROM Bill", BillTable);
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("Bill", data);
+                connect.displayData("SELECT * FROM Bill", BillTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
@@ -2870,9 +2895,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcDeleteActionPerformed
         String data = tcuseridText.getText();
         if(!data.isEmpty()){
-            connect.showDeleteData("TakeCare", data);
-            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
             showDeleteMessage(true);
+            if(option == 1){
+                connect.showDeleteData("TakeCare", data);
+                connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+            }
+            chooseDeleteMess(option);
         }
         else 
             showDeleteMessage(false);
