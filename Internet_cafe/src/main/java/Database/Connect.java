@@ -19,6 +19,7 @@ public class Connect {
     public String rowData[][];
     public String columnName[];
     public boolean status;
+    public boolean modify;
     
     public Connect(){
        try{
@@ -109,8 +110,11 @@ public class Connect {
                pst.setString(i,getData[i-1]);                
             }
             pst.executeUpdate();
+            modify = true;
         } catch (SQLException e) {
             e.printStackTrace();
+            modify = false;
+
         }
     }
     
@@ -171,8 +175,11 @@ public class Connect {
                     pst.setString(i,getData[i-1]);   
             }
             pst.executeUpdate();
+            modify = true;          
         } catch (SQLException e) {
             e.printStackTrace();
+            modify = false;
+
         }
     }
     
@@ -188,8 +195,10 @@ public class Connect {
             PreparedStatement pst = connect.prepareStatement(cmdBuild.toString());
             pst.setString(1, data);
             pst.executeUpdate();
+            modify = true;
         } catch (SQLException e) {
              e.printStackTrace();
+            modify = false;
         }  
     }   
 }
