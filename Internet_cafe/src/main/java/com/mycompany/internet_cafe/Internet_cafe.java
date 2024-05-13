@@ -22,11 +22,11 @@ public class Internet_cafe extends javax.swing.JFrame {
     public Internet_cafe() {
         initComponents();
         connect = new Connect();
-        submenu.setSize(0, 0);
+        submenu.setSize(0,0);
         menuClick = false;
     }
-
-    private void menuSize(boolean status) {
+    
+    private void menuSize(boolean status){
         if (status) {
             submenu.setSize(150, 550);
         }
@@ -34,45 +34,40 @@ public class Internet_cafe extends javax.swing.JFrame {
             submenu.setSize(0,0);
         }
     }
-
-    private void showAddMessage(boolean state) {
-        if (!state)
+    
+    private void showAddMessage(boolean state){
+        if(!state)
             JOptionPane.showMessageDialog(rootPane, "Please enter data!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else
-            JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation",
-                    JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation", JOptionPane.INFORMATION_MESSAGE);      
     }
-
-    private void showUpdateMessage(boolean state) {
+    
+    private void showUpdateMessage(boolean state){
         if (!state)
             JOptionPane.showMessageDialog(rootPane, "No data to update!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else
-            JOptionPane.showMessageDialog(rootPane, "Update data successfully!", "Update Confirmation",
-                    JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Update data successfully!", "Update Confirmation", JOptionPane.INFORMATION_MESSAGE);      
     }
-
-    private void showDeleteMessage(boolean state) {
-        Boolean option = null;
-        if (!state)
+    
+    private void showDeleteMessage(boolean state){
+        boolean option = true;
+        if(!state)
             JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
         else {
-            int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?",
-                    "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+            int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+        
             if (confirmDelete == JOptionPane.YES_OPTION) {
                 option = true;
-                JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation",
-                        JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 option = false;
-                JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled",
-                        JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel = new javax.swing.JPanel();
@@ -273,25 +268,22 @@ public class Internet_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout BarLayout = new javax.swing.GroupLayout(Bar);
         Bar.setLayout(BarLayout);
         BarLayout.setHorizontalGroup(
-                BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(BarLayout.createSequentialGroup()
-                                .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 1000,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarLayout.createSequentialGroup()
+                .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
         BarLayout.setVerticalGroup(
-                BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(BarLayout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addGroup(BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(menuButton, javax.swing.GroupLayout.DEFAULT_SIZE, 51,
-                                                Short.MAX_VALUE)
-                                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)));
+            BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(BarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(menuButton, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
 
         jPanel.add(Bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 50));
 
@@ -315,11 +307,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homeButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 homeButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 homeButtonMouseExited(evt);
             }
@@ -341,11 +331,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 usersButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 usersButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 usersButtonMouseExited(evt);
             }
@@ -365,11 +353,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 staffButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 staffButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 staffButtonMouseExited(evt);
             }
@@ -391,18 +377,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 computerButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 computerButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 computerButtonMouseExited(evt);
-            }
-        });
-        computerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                computerButtonActionPerformed(evt);
             }
         });
 
@@ -422,11 +401,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 serviceButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 serviceButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 serviceButtonMouseExited(evt);
             }
@@ -448,11 +425,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ordersButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ordersButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ordersButtonMouseExited(evt);
             }
@@ -474,11 +449,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 orderDetailButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 orderDetailButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 orderDetailButtonMouseExited(evt);
             }
@@ -500,11 +473,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 billButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 billButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 billButtonMouseExited(evt);
             }
@@ -526,11 +497,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 takeCareButtonMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 takeCareButtonMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 takeCareButtonMouseExited(evt);
             }
@@ -539,68 +508,43 @@ public class Internet_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout submenuLayout = new javax.swing.GroupLayout(submenu);
         submenu.setLayout(submenuLayout);
         submenuLayout.setHorizontalGroup(
-                submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(submenuLayout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addGroup(submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(usersButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(staffButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(serviceButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(orderDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(billButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(takeCareButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(computerButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))));
+            submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(submenuLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usersButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staffButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(serviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(orderDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(billButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(takeCareButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(computerButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
         submenuLayout.setVerticalGroup(
-                submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, submenuLayout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(usersButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(staffButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(computerButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(serviceButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(orderDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(billButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(takeCareButton, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)));
+            submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, submenuLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(usersButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(staffButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(computerButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(serviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(ordersButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(orderDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(billButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(takeCareButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
 
         jPanel.add(submenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 0));
 
@@ -620,7 +564,6 @@ public class Internet_cafe extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 SearchBoxFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 SearchBoxFocusLost(evt);
             }
@@ -642,18 +585,19 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane1.setRequestFocusEnabled(false);
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
-                        {},
-                        {},
-                        {},
-                        {},
-                        {},
-                        {},
-                        {}
-                },
-                new String[] {
+            new Object [][] {
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         Table.setAutoscrolls(false);
         Table.setColumnSelectionAllowed(true);
         Table.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -681,18 +625,17 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addGap(150, 150, 150)))
         );
         homeInterfaceLayout.setVerticalGroup(
-                homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(homeInterfaceLayout.createSequentialGroup()
-                                .addGap(236, 236, 236)
-                                .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(264, Short.MAX_VALUE))
-                        .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(homeInterfaceLayout.createSequentialGroup()
-                                        .addGap(377, 377, 377)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(173, Short.MAX_VALUE))));
+            homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeInterfaceLayout.createSequentialGroup()
+                .addGap(236, 236, 236)
+                .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(264, Short.MAX_VALUE))
+            .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(homeInterfaceLayout.createSequentialGroup()
+                    .addGap(377, 377, 377)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(173, Short.MAX_VALUE)))
+        );
 
         jTabbedPane.addTab("home", homeInterface);
 
@@ -838,12 +781,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 550));
 
         UserTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         UserTable.setGridColor(new java.awt.Color(51, 51, 51));
         UserTable.setMaximumSize(new java.awt.Dimension(500, 550));
         UserTable.setMinimumSize(new java.awt.Dimension(500, 550));
@@ -1041,12 +985,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane3.setPreferredSize(new java.awt.Dimension(500, 550));
 
         StaffTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         StaffTable.setMaximumSize(new java.awt.Dimension(500, 550));
         StaffTable.setMinimumSize(new java.awt.Dimension(500, 550));
         StaffTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1105,7 +1050,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterface.setRequestFocusEnabled(false);
         computerInterface.setVerifyInputWhenFocusTarget(false);
 
-        ComputerInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        ComputerInformation.setBackground(new java.awt.Color(216, 174, 94));
         ComputerInformation.setBorder(new RoundedBorder(40));
         ComputerInformation.setMaximumSize(new java.awt.Dimension(400, 400));
         ComputerInformation.setMinimumSize(new java.awt.Dimension(400, 400));
@@ -1116,10 +1061,15 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         cStatus.setText("Status");
 
+        cON.setBackground(new java.awt.Color(216, 174, 94));
         cON.setText("ON");
+        cON.setBorder(null);
+        cON.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cON.setOpaque(true);
 
+        cOFF.setBackground(new java.awt.Color(216, 174, 94));
         cOFF.setText("OFF");
+        cOFF.setBorder(null);
         cOFF.setOpaque(true);
 
         cUserID.setText("User ID");
@@ -1238,12 +1188,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane4.setPreferredSize(new java.awt.Dimension(500, 550));
 
         ComputerTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         ComputerTable.setMaximumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setMinimumSize(new java.awt.Dimension(500, 550));
         ComputerTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1265,9 +1216,9 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CTableLayout.setVerticalGroup(
-                CTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            CTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout computerInterfaceLayout = new javax.swing.GroupLayout(computerInterface);
         computerInterface.setLayout(computerInterfaceLayout);
@@ -1417,12 +1368,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane5.setPreferredSize(new java.awt.Dimension(500, 550));
 
         ServiceTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         ServiceTable.setMaximumSize(new java.awt.Dimension(500, 550));
         ServiceTable.setMinimumSize(new java.awt.Dimension(500, 550));
         ServiceTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1442,9 +1394,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         SerTableLayout.setVerticalGroup(
-                SerTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            SerTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout serviceInterfaceLayout = new javax.swing.GroupLayout(serviceInterface);
         serviceInterface.setLayout(serviceInterfaceLayout);
@@ -1605,12 +1557,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane6.setPreferredSize(new java.awt.Dimension(500, 550));
 
         OrderTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         OrderTable.setMaximumSize(new java.awt.Dimension(500, 550));
         OrderTable.setMinimumSize(new java.awt.Dimension(500, 550));
         OrderTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1632,9 +1585,9 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         OTableLayout.setVerticalGroup(
-                OTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            OTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout orderInterfaceLayout = new javax.swing.GroupLayout(orderInterface);
         orderInterface.setLayout(orderInterfaceLayout);
@@ -1782,12 +1735,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane7.setPreferredSize(new java.awt.Dimension(500, 550));
 
         OrderDetailTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         OrderDetailTable.setMaximumSize(new java.awt.Dimension(500, 550));
         OrderDetailTable.setMinimumSize(new java.awt.Dimension(500, 550));
         OrderDetailTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1809,9 +1763,9 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         ODTableLayout.setVerticalGroup(
-                ODTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            ODTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout orderDetailInterfaceLayout = new javax.swing.GroupLayout(orderDetailInterface);
         orderDetailInterface.setLayout(orderDetailInterfaceLayout);
@@ -1906,8 +1860,7 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1
-                .setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash", "Card", "Internet Banking" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Null", "Cash", "Card", "Internet Banking" }));
 
         javax.swing.GroupLayout BillInformationLayout = new javax.swing.GroupLayout(BillInformation);
         BillInformation.setLayout(BillInformationLayout);
@@ -1978,12 +1931,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane8.setPreferredSize(new java.awt.Dimension(500, 550));
 
         BillTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         BillTable.setMaximumSize(new java.awt.Dimension(500, 550));
         BillTable.setMinimumSize(new java.awt.Dimension(500, 550));
         BillTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -2003,9 +1957,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         BTableLayout.setVerticalGroup(
-                BTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            BTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout billInterfaceLayout = new javax.swing.GroupLayout(billInterface);
         billInterface.setLayout(billInterfaceLayout);
@@ -2153,12 +2107,13 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane9.setPreferredSize(new java.awt.Dimension(500, 550));
 
         TakeCareTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
+            },
+            new String [] {
 
-                }));
+            }
+        ));
         TakeCareTable.setMaximumSize(new java.awt.Dimension(500, 550));
         TakeCareTable.setMinimumSize(new java.awt.Dimension(500, 550));
         TakeCareTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -2178,9 +2133,9 @@ public class Internet_cafe extends javax.swing.JFrame {
             .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         TCTableLayout.setVerticalGroup(
-                TCTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            TCTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout takeCareInterfaceLayout = new javax.swing.GroupLayout(takeCareInterface);
         takeCareInterface.setLayout(takeCareInterfaceLayout);
@@ -2210,105 +2165,106 @@ public class Internet_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, 0)
-                                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuButtonMouseClicked
+    private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         if (!menuClick) {
             submenu.setSize(150, 550);
             menuClick = true;
-        } else {
-            submenu.setSize(0, 0);
+        }
+        else {
+            submenu.setSize(0,0);
             menuClick = false;
         }
-    }// GEN-LAST:event_menuButtonMouseClicked
+    }                                       
 
-    private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_usersButtonMouseClicked
+    private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         menuSize(false);
         jTabbedPane.setSelectedIndex(1);
         connect.displayData("SELECT * FROM Users", UserTable);
-    }// GEN-LAST:event_usersButtonMouseClicked
+    }                                        
 
-    private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_staffButtonMouseClicked
+    private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {                                         
         menuSize(false);
         jTabbedPane.setSelectedIndex(2);
         connect.displayData("SELECT * FROM Staff", StaffTable);
-    }// GEN-LAST:event_staffButtonMouseClicked
+    }                                        
 
-    private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_computerButtonMouseClicked
+    private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
         menuSize(false);
         jTabbedPane.setSelectedIndex(3);
         connect.displayData("SELECT * FROM Computer", ComputerTable);
-    }// GEN-LAST:event_computerButtonMouseClicked
+    }                                           
 
-    private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_serviceButtonMouseClicked
+    private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {                                           
         menuSize(false);
         jTabbedPane.setSelectedIndex(4);
         connect.displayData("SELECT * FROM Service", ServiceTable);
         menuSize(false);
-    }// GEN-LAST:event_serviceButtonMouseClicked
+    }                                          
 
-    private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ordersButtonMouseClicked
+    private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {                                          
         menuSize(false);
         jTabbedPane.setSelectedIndex(5);
         connect.displayData("SELECT * FROM Orders", OrderTable);
-    }// GEN-LAST:event_ordersButtonMouseClicked
+    }                                         
 
-    private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_orderDetailButtonMouseClicked
+    private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {                                               
         menuSize(false);
         jTabbedPane.setSelectedIndex(6);
         connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-    }// GEN-LAST:event_orderDetailButtonMouseClicked
+    }                                              
 
-    private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_billButtonMouseClicked
+    private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         menuSize(false);
         jTabbedPane.setSelectedIndex(7);
         connect.displayData("SELECT * FROM Bill", BillTable);
-    }// GEN-LAST:event_billButtonMouseClicked
+    }                                       
 
-    private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_takeCareButtonMouseClicked
+    private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
         menuSize(false);
         jTabbedPane.setSelectedIndex(8);
         connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-    }// GEN-LAST:event_takeCareButtonMouseClicked
+    }                                           
 
-    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_homeButtonMouseClicked
-        jTabbedPane.setSelectedIndex(0);
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
         menuSize(false);
-    }// GEN-LAST:event_homeButtonMouseClicked
+        jTabbedPane.setSelectedIndex(0);
+    }                                       
 
-    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {// GEN-FIRST:event_SearchBoxFocusGained
+    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {                                      
         if (SearchBox.getText().trim().equals("Search...")) {
             SearchBox.setText("");
             SearchBox.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         }
-    }// GEN-LAST:event_SearchBoxFocusGained
+    }                                     
 
-    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {// GEN-FIRST:event_SearchBoxFocusLost
+    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {                                    
         if (SearchBox.getText().trim().equals("")) {
             SearchBox.setText("Search...");
             SearchBox.setFont(new Font("Segoe UI", Font.ITALIC, 12));
         }
-    }// GEN-LAST:event_SearchBoxFocusLost
+    }                                   
 
-    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_SearchBoxActionPerformed
+    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {                                          
         if (SearchBox.getText().length() == 0) {
             JOptionPane.showMessageDialog(this, "Please input query string!", "Message", JOptionPane.WARNING_MESSAGE);
         }
-    }// GEN-LAST:event_SearchBoxActionPerformed
+    }                                         
 
-    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_SearchBoxKeyPressed
+    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {                                     
         if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
             String cmd = SearchBox.getText();
             connect.displayData(cmd, Table);
@@ -2323,81 +2279,81 @@ public class Internet_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }// GEN-LAST:event_SearchBoxKeyPressed
+    }                                    
 
-    private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_staffButtonMouseEntered
+    private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
         staffButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_staffButtonMouseEntered
+    }                                        
 
-    private void staffButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_staffButtonMouseExited
+    private void staffButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
         staffButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_staffButtonMouseExited
+    }                                       
 
-    private void computerButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_computerButtonMouseEntered
+    private void computerButtonMouseEntered(java.awt.event.MouseEvent evt) {                                            
         computerButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_computerButtonMouseEntered
+    }                                           
 
-    private void computerButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_computerButtonMouseExited
+    private void computerButtonMouseExited(java.awt.event.MouseEvent evt) {                                           
         computerButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_computerButtonMouseExited
+    }                                          
 
-    private void serviceButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_serviceButtonMouseEntered
+    private void serviceButtonMouseEntered(java.awt.event.MouseEvent evt) {                                           
         serviceButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_serviceButtonMouseEntered
+    }                                          
 
-    private void serviceButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_serviceButtonMouseExited
+    private void serviceButtonMouseExited(java.awt.event.MouseEvent evt) {                                          
         serviceButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_serviceButtonMouseExited
+    }                                         
 
-    private void ordersButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ordersButtonMouseEntered
+    private void ordersButtonMouseEntered(java.awt.event.MouseEvent evt) {                                          
         ordersButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_ordersButtonMouseEntered
+    }                                         
 
-    private void ordersButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ordersButtonMouseExited
+    private void ordersButtonMouseExited(java.awt.event.MouseEvent evt) {                                         
         ordersButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_ordersButtonMouseExited
+    }                                        
 
-    private void orderDetailButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_orderDetailButtonMouseEntered
+    private void orderDetailButtonMouseEntered(java.awt.event.MouseEvent evt) {                                               
         orderDetailButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_orderDetailButtonMouseEntered
+    }                                              
 
-    private void orderDetailButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_orderDetailButtonMouseExited
+    private void orderDetailButtonMouseExited(java.awt.event.MouseEvent evt) {                                              
         orderDetailButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_orderDetailButtonMouseExited
+    }                                             
 
-    private void billButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_billButtonMouseEntered
+    private void billButtonMouseEntered(java.awt.event.MouseEvent evt) {                                        
         billButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_billButtonMouseEntered
+    }                                       
 
-    private void billButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_billButtonMouseExited
+    private void billButtonMouseExited(java.awt.event.MouseEvent evt) {                                       
         billButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_billButtonMouseExited
+    }                                      
 
-    private void takeCareButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_takeCareButtonMouseEntered
+    private void takeCareButtonMouseEntered(java.awt.event.MouseEvent evt) {                                            
         takeCareButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_takeCareButtonMouseEntered
+    }                                           
 
-    private void takeCareButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_takeCareButtonMouseExited
+    private void takeCareButtonMouseExited(java.awt.event.MouseEvent evt) {                                           
         takeCareButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_takeCareButtonMouseExited
+    }                                          
 
-    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_usersButtonMouseExited
+    private void usersButtonMouseExited(java.awt.event.MouseEvent evt) {                                        
         usersButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_usersButtonMouseExited
+    }                                       
 
-    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_usersButtonMouseEntered
+    private void usersButtonMouseEntered(java.awt.event.MouseEvent evt) {                                         
         usersButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_usersButtonMouseEntered
+    }                                        
 
-    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_homeButtonMouseExited
+    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {                                       
         homeButton.setForeground(NORMAL_COLOR);
-    }// GEN-LAST:event_homeButtonMouseExited
+    }                                      
 
-    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_homeButtonMouseEntered
+    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {                                        
         homeButton.setForeground(HOVER_COLOR);
-    }// GEN-LAST:event_homeButtonMouseEntered
+    }                                       
 
-    private void uAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_uAddActionPerformed
+    private void uAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
@@ -2413,9 +2369,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }// GEN-LAST:event_uAddActionPerformed
+    }                                    
 
-    private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_uUpdateActionPerformed
+    private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
         boolean state = true;
         for(String i: data){
@@ -2431,9 +2387,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }// GEN-LAST:event_uUpdateActionPerformed
+    }                                       
 
-    private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_uDeleteActionPerformed
+    private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = uidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Users", data);
@@ -2443,13 +2399,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }// GEN-LAST:event_uDeleteActionPerformed
+    }                                       
 
-    private void computerButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_computerButtonActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_computerButtonActionPerformed
-
-    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_UserTableMouseClicked
+    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {                                       
         connect.selectData("Users", UserTable);
         try {
             while (connect.rs.next()) {
@@ -2461,9 +2413,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_UserTableMouseClicked
+    }                                      
 
-    private void sAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sAddActionPerformed
+    private void sAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = { sidText.getText(), snameText.getText(), sdobText.getText(), sphoneText.getText(),
                 saddressText.getText() };
         
@@ -2481,9 +2433,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }// GEN-LAST:event_sAddActionPerformed
+    }                                    
 
-    private void sUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sUpdateActionPerformed
+    private void sUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = { sidText.getText(), snameText.getText(), sdobText.getText(), sphoneText.getText(),
                 saddressText.getText() };
         boolean state = true;
@@ -2500,9 +2452,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }// GEN-LAST:event_sUpdateActionPerformed
+    }                                       
 
-    private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sDeleteActionPerformed
+    private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = sidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Staff", data);
@@ -2511,9 +2463,24 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }// GEN-LAST:event_sDeleteActionPerformed
+    }                                       
 
-    private void cAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cAddActionPerformed
+    private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {                                        
+        connect.selectData("Staff", StaffTable);
+        try {
+            while (connect.rs.next()) {
+                sidText.setText(connect.rs.getString("Staff_ID"));
+                snameText.setText(connect.rs.getString("Staff_Name"));
+                sdobText.setText(connect.rs.getString("Date_Of_Birth"));
+                sphoneText.setText(connect.rs.getString("Phone_Number"));
+                saddressText.setText(connect.rs.getString("Address"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }                                       
+
+    private void cAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String[] data = null;
         if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), ctimeText.getText() };
@@ -2536,9 +2503,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showAddMessage(false);
-    }// GEN-LAST:event_cAddActionPerformed
+    }                                    
 
-    private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cUpdateActionPerformed
+    private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String[] data = null;
         if (cON.isSelected()) {
             data = new String[] { cidText.getText(), "ON", cuseridText.getText(), (String) ctimeText.getText() };
@@ -2562,10 +2529,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else
             showUpdateMessage(false);
-    }// GEN-LAST:event_cUpdateActionPerformed
+    }                                       
 
-    private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cDeleteActionPerformed
-        
+    private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String data = cidText.getText();
         if(!data.isEmpty()){
             connect.showDeleteData("Computer", data);
@@ -2574,279 +2540,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
         else 
             showDeleteMessage(false);
-    }// GEN-LAST:event_cDeleteActionPerformed
+    }                                       
 
-    private void svAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_svAddActionPerformed
-        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
-                svtypeText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showAddData("Service", data);
-            connect.displayData("SELECT * FROM Service", ServiceTable);
-            showAddMessage(true);
-        }
-        else
-            showAddMessage(false);
-    }// GEN-LAST:event_svAddActionPerformed
-
-    private void svUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_svUpdateActionPerformed
-        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
-                svtypeText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showUpdateData("Service", data, ServiceTable);
-            connect.displayData("SELECT * FROM Service", ServiceTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
-    }// GEN-LAST:event_svUpdateActionPerformed
-
-    private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_svDeleteActionPerformed
-        
-        String data = svidText.getText();
-        if(!data.isEmpty()){
-            connect.showDeleteData("Service", data);
-            connect.displayData("SELECT * FROM Service", ServiceTable);
-            showDeleteMessage(true);
-        }
-        else 
-            showDeleteMessage(false);
-    }// GEN-LAST:event_svDeleteActionPerformed
-
-    private void oAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_oAddActionPerformed
-        String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showAddData("Orders", data);
-            connect.displayData("SELECT * FROM Orders", OrderTable);
-            showAddMessage(true);
-        }
-        else
-            showAddMessage(false);
-    }// GEN-LAST:event_oAddActionPerformed
-
-    private void oUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_oUpdateActionPerformed
-        String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty() ){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showUpdateData("Orders", data, OrderTable);
-            connect.displayData("SELECT * FROM Orders", OrderTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
-    }// GEN-LAST:event_oUpdateActionPerformed
-
-    private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_oDeleteActionPerformed
-        
-        String data = oidText.getText();
-        if(!data.isEmpty()){
-            connect.showDeleteData("Orders", data);
-            connect.displayData("SELECT * FROM Orders", OrderTable);
-            showDeleteMessage(true);
-        }
-        else 
-            showDeleteMessage(false);
-
-    }// GEN-LAST:event_oDeleteActionPerformed
-
-    private void odAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_odAddActionPerformed
-        String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showAddData("OrderDetail", data);
-            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-            showAddMessage(true);
-        }
-        else
-            showAddMessage(false);
-    }// GEN-LAST:event_odAddActionPerformed
-
-    private void odUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_odUpdateActionPerformed
-        String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty() ){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showUpdateData("OrderDetail", data, OrderDetailTable);
-            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
-    }// GEN-LAST:event_odUpdateActionPerformed
-
-    private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_odDeleteActionPerformed
-        
-        String data = odorderidText.getText();
-        if(!data.isEmpty()){
-            connect.showDeleteData("OrderDetail", data);
-            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
-            showDeleteMessage(true);
-        }
-        else 
-            showDeleteMessage(false);
-    }// GEN-LAST:event_odDeleteActionPerformed
-
-    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_bAddActionPerformed
-        String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
-                (String) jComboBox1.getSelectedItem() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showAddData("Bill", data);
-            connect.displayData("SELECT * FROM Bill", BillTable);
-            showAddMessage(true);
-        }
-        else
-            showAddMessage(false);
-    }// GEN-LAST:event_bAddActionPerformed
-
-    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_bUpdateActionPerformed
-        String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
-                (String) jComboBox1.getSelectedItem() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showUpdateData("Bill", data, BillTable);
-            connect.displayData("SELECT * FROM Bill", BillTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
-    }// GEN-LAST:event_bUpdateActionPerformed
-
-    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_bDeleteActionPerformed
-        
-        String data = bidText.getText();
-        if(!data.isEmpty()){
-            connect.showDeleteData("Bill", data);
-            connect.displayData("SELECT * FROM Bill", BillTable);
-            showDeleteMessage(true);
-        }
-        else 
-            showDeleteMessage(false);
-    }// GEN-LAST:event_bDeleteActionPerformed
-
-    private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tcAddActionPerformed
-        String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showAddData("TakeCare", data);
-            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-            showAddMessage(true);
-        }
-        else
-            showAddMessage(false);
-    }// GEN-LAST:event_tcAddActionPerformed
-
-    private void tcUpdateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tcUpdateActionPerformed
-        String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
-        
-        boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
-        if(state){
-            connect.showUpdateData("TakeCare", data, TakeCareTable);
-            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-            showUpdateMessage(true);
-        }
-        else
-            showUpdateMessage(false);
-    }// GEN-LAST:event_tcUpdateActionPerformed
-
-    private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tcDeleteActionPerformed
-        
-        String data = tcuseridText.getText();
-        if(!data.isEmpty()){
-            connect.showDeleteData("TakeCare", data);
-            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
-            showDeleteMessage(true);
-        }
-        else 
-            showDeleteMessage(false);
-    }// GEN-LAST:event_tcDeleteActionPerformed
-
-    private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_StaffTableMouseClicked
-        connect.selectData("Staff", StaffTable);
-        try {
-            while (connect.rs.next()) {
-                sidText.setText(connect.rs.getString("Staff_ID"));
-                snameText.setText(connect.rs.getString("Staff_Name"));
-                sdobText.setText(connect.rs.getString("Date_Of_Birth"));
-                sphoneText.setText(connect.rs.getString("Phone_Number"));
-                saddressText.setText(connect.rs.getString("Address"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }// GEN-LAST:event_StaffTableMouseClicked
-
-    private void ComputerTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ComputerTableMouseClicked
+    private void ComputerTableMouseClicked(java.awt.event.MouseEvent evt) {                                           
         connect.selectData("Computer", ComputerTable);
         try {
             while (connect.rs.next()) {
@@ -2865,9 +2561,69 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_ComputerTableMouseClicked
+    }                                          
 
-    private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ServiceTableMouseClicked
+    private void svAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
+                svtypeText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showAddData("Service", data);
+            connect.displayData("SELECT * FROM Service", ServiceTable);
+            showAddMessage(true);
+        }
+        else
+            showAddMessage(false);
+    }                                     
+
+    private void svUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
+                svtypeText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("Service", data, ServiceTable);
+            connect.displayData("SELECT * FROM Service", ServiceTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                        
+
+    private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String[] data = { svidText.getText(), svpriceText.getText(), svdescriptionText.getText(),
+                svtypeText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("Service", data, ServiceTable);
+            connect.displayData("SELECT * FROM Service", ServiceTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                        
+
+    private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {                                          
         connect.selectData("Service", ServiceTable);
         try {
             while (connect.rs.next()) {
@@ -2879,9 +2635,58 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_ServiceTableMouseClicked
+    }                                         
 
-    private void OrderTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OrderTableMouseClicked
+    private void oAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showAddData("Orders", data);
+            connect.displayData("SELECT * FROM Orders", OrderTable);
+            showAddMessage(true);
+        }
+        else
+            showAddMessage(false);
+    }                                    
+
+    private void oUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        String[] data = { oidText.getText(), ostaffidText.getText(), ooderdateText.getText(), ouseridText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty() ){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("Orders", data, OrderTable);
+            connect.displayData("SELECT * FROM Orders", OrderTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                       
+
+    private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        String data = oidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Orders", data);
+            connect.displayData("SELECT * FROM Orders", OrderTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
+    }                                       
+
+    private void OrderTableMouseClicked(java.awt.event.MouseEvent evt) {                                        
         connect.selectData("Orders", OrderTable);
         try {
             while (connect.rs.next()) {
@@ -2893,9 +2698,58 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_OrderTableMouseClicked
+    }                                       
 
-    private void OrderDetailTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OrderDetailTableMouseClicked
+    private void odAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showAddData("OrderDetail", data);
+            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+            showAddMessage(true);
+        }
+        else
+            showAddMessage(false);
+    }                                     
+
+    private void odUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String[] data = { odorderidText.getText(), odserviceidText.getText(), odquantityText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty() ){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("OrderDetail", data, OrderDetailTable);
+            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                        
+
+    private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String data = odorderidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("OrderDetail", data);
+            connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
+    }                                        
+
+    private void OrderDetailTableMouseClicked(java.awt.event.MouseEvent evt) {                                              
         connect.selectData("OrderDetail", OrderDetailTable);
         try {
             while (connect.rs.next()) {
@@ -2906,9 +2760,60 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_OrderDetailTableMouseClicked
+    }                                             
 
-    private void BillTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_BillTableMouseClicked
+    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
+                (String) jComboBox1.getSelectedItem() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showAddData("Bill", data);
+            connect.displayData("SELECT * FROM Bill", BillTable);
+            showAddMessage(true);
+        }
+        else
+            showAddMessage(false);
+    }                                    
+
+    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        String[] data = { bidText.getText(), boderidText.getText(), bpaymentdayText.getText(),
+                (String) jComboBox1.getSelectedItem() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("Bill", data, BillTable);
+            connect.displayData("SELECT * FROM Bill", BillTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                       
+
+    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        String data = bidText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("Bill", data);
+            connect.displayData("SELECT * FROM Bill", BillTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
+    }                                       
+
+    private void BillTableMouseClicked(java.awt.event.MouseEvent evt) {                                       
         connect.selectData("Bill", BillTable);
         try {
             while (connect.rs.next()) {
@@ -2920,9 +2825,58 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_BillTableMouseClicked
+    }                                      
 
-    private void TakeCareTableMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_TakeCareTableMouseClicked
+    private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showAddData("TakeCare", data);
+            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+            showAddMessage(true);
+        }
+        else
+            showAddMessage(false);
+    }                                     
+
+    private void tcUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String[] data = { tcuseridText.getText(), tcstaffidText.getText(), tcrateText.getText() };
+        
+        boolean state = true;
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+        }
+        if(state){
+            connect.showUpdateData("TakeCare", data, TakeCareTable);
+            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+            showUpdateMessage(true);
+        }
+        else
+            showUpdateMessage(false);
+    }                                        
+
+    private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String data = tcuseridText.getText();
+        if(!data.isEmpty()){
+            connect.showDeleteData("TakeCare", data);
+            connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+            showDeleteMessage(true);
+        }
+        else 
+            showDeleteMessage(false);
+    }                                        
+
+    private void TakeCareTableMouseClicked(java.awt.event.MouseEvent evt) {                                           
         connect.selectData("TakeCare", TakeCareTable);
         try {
             while (connect.rs.next()) {
@@ -2933,8 +2887,10 @@ public class Internet_cafe extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }// GEN-LAST:event_TakeCareTableMouseClicked
+    }                                          
 
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -2949,43 +2905,38 @@ public class Internet_cafe extends javax.swing.JFrame {
          * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         new Internet_cafe().setVisible(true);
-        // try {
-        // for (javax.swing.UIManager.LookAndFeelInfo info :
-        // javax.swing.UIManager.getInstalledLookAndFeels()) {
-        // if ("Nimbus".equals(info.getName())) {
-        // javax.swing.UIManager.setLookAndFeel(info.getClassName());
-        // break;
-        // }
-        // }
-        // } catch (ClassNotFoundException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (InstantiationException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (IllegalAccessException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-        // java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE,
-        // null,
-        // ex);
-        // }
-        // // </editor-fold>
-        //
-        // /* Create and display the form */
-        // java.awt.EventQueue.invokeLater(new Runnable() {
-        // @Override
-        // public void run() {
-        // new Internet_cafe().setVisible(true);
-        // }
-        // });
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+//                    ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+//                    ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+//                    ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Internet_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null,
+//                    ex);
+//        }
+//        // </editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new Internet_cafe().setVisible(true);
+//            }
+//        });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JPanel BTable;
     private javax.swing.JPanel Bar;
     private javax.swing.JPanel BillInformation;
@@ -3132,5 +3083,5 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JButton usersButton;
     private javax.swing.JPanel usersInterface;
     private javax.swing.JTextField utimeText;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
