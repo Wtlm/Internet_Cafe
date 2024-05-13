@@ -4,6 +4,7 @@
  */
 package Database;
 import java.sql.*;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,7 +22,7 @@ public class Connect {
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
+            String connectionUrl = "jdbc:sqlserver://LAPTOPCUATUI\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
             + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);
@@ -192,3 +193,4 @@ public class Connect {
         }  
     }   
 }
+
