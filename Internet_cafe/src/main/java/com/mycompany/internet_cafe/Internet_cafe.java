@@ -4,6 +4,7 @@ import Database.Connect;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -34,24 +35,31 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
     }
     
-    private void showAddMessage(){
-        JOptionPane.showMessageDialog(rootPane, "Please enter data!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation", JOptionPane.INFORMATION_MESSAGE);      
+    private void showAddMessage(boolean state){
+        if(!state)
+            JOptionPane.showMessageDialog(rootPane, "Please enter data!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        else
+            JOptionPane.showMessageDialog(rootPane, "Added data successfully!", "Addition Confirmation", JOptionPane.INFORMATION_MESSAGE);      
     }
     
-    private void showUpdateMessage(){
-        JOptionPane.showMessageDialog(rootPane, "No data to update!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        JOptionPane.showMessageDialog(rootPane, "Update data successfully!", "Update Confirmation", JOptionPane.INFORMATION_MESSAGE);      
+    private void showUpdateMessage(boolean state){
+        if(!state)
+            JOptionPane.showMessageDialog(rootPane, "No data to update!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        else
+            JOptionPane.showMessageDialog(rootPane, "Update data successfully!", "Update Confirmation", JOptionPane.INFORMATION_MESSAGE);      
     }
     
-    private void showDeleteMessage(){
-        JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
-        if (confirmDelete == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
-        }     
+    private void showDeleteMessage(boolean state){
+        if(!state)
+            JOptionPane.showMessageDialog(rootPane, "Please choose data!", "Input Request", JOptionPane.ERROR_MESSAGE);
+        else{
+            int confirmDelete = JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to delete this data?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+            if (confirmDelete == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(rootPane, "Data deleted successfully!", "Deletion Confirmation", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Deletion canceled.", "Deletion Canceled", JOptionPane.INFORMATION_MESSAGE);
+            }     
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -370,6 +378,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 computerButtonMouseExited(evt);
+            }
+        });
+        computerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                computerButtonActionPerformed(evt);
             }
         });
 
@@ -784,6 +797,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         UserTable.setShowGrid(true);
         UserTable.getTableHeader().setReorderingAllowed(false);
+        UserTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UserTableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(UserTable);
 
         javax.swing.GroupLayout UTableLayout = new javax.swing.GroupLayout(UTable);
@@ -857,6 +875,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         sAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         sAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         sAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        sAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sAddActionPerformed(evt);
+            }
+        });
 
         sUpdate.setBackground(new java.awt.Color(73, 79, 86));
         sUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -867,6 +890,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         sUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         sUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         sUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        sUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sUpdateActionPerformed(evt);
+            }
+        });
 
         sDelete.setBackground(new java.awt.Color(73, 79, 86));
         sDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -877,6 +905,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         sDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         sDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         sDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        sDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout StaffInformationLayout = new javax.swing.GroupLayout(StaffInformation);
         StaffInformation.setLayout(StaffInformationLayout);
@@ -965,6 +998,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         StaffTable.setPreferredSize(new java.awt.Dimension(500, 550));
         StaffTable.setShowGrid(true);
         StaffTable.getTableHeader().setReorderingAllowed(false);
+        StaffTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StaffTableMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(StaffTable);
 
         javax.swing.GroupLayout STableLayout = new javax.swing.GroupLayout(STable);
@@ -1043,6 +1081,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         cAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         cAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         cAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        cAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cAddActionPerformed(evt);
+            }
+        });
 
         cUpdate.setBackground(new java.awt.Color(73, 79, 86));
         cUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1053,6 +1096,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         cUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         cUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         cUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        cUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cUpdateActionPerformed(evt);
+            }
+        });
 
         cDelete.setBackground(new java.awt.Color(73, 79, 86));
         cDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1063,6 +1111,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         cDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         cDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         cDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        cDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ComputerInformationLayout = new javax.swing.GroupLayout(ComputerInformation);
         ComputerInformation.setLayout(ComputerInformationLayout);
@@ -1143,6 +1196,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerTable.setPreferredSize(new java.awt.Dimension(500, 550));
         ComputerTable.setShowGrid(true);
         ComputerTable.getTableHeader().setReorderingAllowed(false);
+        ComputerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ComputerTableMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(ComputerTable);
 
         javax.swing.GroupLayout CTableLayout = new javax.swing.GroupLayout(CTable);
@@ -1211,6 +1269,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         svAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         svAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         svAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        svAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                svAddActionPerformed(evt);
+            }
+        });
 
         svUpdate.setBackground(new java.awt.Color(73, 79, 86));
         svUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1221,6 +1284,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         svUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         svUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         svUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        svUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                svUpdateActionPerformed(evt);
+            }
+        });
 
         svDelete.setBackground(new java.awt.Color(73, 79, 86));
         svDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1231,6 +1299,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         svDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         svDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         svDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        svDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                svDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ServiceInformationLayout = new javax.swing.GroupLayout(ServiceInformation);
         ServiceInformation.setLayout(ServiceInformationLayout);
@@ -1303,6 +1376,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         ServiceTable.setPreferredSize(new java.awt.Dimension(500, 550));
         ServiceTable.setShowGrid(true);
         ServiceTable.getTableHeader().setReorderingAllowed(false);
+        ServiceTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ServiceTableMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(ServiceTable);
 
         javax.swing.GroupLayout SerTableLayout = new javax.swing.GroupLayout(SerTable);
@@ -1372,6 +1450,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         oAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         oAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         oAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        oAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oAddActionPerformed(evt);
+            }
+        });
 
         oUpdate.setBackground(new java.awt.Color(73, 79, 86));
         oUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1382,6 +1465,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         oUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         oUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         oUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        oUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oUpdateActionPerformed(evt);
+            }
+        });
 
         oDelete.setBackground(new java.awt.Color(73, 79, 86));
         oDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1392,6 +1480,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         oDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         oDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         oDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        oDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout OrderInformationLayout = new javax.swing.GroupLayout(OrderInformation);
         OrderInformation.setLayout(OrderInformationLayout);
@@ -1472,6 +1565,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderTable.setPreferredSize(new java.awt.Dimension(500, 550));
         OrderTable.setShowGrid(true);
         OrderTable.getTableHeader().setReorderingAllowed(false);
+        OrderTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OrderTableMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(OrderTable);
 
         javax.swing.GroupLayout OTableLayout = new javax.swing.GroupLayout(OTable);
@@ -1541,6 +1639,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         odAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         odAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         odAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        odAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                odAddActionPerformed(evt);
+            }
+        });
 
         odUpdate.setBackground(new java.awt.Color(73, 79, 86));
         odUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1551,6 +1654,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         odUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         odUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         odUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        odUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                odUpdateActionPerformed(evt);
+            }
+        });
 
         odDelete.setBackground(new java.awt.Color(73, 79, 86));
         odDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1561,6 +1669,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         odDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         odDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         odDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        odDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                odDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout OrderDetaiInformationLayout = new javax.swing.GroupLayout(OrderDetaiInformation);
         OrderDetaiInformation.setLayout(OrderDetaiInformationLayout);
@@ -1630,6 +1743,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetailTable.setPreferredSize(new java.awt.Dimension(500, 550));
         OrderDetailTable.setShowGrid(true);
         OrderDetailTable.getTableHeader().setReorderingAllowed(false);
+        OrderDetailTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OrderDetailTableMouseClicked(evt);
+            }
+        });
         jScrollPane7.setViewportView(OrderDetailTable);
 
         javax.swing.GroupLayout ODTableLayout = new javax.swing.GroupLayout(ODTable);
@@ -1702,6 +1820,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         bAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         bAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         bAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        bAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAddActionPerformed(evt);
+            }
+        });
 
         bUpdate.setBackground(new java.awt.Color(73, 79, 86));
         bUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1712,6 +1835,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         bUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         bUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         bUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        bUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bUpdateActionPerformed(evt);
+            }
+        });
 
         bDelete.setBackground(new java.awt.Color(73, 79, 86));
         bDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1722,6 +1850,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         bDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         bDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         bDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        bDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDeleteActionPerformed(evt);
+            }
+        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash", "Card", "Internet Banking" }));
 
@@ -1806,6 +1939,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillTable.setPreferredSize(new java.awt.Dimension(500, 550));
         BillTable.setShowGrid(true);
         BillTable.getTableHeader().setReorderingAllowed(false);
+        BillTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BillTableMouseClicked(evt);
+            }
+        });
         jScrollPane8.setViewportView(BillTable);
 
         javax.swing.GroupLayout BTableLayout = new javax.swing.GroupLayout(BTable);
@@ -1870,6 +2008,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         tcAdd.setMaximumSize(new java.awt.Dimension(100, 25));
         tcAdd.setMinimumSize(new java.awt.Dimension(100, 25));
         tcAdd.setPreferredSize(new java.awt.Dimension(100, 25));
+        tcAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tcAddActionPerformed(evt);
+            }
+        });
 
         tcUpdate.setBackground(new java.awt.Color(73, 79, 86));
         tcUpdate.setForeground(new java.awt.Color(252, 255, 222));
@@ -1880,6 +2023,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         tcUpdate.setMaximumSize(new java.awt.Dimension(100, 25));
         tcUpdate.setMinimumSize(new java.awt.Dimension(100, 25));
         tcUpdate.setPreferredSize(new java.awt.Dimension(100, 25));
+        tcUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tcUpdateActionPerformed(evt);
+            }
+        });
 
         tcDelete.setBackground(new java.awt.Color(73, 79, 86));
         tcDelete.setForeground(new java.awt.Color(252, 255, 222));
@@ -1890,6 +2038,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         tcDelete.setMaximumSize(new java.awt.Dimension(100, 25));
         tcDelete.setMinimumSize(new java.awt.Dimension(100, 25));
         tcDelete.setPreferredSize(new java.awt.Dimension(100, 25));
+        tcDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tcDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout TakeCareInformationLayout = new javax.swing.GroupLayout(TakeCareInformation);
         TakeCareInformation.setLayout(TakeCareInformationLayout);
@@ -1962,6 +2115,11 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareTable.setPreferredSize(new java.awt.Dimension(500, 550));
         TakeCareTable.setShowGrid(true);
         TakeCareTable.getTableHeader().setReorderingAllowed(false);
+        TakeCareTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TakeCareTableMouseClicked(evt);
+            }
+        });
         jScrollPane9.setViewportView(TakeCareTable);
 
         javax.swing.GroupLayout TCTableLayout = new javax.swing.GroupLayout(TCTable);
@@ -2031,66 +2189,50 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usersButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(1);
-        connect.displayData("SELECT * FROM Users");
-        DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Users", UserTable);
     }//GEN-LAST:event_usersButtonMouseClicked
 
     private void staffButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(2);
-        connect.displayData("SELECT * FROM Staff");
-        DefaultTableModel model = (DefaultTableModel) StaffTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Staff", StaffTable);
     }//GEN-LAST:event_staffButtonMouseClicked
 
     private void computerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computerButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(3);
-        connect.displayData("SELECT * FROM Computer");
-        DefaultTableModel model = (DefaultTableModel) ComputerTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Computer", ComputerTable);
     }//GEN-LAST:event_computerButtonMouseClicked
 
     private void serviceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_serviceButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(4);
-        connect.displayData("SELECT * FROM Service");
-        DefaultTableModel model = (DefaultTableModel) ServiceTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Service", ServiceTable);
         menuSize(false);
     }//GEN-LAST:event_serviceButtonMouseClicked
 
     private void ordersButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(5);
-        connect.displayData("SELECT * FROM Orders");
-        DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Orders", OrderTable);
     }//GEN-LAST:event_ordersButtonMouseClicked
 
     private void orderDetailButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderDetailButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(6);
-        connect.displayData("SELECT * FROM OrderDetail");
-        DefaultTableModel model = (DefaultTableModel) OrderDetailTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
     }//GEN-LAST:event_orderDetailButtonMouseClicked
 
     private void billButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(7);
-        connect.displayData("SELECT * FROM Bill");
-        DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM Bill", BillTable);
     }//GEN-LAST:event_billButtonMouseClicked
 
     private void takeCareButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_takeCareButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(8);
-        connect.displayData("SELECT * FROM TakeCare");
-        DefaultTableModel model = (DefaultTableModel) TakeCareTable.getModel();
-        model.setDataVector(connect.rowData, connect.columnName);
+        connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
     }//GEN-LAST:event_takeCareButtonMouseClicked
 
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
@@ -2121,9 +2263,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
         if (evt.getKeyCode()== KeyEvent.VK_ENTER && !SearchBox.getText().equals("")){
             String cmd = SearchBox.getText();
-            connect.displayData(cmd);
-            DefaultTableModel model = (DefaultTableModel) Table.getModel();
-            model.setDataVector(connect.rowData, connect.columnName);
+            connect.displayData(cmd, Table);
             jScrollPane1.setViewportView(Table);
 
             if (connect.status){
@@ -2133,6 +2273,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 jScrollPane1.setLocation(148, 110);
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
+                connect.status = true;
             }
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
@@ -2210,16 +2351,304 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_homeButtonMouseEntered
 
     private void uAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uAddActionPerformed
-        showAddMessage();
+        String[] data = {uidText.getText(), uaccText.getText(),upassText.getText(),utimeText.getText()};      
+        connect.showAddData("Users", data);
+        connect.displayData("SELECT * FROM Users", UserTable);
+        showAddMessage(true);
     }//GEN-LAST:event_uAddActionPerformed
 
     private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uUpdateActionPerformed
-        showUpdateMessage();
+        String[] data = {uidText.getText(), uaccText.getText(),upassText.getText(),utimeText.getText()};   
+        connect.showUpdateData("Users", data, UserTable);
+        connect.displayData("SELECT * FROM Users", UserTable);
+        showUpdateMessage(true);
     }//GEN-LAST:event_uUpdateActionPerformed
 
     private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDeleteActionPerformed
+        connect.showDeleteData("Users", UserTable);
+        connect.displayData("SELECT * FROM Users", UserTable);
         showDeleteMessage();
     }//GEN-LAST:event_uDeleteActionPerformed
+
+    private void computerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_computerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_computerButtonActionPerformed
+    
+    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserTableMouseClicked
+        connect.selectData("Users", UserTable);
+        try{
+            while(connect.rs.next()){
+                    uidText.setText(connect.rs.getString("User_ID"));
+                    uaccText.setText(connect.rs.getString("Account"));
+                    upassText.setText(connect.rs.getString("Password"));
+                    utimeText.setText(connect.rs.getString("Remaining_Time"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_UserTableMouseClicked
+
+    private void sAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sAddActionPerformed
+        String[] data = {sidText.getText(), snameText.getText(),sdobText.getText(),sphoneText.getText(), saddressText.getText()};      
+        connect.showAddData("Staff", data);
+        connect.displayData("SELECT * FROM Staff", StaffTable);
+        showAddMessage(true);
+    }//GEN-LAST:event_sAddActionPerformed
+
+    private void sUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sUpdateActionPerformed
+        String[] data = {sidText.getText(), snameText.getText(),sdobText.getText(),sphoneText.getText(), saddressText.getText()};   
+        connect.showUpdateData("Staff", data, StaffTable);
+        connect.displayData("SELECT * FROM Staff", StaffTable);
+        showUpdateMessage(true);
+    }//GEN-LAST:event_sUpdateActionPerformed
+
+    private void sDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sDeleteActionPerformed
+        connect.showDeleteData("Staff", StaffTable);
+        connect.displayData("SELECT * FROM Staff", StaffTable);
+        
+        showDeleteMessage();    }//GEN-LAST:event_sDeleteActionPerformed
+
+    private void cAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cAddActionPerformed
+        String[] data = null;
+        if(cON.isSelected()){
+            data = new String[]{cidText.getText(), "ON", cuseridText.getText(), ctimeText.getText()};      
+        }
+        else if(cOFF.isSelected()){
+            data = new String[]{cidText.getText(), "OFF", null, null};      
+        }
+        else if(cON.isSelected() && cOFF.isSelected() || !cOFF.isSelected() && !cON.isSelected()){
+            System.out.print("Please choose status of computer");
+        }
+        connect.showAddData("Computer", data);
+        connect.displayData("SELECT * FROM Computer", ComputerTable);
+        showAddMessage();
+    }//GEN-LAST:event_cAddActionPerformed
+
+    private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cUpdateActionPerformed
+        String[] data = null;
+        if(cON.isSelected()){
+            data = new String[]{cidText.getText(), "ON", cuseridText.getText(), (String)ctimeText.getText()};      
+        }
+        else if(cOFF.isSelected()){
+            data = new String[]{cidText.getText(), "OFF", null, null};      
+        }
+        else if(cON.isSelected() && cOFF.isSelected() || !cOFF.isSelected() && !cON.isSelected()){
+            System.out.print("Please choose status of computer");
+        }   
+        connect.showUpdateData("Computer", data, ComputerTable);
+        connect.displayData("SELECT * FROM Computer", ComputerTable);
+        showUpdateMessage();
+    }//GEN-LAST:event_cUpdateActionPerformed
+
+    private void cDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cDeleteActionPerformed
+        connect.showDeleteData("Computer", ComputerTable);
+        connect.displayData("SELECT * FROM Computer", ComputerTable);
+        showDeleteMessage();
+    }//GEN-LAST:event_cDeleteActionPerformed
+
+    private void svAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svAddActionPerformed
+        String[] data = {svidText.getText(), svpriceText.getText(),svdescriptionText.getText(),svtypeText.getText()};      
+        connect.showAddData("Service", data);
+        connect.displayData("SELECT * FROM Service", ServiceTable);
+        showAddMessage();
+    }//GEN-LAST:event_svAddActionPerformed
+
+    private void svUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svUpdateActionPerformed
+        String[] data = {svidText.getText(), svpriceText.getText(),svdescriptionText.getText(),svtypeText.getText()};   
+        connect.showUpdateData("Service", data, ServiceTable);
+        connect.displayData("SELECT * FROM Service", ServiceTable);
+        showUpdateMessage();
+    }//GEN-LAST:event_svUpdateActionPerformed
+
+    private void svDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_svDeleteActionPerformed
+        connect.showDeleteData("Service", ServiceTable);
+        connect.displayData("SELECT * FROM Service", ServiceTable);
+        showDeleteMessage();
+    }//GEN-LAST:event_svDeleteActionPerformed
+
+    private void oAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oAddActionPerformed
+        String[] data = {oidText.getText(), ostaffidText.getText(),ooderdateText.getText(),ouseridText.getText()};      
+        connect.showAddData("Orders", data);
+        connect.displayData("SELECT * FROM Orders", OrderTable);
+        showAddMessage();
+    }//GEN-LAST:event_oAddActionPerformed
+
+    private void oUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oUpdateActionPerformed
+        String[] data = {oidText.getText(), ostaffidText.getText(),ooderdateText.getText(),ouseridText.getText()};   
+        connect.showUpdateData("Orders", data, OrderTable);
+        connect.displayData("SELECT * FROM Orders", OrderTable);
+        showUpdateMessage();
+    }//GEN-LAST:event_oUpdateActionPerformed
+
+    private void oDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oDeleteActionPerformed
+        connect.showDeleteData("Orders", OrderTable);
+        connect.displayData("SELECT * FROM Orders", OrderTable);
+        showDeleteMessage();
+    }//GEN-LAST:event_oDeleteActionPerformed
+
+    private void odAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odAddActionPerformed
+        String[] data = {odorderidText.getText(), odserviceidText.getText(),odquantityText.getText()};      
+        connect.showAddData("OrderDetail", data);
+        connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+        showAddMessage();
+    }//GEN-LAST:event_odAddActionPerformed
+
+    private void odUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odUpdateActionPerformed
+        String[] data = {odorderidText.getText(), odserviceidText.getText(),odquantityText.getText()};   
+        connect.showUpdateData("OrderDetail", data, OrderDetailTable);
+        connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+        showUpdateMessage();    }//GEN-LAST:event_odUpdateActionPerformed
+
+    private void odDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odDeleteActionPerformed
+        connect.showDeleteData("OrderDetail", OrderDetailTable);
+        connect.displayData("SELECT * FROM OrderDetail", OrderDetailTable);
+        showDeleteMessage();    }//GEN-LAST:event_odDeleteActionPerformed
+
+    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
+        String[] data = {bidText.getText(), boderidText.getText(),bpaymentdayText.getText(),(String)jComboBox1.getSelectedItem()};      
+        connect.showAddData("Bill", data);
+        connect.displayData("SELECT * FROM Bill", BillTable);
+        showAddMessage();
+    }//GEN-LAST:event_bAddActionPerformed
+
+    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
+        String[] data = {bidText.getText(), boderidText.getText(),bpaymentdayText.getText(),(String)jComboBox1.getSelectedItem()};   
+        connect.showUpdateData("Bill", data, BillTable);
+        connect.displayData("SELECT * FROM Bill", BillTable);
+        showUpdateMessage();
+    }//GEN-LAST:event_bUpdateActionPerformed
+
+    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+        connect.showDeleteData("Bill", BillTable);
+        connect.displayData("SELECT * FROM Bill", BillTable);
+        showDeleteMessage();
+    }//GEN-LAST:event_bDeleteActionPerformed
+
+    private void tcAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcAddActionPerformed
+        String[] data = {tcuseridText.getText(), tcstaffidText.getText(),tcrateText.getText()};      
+        connect.showAddData("TakeCare", data);
+        connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+        showAddMessage();
+    }//GEN-LAST:event_tcAddActionPerformed
+
+    private void tcUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcUpdateActionPerformed
+        String[] data = {tcuseridText.getText(), tcstaffidText.getText(),tcrateText.getText()};   
+        connect.showUpdateData("TakeCare", data, TakeCareTable);
+        connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+        showUpdateMessage();    }//GEN-LAST:event_tcUpdateActionPerformed
+
+    private void tcDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcDeleteActionPerformed
+        connect.showDeleteData("TakeCare", TakeCareTable);
+        connect.displayData("SELECT * FROM TakeCare", TakeCareTable);
+        showDeleteMessage();
+    }//GEN-LAST:event_tcDeleteActionPerformed
+
+    private void StaffTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StaffTableMouseClicked
+        connect.selectData("Staff", StaffTable);
+        try{
+            while(connect.rs.next()){
+                    sidText.setText(connect.rs.getString("Staff_ID"));
+                    snameText.setText(connect.rs.getString("Staff_Name"));
+                    sdobText.setText(connect.rs.getString("Date_Of_Birth"));
+                    sphoneText.setText(connect.rs.getString("Phone_Number"));
+                    saddressText.setText(connect.rs.getString("Address"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_StaffTableMouseClicked
+
+    private void ComputerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputerTableMouseClicked
+        connect.selectData("Computer", ComputerTable);
+        try{
+            while(connect.rs.next()){
+                    cidText.setText(connect.rs.getString("Computer_ID"));
+                    cuseridText.setText(connect.rs.getString("User_ID"));
+                    ctimeText.setText(connect.rs.getString("Start_Time"));
+                    String data = (String) connect.rs.getString("User_ID");
+                    if(data != null){
+                        cON.setSelected(true);
+                        cOFF.setSelected(false);
+                    }
+                    else{
+                        cON.setSelected(false);
+                        cOFF.setSelected(true);
+                    }
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_ComputerTableMouseClicked
+
+    private void ServiceTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ServiceTableMouseClicked
+        connect.selectData("Service", ServiceTable);
+        try{        
+            while(connect.rs.next()){
+                    svidText.setText(connect.rs.getString("Service_ID"));
+                    svpriceText.setText(connect.rs.getString("Price"));
+                    svdescriptionText.setText(connect.rs.getString("Description"));
+                    svtypeText.setText(connect.rs.getString("Type"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_ServiceTableMouseClicked
+
+    private void OrderTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderTableMouseClicked
+        connect.selectData("Orders", OrderTable);
+        try{    
+            while(connect.rs.next()){
+                    oidText.setText(connect.rs.getString("Order_ID"));
+                    ostaffidText.setText(connect.rs.getString("Staff_ID"));
+                    ooderdateText.setText(connect.rs.getString("Order_Date"));
+                    ouseridText.setText(connect.rs.getString("User_ID"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_OrderTableMouseClicked
+
+    private void OrderDetailTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailTableMouseClicked
+        connect.selectData("OrderDetail", OrderDetailTable);
+        try{       
+            while(connect.rs.next()){
+                    odorderidText.setText(connect.rs.getString("Order_ID"));
+                    odserviceidText.setText(connect.rs.getString("Service_ID"));
+                    odquantityText.setText(connect.rs.getString("Quantity"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_OrderDetailTableMouseClicked
+
+    private void BillTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillTableMouseClicked
+        connect.selectData("Bill", BillTable);
+        try{        
+            while(connect.rs.next()){
+                    bidText.setText(connect.rs.getString("Bill_ID"));
+                    boderidText.setText(connect.rs.getString("Order_ID"));
+                    bpaymentdayText.setText(connect.rs.getString("Pay_Date"));
+                    jComboBox1.setSelectedItem(connect.rs.getString("Payment_Method"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_BillTableMouseClicked
+
+    private void TakeCareTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TakeCareTableMouseClicked
+        connect.selectData("TakeCare", TakeCareTable);
+        try{      
+            while(connect.rs.next()){
+                    tcuseridText.setText(connect.rs.getString("User_ID"));
+                    tcstaffidText.setText(connect.rs.getString("Staff_ID"));
+                    tcrateText.setText(connect.rs.getString("Rate"));
+                }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_TakeCareTableMouseClicked
+    
+    
 
     /**
      * @param args the command line arguments
