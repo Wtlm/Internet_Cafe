@@ -27,7 +27,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     
     private void menuSize(boolean status){
         if (status) {
-            submenu.setSize(150, 325);
+            submenu.setSize(150, 550);
         }
         else {
             submenu.setSize(0,0);
@@ -275,16 +275,18 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         jPanel.add(Bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 50));
 
-        submenu.setBackground(new java.awt.Color(51, 51, 51, 220));
+        submenu.setBackground(new java.awt.Color(51, 51, 51));
         submenu.setMaximumSize(new java.awt.Dimension(150, 325));
         submenu.setPreferredSize(new java.awt.Dimension(150, 325));
 
-        homeButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        homeButton.setBackground(new java.awt.Color(51, 51, 51));
         homeButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         homeButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         homeButton.setText("Home");
         homeButton.setBorder(null);
+        homeButton.setBorderPainted(false);
         homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        homeButton.setFocusPainted(false);
         homeButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         homeButton.setMaximumSize(new java.awt.Dimension(150, 35));
         homeButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -301,12 +303,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        usersButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        usersButton.setBackground(new java.awt.Color(51, 51, 51));
         usersButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         usersButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         usersButton.setText("Users");
         usersButton.setBorder(null);
+        usersButton.setBorderPainted(false);
         usersButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        usersButton.setFocusPainted(false);
         usersButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         usersButton.setMaximumSize(new java.awt.Dimension(150, 35));
         usersButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -323,11 +327,13 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        staffButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        staffButton.setBackground(new java.awt.Color(51, 51, 51));
         staffButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         staffButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         staffButton.setText("Staff");
         staffButton.setBorder(null);
+        staffButton.setBorderPainted(false);
+        staffButton.setFocusPainted(false);
         staffButton.setMaximumSize(new java.awt.Dimension(150, 35));
         staffButton.setMinimumSize(new java.awt.Dimension(150, 35));
         staffButton.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -343,12 +349,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        computerButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        computerButton.setBackground(new java.awt.Color(51, 51, 51));
         computerButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         computerButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         computerButton.setText("Computer");
         computerButton.setBorder(null);
+        computerButton.setBorderPainted(false);
         computerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        computerButton.setFocusPainted(false);
         computerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         computerButton.setMaximumSize(new java.awt.Dimension(150, 35));
         computerButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -365,12 +373,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        serviceButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        serviceButton.setBackground(new java.awt.Color(51, 51, 51));
         serviceButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         serviceButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         serviceButton.setText("Service");
         serviceButton.setBorder(null);
+        serviceButton.setBorderPainted(false);
         serviceButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        serviceButton.setFocusPainted(false);
         serviceButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         serviceButton.setMaximumSize(new java.awt.Dimension(150, 35));
         serviceButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -387,12 +397,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        ordersButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        ordersButton.setBackground(new java.awt.Color(51, 51, 51));
         ordersButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ordersButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         ordersButton.setText("Orders");
         ordersButton.setBorder(null);
+        ordersButton.setBorderPainted(false);
         ordersButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ordersButton.setFocusPainted(false);
         ordersButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         ordersButton.setMaximumSize(new java.awt.Dimension(150, 35));
         ordersButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -409,12 +421,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        orderDetailButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        orderDetailButton.setBackground(new java.awt.Color(51, 51, 51));
         orderDetailButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         orderDetailButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         orderDetailButton.setText("Order Detail");
         orderDetailButton.setBorder(null);
+        orderDetailButton.setBorderPainted(false);
         orderDetailButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        orderDetailButton.setFocusPainted(false);
         orderDetailButton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         orderDetailButton.setMaximumSize(new java.awt.Dimension(150, 35));
         orderDetailButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -431,12 +445,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        billButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        billButton.setBackground(new java.awt.Color(51, 51, 51));
         billButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         billButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         billButton.setText("Bill");
         billButton.setBorder(null);
+        billButton.setBorderPainted(false);
         billButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        billButton.setFocusPainted(false);
         billButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         billButton.setMaximumSize(new java.awt.Dimension(150, 35));
         billButton.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -453,13 +469,14 @@ public class Internet_cafe extends javax.swing.JFrame {
             }
         });
 
-        takeCareButton.setBackground(new java.awt.Color(51, 51, 51, 0));
+        takeCareButton.setBackground(new java.awt.Color(51, 51, 51));
         takeCareButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         takeCareButton.setForeground(new java.awt.Color(216, 174, 94, 200));
         takeCareButton.setText("Take Care");
         takeCareButton.setBorder(null);
         takeCareButton.setBorderPainted(false);
         takeCareButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        takeCareButton.setFocusPainted(false);
         takeCareButton.setMaximumSize(new java.awt.Dimension(150, 35));
         takeCareButton.setMinimumSize(new java.awt.Dimension(150, 35));
         takeCareButton.setName(""); // NOI18N
@@ -519,10 +536,11 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         jPanel.add(submenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 0));
 
-        jTabbedPane.setMaximumSize(new java.awt.Dimension(1000, 800));
-        jTabbedPane.setMinimumSize(new java.awt.Dimension(1000, 800));
-        jTabbedPane.setPreferredSize(new java.awt.Dimension(1000, 800));
+        jTabbedPane.setMaximumSize(new java.awt.Dimension(1000, 600));
+        jTabbedPane.setMinimumSize(new java.awt.Dimension(1000, 600));
+        jTabbedPane.setPreferredSize(new java.awt.Dimension(1000, 600));
 
+        homeInterface.setBackground(new java.awt.Color(245, 229, 191));
         homeInterface.setToolTipText("");
         homeInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
         homeInterface.setMinimumSize(new java.awt.Dimension(1000, 550));
@@ -584,7 +602,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         homeInterface.setLayout(homeInterfaceLayout);
         homeInterfaceLayout.setHorizontalGroup(
             homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homeInterfaceLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homeInterfaceLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addComponent(SearchBox, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
                 .addGap(150, 150, 150))
@@ -620,7 +638,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         usersInterface.setVerifyInputWhenFocusTarget(false);
 
         UserInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
-        UserInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        UserInformation.setBorder(new RoundedBorder(40));
+        UserInformation.setOpaque(false);
+        UserInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         uID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         uID.setText("ID");
@@ -687,7 +707,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserInformationLayout.setHorizontalGroup(
             UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserInformationLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
                         .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -712,12 +732,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(utimeText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(69, 69, 69))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         UserInformationLayout.setVerticalGroup(
             UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserInformationLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(90, 90, 90)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -738,7 +758,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(90, 90, 90))
         );
 
         UTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -770,11 +790,14 @@ public class Internet_cafe extends javax.swing.JFrame {
         UTable.setLayout(UTableLayout);
         UTableLayout.setHorizontalGroup(
             UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         UTableLayout.setVerticalGroup(
             UTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UTableLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout usersInterfaceLayout = new javax.swing.GroupLayout(usersInterface);
@@ -783,34 +806,37 @@ public class Internet_cafe extends javax.swing.JFrame {
             usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersInterfaceLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85)
-                .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(UTable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         usersInterfaceLayout.setVerticalGroup(
             usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(usersInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(usersInterfaceLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 199, Short.MAX_VALUE))
+                .addComponent(UTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(usersInterfaceLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(UserInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("users", usersInterface);
 
+        staffInterface.setBackground(new java.awt.Color(245, 229, 191));
         staffInterface.setToolTipText("");
         staffInterface.setFocusable(false);
         staffInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
         staffInterface.setMinimumSize(new java.awt.Dimension(1000, 550));
         staffInterface.setName(""); // NOI18N
+        staffInterface.setPreferredSize(new java.awt.Dimension(1000, 550));
         staffInterface.setRequestFocusEnabled(false);
         staffInterface.setVerifyInputWhenFocusTarget(false);
 
-        StaffInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        StaffInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        StaffInformation.setBorder(new RoundedBorder(40));
+        StaffInformation.setOpaque(false);
+        StaffInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         sID.setText("ID");
 
@@ -857,7 +883,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         StaffInformationLayout.setHorizontalGroup(
             StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StaffInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(StaffInformationLayout.createSequentialGroup()
                         .addComponent(sAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -886,12 +912,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(sDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(sphoneText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         StaffInformationLayout.setVerticalGroup(
             StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StaffInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(75, 75, 75)
                 .addGroup(StaffInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(sID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -916,10 +942,10 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(sAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
-        STable.setPreferredSize(new java.awt.Dimension(500, 550));
+        STable.setPreferredSize(new java.awt.Dimension(512, 550));
         STable.setRequestFocusEnabled(false);
 
         jScrollPane3.setMaximumSize(new java.awt.Dimension(500, 550));
@@ -945,11 +971,14 @@ public class Internet_cafe extends javax.swing.JFrame {
         STable.setLayout(STableLayout);
         STableLayout.setHorizontalGroup(
             STableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         STableLayout.setVerticalGroup(
             STableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(STableLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout staffInterfaceLayout = new javax.swing.GroupLayout(staffInterface);
@@ -957,23 +986,25 @@ public class Internet_cafe extends javax.swing.JFrame {
         staffInterfaceLayout.setHorizontalGroup(
             staffInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staffInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(StaffInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(STable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(STable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         staffInterfaceLayout.setVerticalGroup(
             staffInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staffInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(staffInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(STable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(StaffInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(staffInterfaceLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(StaffInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(9, 9, 9))
         );
 
         jTabbedPane.addTab("tab3", staffInterface);
 
+        computerInterface.setBackground(new java.awt.Color(245, 229, 191));
         computerInterface.setToolTipText("");
         computerInterface.setFocusable(false);
         computerInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -982,15 +1013,22 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterface.setRequestFocusEnabled(false);
         computerInterface.setVerifyInputWhenFocusTarget(false);
 
-        ComputerInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        ComputerInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        ComputerInformation.setBorder(new RoundedBorder(40));
+        ComputerInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        ComputerInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        ComputerInformation.setOpaque(false);
+        ComputerInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         cID.setText("ID");
 
         cStatus.setText("Status");
 
         cON.setText("ON");
+        cON.setOpaque(true);
 
         cOFF.setText("OFF");
+        cOFF.setOpaque(true);
 
         cUserID.setText("User ID");
 
@@ -1031,7 +1069,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerInformationLayout.setHorizontalGroup(
             ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ComputerInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(cTime, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1047,18 +1085,20 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ctimeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(ComputerInformationLayout.createSequentialGroup()
-                            .addComponent(cON, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(cOFF, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                    .addGroup(ComputerInformationLayout.createSequentialGroup()
+                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ComputerInformationLayout.createSequentialGroup()
+                                .addComponent(cON)
+                                .addGap(69, 69, 69)
+                                .addComponent(cOFF)))
+                        .addGap(1, 1, 1)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         ComputerInformationLayout.setVerticalGroup(
             ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ComputerInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(90, 90, 90)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1080,7 +1120,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         CTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1109,7 +1149,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         CTable.setLayout(CTableLayout);
         CTableLayout.setHorizontalGroup(
             CTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CTableLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CTableLayout.setVerticalGroup(
             CTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1121,23 +1163,22 @@ public class Internet_cafe extends javax.swing.JFrame {
         computerInterfaceLayout.setHorizontalGroup(
             computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(computerInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         computerInterfaceLayout.setVerticalGroup(
             computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(computerInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(computerInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addComponent(ComputerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane.addTab("tab4", computerInterface);
 
+        serviceInterface.setBackground(new java.awt.Color(245, 229, 191));
         serviceInterface.setToolTipText("");
         serviceInterface.setFocusable(false);
         serviceInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -1146,7 +1187,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         serviceInterface.setRequestFocusEnabled(false);
         serviceInterface.setVerifyInputWhenFocusTarget(false);
 
-        ServiceInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        ServiceInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        ServiceInformation.setBorder(new RoundedBorder(40));
+        ServiceInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        ServiceInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        ServiceInformation.setOpaque(false);
+        ServiceInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         svID.setText("ID");
 
@@ -1191,7 +1237,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         ServiceInformationLayout.setHorizontalGroup(
             ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ServiceInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(svType, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1208,12 +1254,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(svdescriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svpriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svtypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         ServiceInformationLayout.setVerticalGroup(
             ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ServiceInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(90, 90, 90)
                 .addGroup(ServiceInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(svID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1234,7 +1280,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(svAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(svDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         SerTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1263,9 +1309,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         SerTable.setLayout(SerTableLayout);
         SerTableLayout.setHorizontalGroup(
             SerTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SerTableLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         SerTableLayout.setVerticalGroup(
             SerTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1277,23 +1321,25 @@ public class Internet_cafe extends javax.swing.JFrame {
         serviceInterfaceLayout.setHorizontalGroup(
             serviceInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(serviceInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(ServiceInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(SerTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(SerTable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         serviceInterfaceLayout.setVerticalGroup(
             serviceInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(serviceInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(serviceInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SerTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ServiceInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(serviceInterfaceLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(ServiceInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         jTabbedPane.addTab("tab5", serviceInterface);
 
+        orderInterface.setBackground(new java.awt.Color(245, 229, 191));
         orderInterface.setToolTipText("");
         orderInterface.setFocusable(false);
         orderInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -1302,7 +1348,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         orderInterface.setRequestFocusEnabled(false);
         orderInterface.setVerifyInputWhenFocusTarget(false);
 
-        OrderInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        OrderInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        OrderInformation.setBorder(new RoundedBorder(40));
+        OrderInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        OrderInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        OrderInformation.setOpaque(false);
+        OrderInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         oID.setText("ID");
 
@@ -1347,7 +1398,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderInformationLayout.setHorizontalGroup(
             OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInformationLayout.createSequentialGroup()
                         .addComponent(oID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1372,12 +1423,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(oDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ouseridText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         OrderInformationLayout.setVerticalGroup(
             OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(90, 90, 90)
                 .addGroup(OrderInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(oID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1398,7 +1449,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(oAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(oDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         OTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1427,7 +1478,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         OTable.setLayout(OTableLayout);
         OTableLayout.setHorizontalGroup(
             OTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OTableLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         OTableLayout.setVerticalGroup(
             OTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1439,23 +1492,25 @@ public class Internet_cafe extends javax.swing.JFrame {
         orderInterfaceLayout.setHorizontalGroup(
             orderInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(orderInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(OrderInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(OTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(OTable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         orderInterfaceLayout.setVerticalGroup(
             orderInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(orderInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(orderInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(OTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OrderInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(orderInterfaceLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(OrderInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         jTabbedPane.addTab("tab6", orderInterface);
 
+        orderDetailInterface.setBackground(new java.awt.Color(245, 229, 191));
         orderDetailInterface.setToolTipText("");
         orderDetailInterface.setFocusable(false);
         orderDetailInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -1464,7 +1519,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         orderDetailInterface.setRequestFocusEnabled(false);
         orderDetailInterface.setVerifyInputWhenFocusTarget(false);
 
-        OrderDetaiInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        OrderDetaiInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        OrderDetaiInformation.setBorder(new RoundedBorder(40));
+        OrderDetaiInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        OrderDetaiInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        OrderDetaiInformation.setOpaque(false);
+        OrderDetaiInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         odOderID.setText("Order ID");
 
@@ -1507,7 +1567,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         OrderDetaiInformationLayout.setHorizontalGroup(
             OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
                         .addComponent(odAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1525,12 +1585,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                             .addComponent(odorderidText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(odquantityText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(odserviceidText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         OrderDetaiInformationLayout.setVerticalGroup(
             OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrderDetaiInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(109, 109, 109)
                 .addGroup(OrderDetaiInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(odOderID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odorderidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1547,7 +1607,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(odAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(odDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         ODTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1576,7 +1636,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         ODTable.setLayout(ODTableLayout);
         ODTableLayout.setHorizontalGroup(
             ODTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ODTableLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         ODTableLayout.setVerticalGroup(
             ODTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1588,23 +1650,26 @@ public class Internet_cafe extends javax.swing.JFrame {
         orderDetailInterfaceLayout.setHorizontalGroup(
             orderDetailInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(orderDetailInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(OrderDetaiInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(ODTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(ODTable, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         orderDetailInterfaceLayout.setVerticalGroup(
             orderDetailInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(orderDetailInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(orderDetailInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ODTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OrderDetaiInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(orderDetailInterfaceLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(OrderDetaiInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         jTabbedPane.addTab("tab7", orderDetailInterface);
 
+        billInterface.setBackground(new java.awt.Color(245, 229, 191));
         billInterface.setToolTipText("");
         billInterface.setFocusable(false);
         billInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -1613,7 +1678,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         billInterface.setRequestFocusEnabled(false);
         billInterface.setVerifyInputWhenFocusTarget(false);
 
-        BillInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        BillInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        BillInformation.setBorder(new RoundedBorder(40));
+        BillInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        BillInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        BillInformation.setOpaque(false);
+        BillInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         bID.setText("ID");
 
@@ -1660,7 +1730,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         BillInformationLayout.setHorizontalGroup(
             BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BillInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillInformationLayout.createSequentialGroup()
                         .addComponent(bID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1687,12 +1757,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                             .addGroup(BillInformationLayout.createSequentialGroup()
                                 .addGap(55, 55, 55)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         BillInformationLayout.setVerticalGroup(
             BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BillInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(90, 90, 90)
                 .addGroup(BillInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(bID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1713,7 +1783,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         BTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1742,9 +1812,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         BTable.setLayout(BTableLayout);
         BTableLayout.setHorizontalGroup(
             BTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BTableLayout.createSequentialGroup()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         BTableLayout.setVerticalGroup(
             BTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1756,23 +1824,22 @@ public class Internet_cafe extends javax.swing.JFrame {
         billInterfaceLayout.setHorizontalGroup(
             billInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(billInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(BillInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(BTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(BTable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         billInterfaceLayout.setVerticalGroup(
             billInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(billInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(billInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BillInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addComponent(BillInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane.addTab("tab8", billInterface);
 
+        takeCareInterface.setBackground(new java.awt.Color(245, 229, 191));
         takeCareInterface.setToolTipText("");
         takeCareInterface.setFocusable(false);
         takeCareInterface.setMaximumSize(new java.awt.Dimension(1000, 550));
@@ -1781,7 +1848,12 @@ public class Internet_cafe extends javax.swing.JFrame {
         takeCareInterface.setRequestFocusEnabled(false);
         takeCareInterface.setVerifyInputWhenFocusTarget(false);
 
-        TakeCareInformation.setPreferredSize(new java.awt.Dimension(500, 550));
+        TakeCareInformation.setBackground(new java.awt.Color(216, 174, 94, 200));
+        TakeCareInformation.setBorder(new RoundedBorder(40));
+        TakeCareInformation.setMaximumSize(new java.awt.Dimension(400, 400));
+        TakeCareInformation.setMinimumSize(new java.awt.Dimension(400, 400));
+        TakeCareInformation.setOpaque(false);
+        TakeCareInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         tcUserID.setText("User ID");
 
@@ -1824,7 +1896,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         TakeCareInformationLayout.setHorizontalGroup(
             TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TakeCareInformationLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(19, 19, 19)
                 .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TakeCareInformationLayout.createSequentialGroup()
                         .addComponent(tcStaffID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1845,12 +1917,12 @@ public class Internet_cafe extends javax.swing.JFrame {
                                 .addGap(31, 31, 31)
                                 .addComponent(tcDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(tcrateText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         TakeCareInformationLayout.setVerticalGroup(
             TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TakeCareInformationLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(109, 109, 109)
                 .addGroup(TakeCareInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tcUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1867,7 +1939,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                     .addComponent(tcAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         TCTable.setPreferredSize(new java.awt.Dimension(500, 550));
@@ -1896,7 +1968,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         TCTable.setLayout(TCTableLayout);
         TCTableLayout.setHorizontalGroup(
             TCTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         TCTableLayout.setVerticalGroup(
             TCTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1908,24 +1980,25 @@ public class Internet_cafe extends javax.swing.JFrame {
         takeCareInterfaceLayout.setHorizontalGroup(
             takeCareInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(takeCareInterfaceLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(TakeCareInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(TCTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(TCTable, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
         takeCareInterfaceLayout.setVerticalGroup(
             takeCareInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(takeCareInterfaceLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(takeCareInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TCTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TakeCareInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, takeCareInterfaceLayout.createSequentialGroup()
+                        .addComponent(TakeCareInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71))))
         );
 
         jTabbedPane.addTab("tab9", takeCareInterface);
 
-        jPanel.add(jTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 790));
+        jPanel.add(jTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 25, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1946,7 +2019,7 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void menuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuButtonMouseClicked
         if (!menuClick) {
-            submenu.setSize(150, 325);
+            submenu.setSize(150, 550);
             menuClick = true;
         }
         else {
@@ -2059,7 +2132,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 jScrollPane1.setSize(700, 300);
                 jScrollPane1.setLocation(148, 110);
             } else {
-                JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_SearchBoxKeyPressed
@@ -2147,8 +2220,6 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void uDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDeleteActionPerformed
         showDeleteMessage();
     }//GEN-LAST:event_uDeleteActionPerformed
-    
-    
 
     /**
      * @param args the command line arguments
