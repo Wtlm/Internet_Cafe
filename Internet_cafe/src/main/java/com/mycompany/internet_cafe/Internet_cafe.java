@@ -3122,7 +3122,10 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchBoxFocusLost
 
     private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER && evt.isShiftDown()){
+            SearchBox.append("\n");
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
             String cmd = SearchBox.getText();
             connect.displayData(cmd, Table);
             jScrollPane1.setViewportView(Table);
