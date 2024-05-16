@@ -23,7 +23,7 @@ public class Connect {
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://ZANG\\SQLEXPRESS:1433;databaseName=InternetCafe;user=sa;password=123456;"
+            String connectionUrl = "jdbc:sqlserver://ZANG\\SQLEXPRESS:1433;databaseName=Attendance;user=sa;password=123456;"
             + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);

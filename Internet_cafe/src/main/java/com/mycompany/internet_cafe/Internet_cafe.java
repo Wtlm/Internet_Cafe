@@ -113,9 +113,10 @@ public class Internet_cafe extends javax.swing.JFrame {
         takeCareButton = new javax.swing.JButton();
         jTabbedPane = new javax.swing.JTabbedPane();
         homeInterface = new javax.swing.JPanel();
-        SearchBox = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        SearchBox = new javax.swing.JTextArea();
         usersInterface = new javax.swing.JPanel();
         UserInformation = new javax.swing.JPanel();
         uID = new javax.swing.JLabel();
@@ -585,27 +586,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         homeInterface.setMinimumSize(new java.awt.Dimension(1000, 550));
         homeInterface.setPreferredSize(new java.awt.Dimension(1000, 550));
 
-        SearchBox.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        SearchBox.setText("Search...");
-        SearchBox.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                SearchBoxFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                SearchBoxFocusLost(evt);
-            }
-        });
-        SearchBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SearchBoxActionPerformed(evt);
-            }
-        });
-        SearchBox.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                SearchBoxKeyPressed(evt);
-            }
-        });
-
         jScrollPane1.setBorder(null);
         jScrollPane1.setEnabled(false);
         jScrollPane1.setFocusable(false);
@@ -637,14 +617,31 @@ public class Internet_cafe extends javax.swing.JFrame {
         Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(Table);
 
+        SearchBox.setColumns(20);
+        SearchBox.setRows(5);
+        SearchBox.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                SearchBoxFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                SearchBoxFocusLost(evt);
+            }
+        });
+        SearchBox.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                SearchBoxKeyPressed(evt);
+            }
+        });
+        jScrollPane10.setViewportView(SearchBox);
+
         javax.swing.GroupLayout homeInterfaceLayout = new javax.swing.GroupLayout(homeInterface);
         homeInterface.setLayout(homeInterfaceLayout);
         homeInterfaceLayout.setHorizontalGroup(
             homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homeInterfaceLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(SearchBox, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
-                .addGap(150, 150, 150))
+            .addGroup(homeInterfaceLayout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+                .addGap(152, 152, 152))
             .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(homeInterfaceLayout.createSequentialGroup()
                     .addGap(150, 150, 150)
@@ -654,9 +651,9 @@ public class Internet_cafe extends javax.swing.JFrame {
         homeInterfaceLayout.setVerticalGroup(
             homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homeInterfaceLayout.createSequentialGroup()
-                .addGap(236, 236, 236)
-                .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(469, Short.MAX_VALUE))
             .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(homeInterfaceLayout.createSequentialGroup()
                     .addGap(377, 377, 377)
@@ -2299,46 +2296,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         jTabbedPane.setSelectedIndex(0);
     }//GEN-LAST:event_homeButtonMouseClicked
 
-    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {// GEN-FIRST:event_SearchBoxFocusGained
-        if (SearchBox.getText().trim().equals("Search...")) {
-            SearchBox.setText("");
-            SearchBox.setFont(new Font("Segoe UI", Font.PLAIN, 12));
-        }
-    }// GEN-LAST:event_SearchBoxFocusGained
-
-    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {// GEN-FIRST:event_SearchBoxFocusLost
-        if (SearchBox.getText().trim().equals("")) {
-            SearchBox.setText("Search...");
-            SearchBox.setFont(new Font("Segoe UI", Font.ITALIC, 12));
-        }
-    }// GEN-LAST:event_SearchBoxFocusLost
-
-    private void SearchBoxActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_SearchBoxActionPerformed
-        if (SearchBox.getText().length() == 0) {
-            JOptionPane.showMessageDialog(this, "Please input query string!", "Message", JOptionPane.WARNING_MESSAGE);
-        }
-    }// GEN-LAST:event_SearchBoxActionPerformed
-
-    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {                                     
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
-            String cmd = SearchBox.getText();
-            connect.displayData(cmd, Table);
-            jScrollPane1.setViewportView(Table);
-            setTable(Table);
-            Table.setBackground(new Color(245,229,191));
-
-            if (connect.status) {
-                SearchBox.setSize(700, 30);
-                SearchBox.setLocation(148, 40);
-                jScrollPane1.setSize(700, 300);
-                jScrollPane1.setLocation(148, 110);
-                setScroll(jScrollPane1);
-            } else {
-                JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    }// GEN-LAST:event_SearchBoxKeyPressed
-
     private void staffButtonMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_staffButtonMouseEntered
         staffButton.setForeground(HOVER_COLOR);
     }// GEN-LAST:event_staffButtonMouseEntered
@@ -3150,6 +3107,43 @@ public class Internet_cafe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_TakeCareTableMouseClicked
 
+    private void SearchBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusGained
+        if (SearchBox.getText().trim().equals("Search...")) {
+            SearchBox.setText("");
+            SearchBox.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+        }
+    }//GEN-LAST:event_SearchBoxFocusGained
+
+    private void SearchBoxFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SearchBoxFocusLost
+        if (SearchBox.getText().trim().equals("")) {
+            SearchBox.setText("Search...");
+            SearchBox.setFont(new Font("Segoe UI", Font.ITALIC, 12));
+        }
+    }//GEN-LAST:event_SearchBoxFocusLost
+
+    private void SearchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchBoxKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER && !SearchBox.getText().equals("")) {
+            String cmd = SearchBox.getText();
+            connect.displayData(cmd, Table);
+            jScrollPane1.setViewportView(Table);
+            setTable(Table);
+            Table.setBackground(new Color(245,229,191));
+
+            if (connect.status) {
+                SearchBox.setSize(700, 30);
+                SearchBox.setLocation(148, 40);
+                jScrollPane1.setSize(700, 300);
+                jScrollPane1.setLocation(148, 110);
+                setScroll(jScrollPane1);
+            } else {
+                JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ENTER && SearchBox.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please input query string!", "Message", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_SearchBoxKeyPressed
+
     
     
     /**
@@ -3184,7 +3178,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JPanel OrderInformation;
     private javax.swing.JTable OrderTable;
     private javax.swing.JPanel STable;
-    private javax.swing.JTextField SearchBox;
+    private javax.swing.JTextArea SearchBox;
     private javax.swing.JPanel SerTable;
     private javax.swing.JPanel ServiceInformation;
     private javax.swing.JTable ServiceTable;
@@ -3228,6 +3222,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
