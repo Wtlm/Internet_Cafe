@@ -25,7 +25,7 @@ public class Connect {
     
     public Connect(){
        try{
-            String connectionUrl = "jdbc:sqlserver://ZANG\\SQLEXPRESS:1433;databaseName=Attendance;user=sa;password=123456;"
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-DCGSC18J\\SQLEXPRESS:1433;databaseName=Attendance;user=sa;password=123456;"
             + "encrypt=true;trustServerCertificate=true;";
            
             connect = DriverManager.getConnection(connectionUrl);
@@ -202,54 +202,69 @@ public class Connect {
         }  
     }  
     
-    public String createAddCmd(String[] getData){
-        String cmd = "INSERT INTO Subject(SubjectName) VALUES(";
+    public void insertSubject(String[] getData){
+        PreparedStatement pst;
+
+        String cmd = "INSERT INTO Subject(SubjectName) VALUES('";
         StringBuilder cmdBuild = new StringBuilder(cmd);
         cmdBuild.append(getData[0]);
-        cmdBuild.append(")");
-        PreparedStatement pst;
+        cmdBuild.append("')");
+        
+        cmd = "INSERT INTO TeacherSubject (SubID, TeaID) "
+            + "VALUES ((SELECT SubjectID FROM Subject WHERE SubjectName = '";
+        StringBuilder cmdBuild2 = new StringBuilder(cmd);
+        cmdBuild2.append(getData[0]);
+        cmdBuild2.append("'),(SELECT TeacherID FROM Teacher WHERE TeacherName = '");
+        cmdBuild2.append(getData[1]);
+        cmdBuild2.append("'))");       
+        
         try {
             pst = connect.prepareStatement(cmdBuild.toString());
             pst.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        
-        
-        
-        int count = 0;
-        while(count < 2){
-            for(int i = 1; i < columnName.length; i++){
-                if(count < 1)
-                    cmdBuild.append(columnName[i]);
-                else
-                    cmdBuild.append("?");
-                if(i != columnName.length -1)
-                    cmdBuild.append(", ");
-                else
-                    cmdBuild.append(") ");
-            }
-            if(count < 1)
-                cmdBuild.append("VALUES(");
-            count++;
-        }
-        return cmdBuild.toString();
-    }
-    
-    public void showAddData(String TableName, String[] getData){
-        try {
-            String query = createAddCmd(TableName);
-            PreparedStatement pst = connect.prepareStatement(query);
-//            pst.setString(1,TableName);
-            for(int i = 1; i < columnName.length; i++ ){
-               pst.setString(i,getData[i-1]);                
-            }
+            pst = connect.prepareStatement(cmdBuild2.toString());
+            pst.executeUpdate();
             modify = true;
         } catch (SQLException e) {
             e.printStackTrace();
             modify = false;
-
         }
+    }
+    public String cmdRelationship(){
+        String cmd =  "SELECT S.SubjectID, T.TeacherID, S.SubjectName, T.TeacherName "
+                    + "FROM Subject as S "
+                    + "JOIN TeacherSubject as TS ON S.SubjectID = TS.SubID "
+                    + "JOIN Teacher as T ON T.TeacherID = TS.TeaID";
+        return cmd;
+    }
+        
+    public void insertLesson(String[] getData){
+        PreparedStatement pst;
+
+        String cmd = "INSERT INTO Lesson (DateOfLesson, SubID, TeaID) VALUES ('";
+        StringBuilder cmdBuild = new StringBuilder(cmd);
+        cmdBuild.append(getData[0]);
+        cmdBuild.append("',(SELECT SubjectID FROM Subject WHERE SubjectName = '");
+        cmdBuild.append(getData[1]);
+        cmdBuild.append("'),(SELECT TeacherID FROM Teacher WHERE TeacherName = '");
+        cmdBuild.append(getData[2]);
+        cmdBuild.append("'))");       
+        
+        try {
+            pst = connect.prepareStatement(cmdBuild.toString());
+            pst.executeUpdate();
+            modify = true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            modify = false;
+        }
+    }
+    
+    public String cmdLesson(){
+        String cmd =  "SELECT L.LessonID, L.DateOfLesson,S.SubjectID, T.TeacherID, S.SubjectName, T.TeacherName "
+                    + "FROM Lesson as L "
+                    + "JOIN Subject as S ON S.SubjectID = L.SubID "
+                    + "JOIN Teacher as T ON T.TeacherID = L.TeaID";
+        return cmd;
     }
 }
 
