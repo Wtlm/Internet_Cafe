@@ -4,6 +4,8 @@
  */
 package Database;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -84,12 +86,12 @@ public class Connect {
         cmdBuild.append("(");
         int count = 0;
         while(count < 2){
-            for(int i = 1; i <= columnName.length; i++){
+            for(int i = 1; i < columnName.length; i++){
                 if(count < 1)
-                    cmdBuild.append(columnName[i-1]);
+                    cmdBuild.append(columnName[i]);
                 else
                     cmdBuild.append("?");
-                if(i != columnName.length)
+                if(i != columnName.length -1)
                     cmdBuild.append(", ");
                 else
                     cmdBuild.append(") ");
@@ -106,7 +108,7 @@ public class Connect {
             String query = createAddCmd(TableName);
             PreparedStatement pst = connect.prepareStatement(query);
 //            pst.setString(1,TableName);
-            for(int i = 1; i <= columnName.length; i++ ){
+            for(int i = 1; i < columnName.length; i++ ){
                pst.setString(i,getData[i-1]);                
             }
             pst.executeUpdate();
@@ -141,7 +143,7 @@ public class Connect {
         StringBuilder cmdBuild = new StringBuilder(cmd);
         cmdBuild.append(TableName);
         cmdBuild.append(" SET ");
-        for(int i = 1; i <= columnName.length*2 +1; i++){
+        for(int i = 1; i < columnName.length*2 +1; i++){
             if(i > columnName.length*2){
                 cmdBuild.append("WHERE ") ;
                 cmdBuild.append(columnName[0]);
@@ -168,7 +170,7 @@ public class Connect {
         try {
             String query = createUpdateCmd(TableName);
             PreparedStatement pst = connect.prepareStatement(query);
-            for(int i = 1; i <= columnName.length+1; i++){
+            for(int i = 1; i < columnName.length+1; i++){
                 if(i == (columnName.length+1))
                     pst.setString(i, id);
                 else
@@ -182,24 +184,72 @@ public class Connect {
 
         }
     }
-    
+
     public void showDeleteData(String TableName, String data){
         try {
-            String query = "DELETE FROM ";
-            StringBuilder cmdBuild = new StringBuilder(query);
-            cmdBuild.append(TableName);
-            cmdBuild.append(" WHERE ");
-            cmdBuild.append( columnName[0]);
-            cmdBuild.append(" = ?");
+            String query = "DELETE FROM Attendance WHERE StuID IN (SELECT StudentID FROM Student";
+            StringBuilder cmdBuild = new StringBuilder(query);   
+            cmdBuild.append(" WHERE Student.StudentName = '");
+            cmdBuild.append(data);
+            cmdBuild.append("')");
             
             PreparedStatement pst = connect.prepareStatement(cmdBuild.toString());
-            pst.setString(1, data);
             pst.executeUpdate();
             modify = true;
         } catch (SQLException e) {
              e.printStackTrace();
             modify = false;
         }  
-    }   
+    }  
+    
+    public String createAddCmd(String[] getData){
+        String cmd = "INSERT INTO Subject(SubjectName) VALUES(";
+        StringBuilder cmdBuild = new StringBuilder(cmd);
+        cmdBuild.append(getData[0]);
+        cmdBuild.append(")");
+        PreparedStatement pst;
+        try {
+            pst = connect.prepareStatement(cmdBuild.toString());
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        
+        
+        int count = 0;
+        while(count < 2){
+            for(int i = 1; i < columnName.length; i++){
+                if(count < 1)
+                    cmdBuild.append(columnName[i]);
+                else
+                    cmdBuild.append("?");
+                if(i != columnName.length -1)
+                    cmdBuild.append(", ");
+                else
+                    cmdBuild.append(") ");
+            }
+            if(count < 1)
+                cmdBuild.append("VALUES(");
+            count++;
+        }
+        return cmdBuild.toString();
+    }
+    
+    public void showAddData(String TableName, String[] getData){
+        try {
+            String query = createAddCmd(TableName);
+            PreparedStatement pst = connect.prepareStatement(query);
+//            pst.setString(1,TableName);
+            for(int i = 1; i < columnName.length; i++ ){
+               pst.setString(i,getData[i-1]);                
+            }
+            modify = true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            modify = false;
+
+        }
+    }
 }
 

@@ -121,12 +121,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserInformation = new javax.swing.JPanel();
         uID = new javax.swing.JLabel();
         uidText = new javax.swing.JTextField();
-        uAcc = new javax.swing.JLabel();
-        uaccText = new javax.swing.JTextField();
-        uPass = new javax.swing.JLabel();
-        upassText = new javax.swing.JTextField();
-        uTime = new javax.swing.JLabel();
-        utimeText = new javax.swing.JTextField();
         uAdd = new javax.swing.JButton();
         uUpdate = new javax.swing.JButton();
         uDelete = new javax.swing.JButton();
@@ -288,7 +282,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         name.setForeground(new java.awt.Color(216, 174, 94));
         name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        name.setText("The Internet Cafe Management");
+        name.setText("LAB 6");
         name.setMaximumSize(new java.awt.Dimension(352, 50));
         name.setMinimumSize(new java.awt.Dimension(352, 50));
         name.setPreferredSize(new java.awt.Dimension(352, 50));
@@ -591,6 +585,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         jScrollPane1.setFocusable(false);
         jScrollPane1.setRequestFocusEnabled(false);
 
+        Table.setBackground(new java.awt.Color(255, 255, 255));
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -652,8 +647,8 @@ public class Internet_cafe extends javax.swing.JFrame {
             homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homeInterfaceLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(469, Short.MAX_VALUE))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(440, Short.MAX_VALUE))
             .addGroup(homeInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(homeInterfaceLayout.createSequentialGroup()
                     .addGap(377, 377, 377)
@@ -679,16 +674,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         UserInformation.setPreferredSize(new java.awt.Dimension(400, 400));
 
         uID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uID.setText("ID");
-
-        uAcc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uAcc.setText("Account");
-
-        uPass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uPass.setText("Password");
-
-        uTime.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        uTime.setText("Remaining Time");
+        uID.setText("Student's Name");
 
         uAdd.setBackground(new java.awt.Color(73, 79, 86));
         uAdd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -750,46 +736,21 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
-                        .addComponent(uPass, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(upassText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
-                        .addComponent(uAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(uaccText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
-                        .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(uTime, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 31, Short.MAX_VALUE)
-                        .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserInformationLayout.createSequentialGroup()
-                                .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(utimeText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(uDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         UserInformationLayout.setVerticalGroup(
             UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserInformationLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(121, 121, 121)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(uID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(uAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(uaccText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(uPass, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(upassText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(uTime, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(utimeText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
+                .addGap(138, 138, 138)
                 .addGroup(UserInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2230,7 +2191,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     private void usersButtonMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_usersButtonMouseClicked
         menuSize(false);
         jTabbedPane.setSelectedIndex(1);
-        connect.displayData("SELECT * FROM Users", UserTable);
+        connect.displayData("SELECT * FROM Student", UserTable);
         setTable(UserTable);
         setScroll(jScrollPane2);
     }                                        
@@ -2369,7 +2330,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     }// GEN-LAST:event_homeButtonMouseEntered
 
     private void uAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uAddActionPerformed
-        String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
+        String[] data = { uidText.getText() };
         boolean state = true;
         for(String i: data){
             if(i.isEmpty()){
@@ -2378,15 +2339,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             }                
         }
         if(state){
-            connect.showAddData("Users", data);
-            connect.displayData("SELECT * FROM Users", UserTable);
+            connect.showAddData("Student", data);
+            connect.displayData("SELECT * FROM Student", UserTable);
             if(connect.modify != false){
                 showAddMessage(true);
             
                 uidText.setText(null);
-                uaccText.setText(null); 
-                upassText.setText(null);
-                utimeText.setText(null);
             }else
                 exceptionMess();
         }
@@ -2395,7 +2353,7 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_uAddActionPerformed
 
     private void uUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uUpdateActionPerformed
-        String[] data = { uidText.getText(), uaccText.getText(), upassText.getText(), utimeText.getText() };
+        String[] data = { uidText.getText() };
         boolean state = true;
         for(String i: data){
             if(i.isEmpty()){
@@ -2404,15 +2362,12 @@ public class Internet_cafe extends javax.swing.JFrame {
             }                
         }
         if(state){
-            connect.showUpdateData("Users", data, UserTable);
-            connect.displayData("SELECT * FROM Users", UserTable);
+            connect.showUpdateData("Student", data, UserTable);
+            connect.displayData("SELECT * FROM Student", UserTable);
             if(connect.modify != false){
                 showUpdateMessage(true);
 
                 uidText.setText(null);
-                uaccText.setText(null); 
-                upassText.setText(null);
-                utimeText.setText(null);
             }else
                 exceptionMess();
         }
@@ -2425,13 +2380,10 @@ public class Internet_cafe extends javax.swing.JFrame {
         if(!data.isEmpty()){
             showDeleteMessage(true);
             if(option == 1){
-                connect.showDeleteData("Users", data);
-                connect.displayData("SELECT * FROM Users", UserTable);
+                connect.showDeleteData("Student", data);
+                connect.displayData("SELECT * FROM Attendance", UserTable);
                 
                 uidText.setText(null);
-                uaccText.setText(null); 
-                upassText.setText(null);
-                utimeText.setText(null);
             }
             chooseDeleteMess(option);
         }
@@ -2440,13 +2392,10 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_uDeleteActionPerformed
 
     private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserTableMouseClicked
-        connect.selectData("Users", UserTable);
+        connect.selectData("Student", UserTable);
         try {
             while (connect.rs.next()) {
-                uidText.setText(connect.rs.getString("User_ID"));
-                uaccText.setText(connect.rs.getString("Account"));
-                upassText.setText(connect.rs.getString("Password"));
-                utimeText.setText(connect.rs.getString("Remaining_Time"));
+                uidText.setText(connect.rs.getString("StudentName"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -2454,19 +2403,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_UserTableMouseClicked
 
     private void sAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sAddActionPerformed
-        String[] data = { sidText.getText(), snameText.getText(), sdobText.getText(), sphoneText.getText(),
-                saddressText.getText() };
+        String[] data = { sidText.getText() };
         
         boolean state = true;
-        for(String i: data){
-            if(i.isEmpty()){
-                state = false;
-                break;
-            }                
-        }
         if(state){
             connect.showAddData("Staff", data);
-            connect.displayData("SELECT * FROM Staff", StaffTable);
+            connect.displayData("SELECT * FROM Attenda", StaffTable);
             if(connect.modify != false){
                 showAddMessage(true);
 
@@ -3130,13 +3072,11 @@ public class Internet_cafe extends javax.swing.JFrame {
             connect.displayData(cmd, Table);
             jScrollPane1.setViewportView(Table);
             setTable(Table);
-            Table.setBackground(new Color(245,229,191));
+            Table.setBackground(new Color(255,255,255));
 
             if (connect.status) {
-                SearchBox.setSize(700, 30);
-                SearchBox.setLocation(148, 40);
                 jScrollPane1.setSize(700, 300);
-                jScrollPane1.setLocation(148, 110);
+                jScrollPane1.setLocation(148, 140);
                 setScroll(jScrollPane1);
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect syntax, please enter again!", "Message", JOptionPane.ERROR_MESSAGE);
@@ -3301,18 +3241,12 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JTextField tcrateText;
     private javax.swing.JTextField tcstaffidText;
     private javax.swing.JTextField tcuseridText;
-    private javax.swing.JLabel uAcc;
     private javax.swing.JButton uAdd;
     private javax.swing.JButton uDelete;
     private javax.swing.JLabel uID;
-    private javax.swing.JLabel uPass;
-    private javax.swing.JLabel uTime;
     private javax.swing.JButton uUpdate;
-    private javax.swing.JTextField uaccText;
     private javax.swing.JTextField uidText;
-    private javax.swing.JTextField upassText;
     private javax.swing.JButton usersButton;
     private javax.swing.JPanel usersInterface;
-    private javax.swing.JTextField utimeText;
     // End of variables declaration//GEN-END:variables
 }
