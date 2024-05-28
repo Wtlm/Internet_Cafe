@@ -203,7 +203,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="takeCareButton" alignment="1" pref="156" max="32767" attributes="0"/>
+                          <Component id="takeCareButton" alignment="1" max="32767" attributes="0"/>
                           <Component id="OrderComputer" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1562,9 +1562,7 @@
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cAdd" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cUserID" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                                   <Component id="cID" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="cStatus" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1573,16 +1571,8 @@
                                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                       <Component id="cDelete" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="cuseridText" alignment="1" min="-2" pref="207" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cidText" min="-2" pref="207" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="cON" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                              <Component id="cOFF" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <Component id="cidText" min="-2" pref="207" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -1593,23 +1583,12 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="cID" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="cidText" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cStatus" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Component id="cON" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cOFF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cUserID" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Component id="cuseridText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="cAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1627,45 +1606,6 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="cidText">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cStatus">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Status"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="cON">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new java.awt.Color(216, 174, 94)" type="code"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="ON"/>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="null"/>
-                        </Property>
-                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Hand Cursor"/>
-                        </Property>
-                        <Property name="opaque" type="boolean" value="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="cOFF">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new java.awt.Color(216, 174, 94)" type="code"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="OFF"/>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="null"/>
-                        </Property>
-                        <Property name="opaque" type="boolean" value="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cUserID">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="User ID"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cuseridText">
                     </Component>
                     <Component class="javax.swing.JButton" name="cAdd">
                       <Properties>
@@ -3653,31 +3593,29 @@
                                       <EmptySpace pref="57" max="32767" attributes="0"/>
                                       <Component id="ocStopText" min="-2" pref="207" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="tcStaffID1" min="-2" pref="98" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="ocCIDText" min="-2" pref="207" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="tcStaffID1" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="ocCIDText" min="-2" pref="207" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="tcUserID1" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="ocOIDText" min="-2" pref="207" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="tcRate1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="ocAdd" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="tcUserID1" min="-2" pref="98" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="ocOIDText" min="-2" pref="207" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="tcRate1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                              <Component id="ocAdd" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="ocUpdate" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="ocDelete" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="ocUpdate" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                                  <Component id="ocDelete" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="ocSTText" alignment="1" min="-2" pref="207" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="ocSTText" alignment="1" min="-2" pref="207" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>

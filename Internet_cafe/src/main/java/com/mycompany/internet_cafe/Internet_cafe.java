@@ -155,11 +155,6 @@ public class Internet_cafe extends javax.swing.JFrame {
         ComputerInformation = new javax.swing.JPanel();
         cID = new javax.swing.JLabel();
         cidText = new javax.swing.JTextField();
-        cStatus = new javax.swing.JLabel();
-        cON = new javax.swing.JRadioButton();
-        cOFF = new javax.swing.JRadioButton();
-        cUserID = new javax.swing.JLabel();
-        cuseridText = new javax.swing.JTextField();
         cAdd = new javax.swing.JButton();
         cUpdate = new javax.swing.JButton();
         cDelete = new javax.swing.JButton();
@@ -588,7 +583,7 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(submenuLayout.createSequentialGroup()
                 .addGroup(submenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(takeCareButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .addComponent(takeCareButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(OrderComputer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1126,21 +1121,6 @@ public class Internet_cafe extends javax.swing.JFrame {
 
         cID.setText("ID");
 
-        cStatus.setText("Status");
-
-        cON.setBackground(new java.awt.Color(216, 174, 94));
-        cON.setText("ON");
-        cON.setBorder(null);
-        cON.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cON.setOpaque(true);
-
-        cOFF.setBackground(new java.awt.Color(216, 174, 94));
-        cOFF.setText("OFF");
-        cOFF.setBorder(null);
-        cOFF.setOpaque(true);
-
-        cUserID.setText("User ID");
-
         cAdd.setBackground(new java.awt.Color(73, 79, 86));
         cAdd.setForeground(new java.awt.Color(252, 255, 222));
         cAdd.setText("Add");
@@ -1194,43 +1174,26 @@ public class Internet_cafe extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(ComputerInformationLayout.createSequentialGroup()
                         .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
                         .addComponent(cDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ComputerInformationLayout.createSequentialGroup()
-                        .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ComputerInformationLayout.createSequentialGroup()
-                                .addComponent(cON)
-                                .addGap(69, 69, 69)
-                                .addComponent(cOFF)))
+                        .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         ComputerInformationLayout.setVerticalGroup(
             ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ComputerInformationLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(142, 142, 142)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cidText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cON)
-                    .addComponent(cOFF))
-                .addGap(12, 12, 12)
-                .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cuseridText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(93, 93, 93)
+                .addGap(117, 117, 117)
                 .addGroup(ComputerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2316,26 +2279,25 @@ public class Internet_cafe extends javax.swing.JFrame {
                         .addComponent(tcRate2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                         .addComponent(ocStopText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(OCInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
-                            .addComponent(tcStaffID1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ocCIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
-                            .addComponent(tcUserID1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ocOIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
-                            .addGroup(OCInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tcRate1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ocAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(0, 31, Short.MAX_VALUE)
-                            .addGroup(OCInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
-                                    .addComponent(ocUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(ocDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(ocSTText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
+                        .addComponent(tcStaffID1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ocCIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
+                        .addComponent(tcUserID1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ocOIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
+                        .addGroup(OCInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tcRate1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ocAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 31, Short.MAX_VALUE)
+                        .addGroup(OCInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OCInformationLayout.createSequentialGroup()
+                                .addComponent(ocUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(ocDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ocSTText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         OCInformationLayout.setVerticalGroup(
@@ -2820,24 +2782,14 @@ public class Internet_cafe extends javax.swing.JFrame {
     }//GEN-LAST:event_StaffTableMouseClicked
 
     private void cAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cAddActionPerformed
-        String[] data = null;
-        if (cON.isSelected() == true && cOFF.isSelected() == true ||
-                    cON.isSelected() == false && cOFF.isSelected() == false) {
-            JOptionPane.showMessageDialog(rootPane, "Please choose 1 state of computer!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        }
-        else if (cON.isSelected()) {
-            data = new String[] { cidText.getText(), "ON", cuseridText.getText() };
-        } else if (cOFF.isSelected()) {
-            data = new String[] { cidText.getText(), "OFF", null, null };
-        }
+        String[] data = {cidText.getText()};
+      
         boolean state = true;
-        if(cON.isSelected()){
-            for(String i: data){
-                if(i.isEmpty()){
-                    state = false;
-                    break;
-                }                
-            }
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
         }
         if(state){
             connect.showAddData("Computer", data);
@@ -2846,9 +2798,6 @@ public class Internet_cafe extends javax.swing.JFrame {
                 showAddMessage(true);
 
                 cidText.setText(null);
-                cuseridText.setText(null);
-                cON.setSelected(false);
-                cOFF.setSelected(false); 
             }else
                 exceptionMess();
             
@@ -2859,24 +2808,14 @@ public class Internet_cafe extends javax.swing.JFrame {
 
     private void cUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cUpdateActionPerformed
         String[] data = null;
-        if (cON.isSelected() == true && cOFF.isSelected() == true ||
-                    cON.isSelected() == false && cOFF.isSelected() == false) {
-            JOptionPane.showMessageDialog(rootPane, "Please choose 1 state of computer!", "Input Request", JOptionPane.ERROR_MESSAGE);
-        }
-        else if (cON.isSelected()) {
-            data = new String[] { cidText.getText(), "ON", cuseridText.getText()};
-        } else if (cOFF.isSelected()) {
-            data = new String[] { cidText.getText(), "OFF", null, null };
-        }
 
         boolean state = true;
-        if(cON.isSelected()){
-            for(String i: data){
-                if(i.isEmpty()){
-                    state = false;
-                    break;
-                }                
-            }
+        for(String i: data){
+            if(i.isEmpty()){
+                state = false;
+                break;
+            }                
+            
         }
         if(state){
             connect.showUpdateData("Computer", data, ComputerTable);
@@ -2885,9 +2824,6 @@ public class Internet_cafe extends javax.swing.JFrame {
                 showUpdateMessage(true);
 
                 cidText.setText(null);
-                cuseridText.setText(null);
-                cON.setSelected(false);
-                cOFF.setSelected(false);
             }else
                 exceptionMess();
 
@@ -2905,9 +2841,6 @@ public class Internet_cafe extends javax.swing.JFrame {
                 connect.displayData("SELECT * FROM Computer", ComputerTable);
                 
                 cidText.setText(null);
-                cuseridText.setText(null);
-                cON.setSelected(false);
-                cOFF.setSelected(false);
             }
             chooseDeleteMess(option);
         }
@@ -2919,16 +2852,7 @@ public class Internet_cafe extends javax.swing.JFrame {
         connect.selectData("Computer", ComputerTable);
         try {
             while (connect.rs.next()) {
-                cidText.setText(connect.rs.getString("Computer_ID"));
-                cuseridText.setText(connect.rs.getString("User_ID"));
-                String data = (String) connect.rs.getString("User_ID");
-                if (data != null) {
-                    cON.setSelected(true);
-                    cOFF.setSelected(false);
-                } else {
-                    cON.setSelected(false);
-                    cOFF.setSelected(true);
-                }
+                cidText.setText(connect.rs.getString("Computer_ID"));            
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -3542,15 +3466,10 @@ public class Internet_cafe extends javax.swing.JFrame {
     private javax.swing.JButton cAdd;
     private javax.swing.JButton cDelete;
     private javax.swing.JLabel cID;
-    private javax.swing.JRadioButton cOFF;
-    private javax.swing.JRadioButton cON;
-    private javax.swing.JLabel cStatus;
     private javax.swing.JButton cUpdate;
-    private javax.swing.JLabel cUserID;
     private javax.swing.JTextField cidText;
     private javax.swing.JButton computerButton;
     private javax.swing.JPanel computerInterface;
-    private javax.swing.JTextField cuseridText;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel homeInterface;
     private javax.swing.JComboBox<String> jComboBox1;
